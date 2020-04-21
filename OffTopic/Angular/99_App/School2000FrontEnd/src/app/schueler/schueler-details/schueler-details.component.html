@@ -1,0 +1,42 @@
+<div *ngIf="schueler">
+  <div id="editModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">{{modalHeaderText}}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="col-sm-12">
+              <h3>{{schueler?.vorname}} {{schueler?.name}}&nbsp;</h3>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Vorname</label>
+                <div class="col-sm-10">
+                  <input class="form-control" [(ngModel)]="schueler.vorname"  name="vorname"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Nachname</label>
+                <div class="col-sm-10">
+                  <input class="form-control" [(ngModel)]="schueler.name"  name="name"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Adresse</label>
+                <div class="col-sm-10">
+                  <input class="form-control" [(ngModel)]="schueler.adresse"  name="adresse"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="update" class="btn btn-success" (click)="save()">Speichern</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

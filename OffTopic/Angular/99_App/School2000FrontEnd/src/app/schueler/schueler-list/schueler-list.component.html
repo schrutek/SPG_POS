@@ -1,0 +1,64 @@
+<app-schueler-details [schueler]="selectedSchueler"></app-schueler-details>
+
+<div class="form-inline">
+  <div class="form-group">
+      <label for="search">Suche:</label>
+      <input type="text" class="form-control" name="suchschueler" placeholder="Name" [(ngModel)]="filter">
+  </div>
+  <button class="btn btn-default" (click)="getAllSchuelersSortedFiltered()">GO</button>
+</div>
+
+<div class="row"> 
+  <div class="col-md-offset-10 col-md-2">
+    <a href="#">Neuer Schüler</a>
+  </div>
+</div>
+<br>
+
+<div>
+  <p>
+    <button type="button" id="previousPage" class="btn btn-default" (click)="previousPage()">( - )</button>
+    <button type="button" id="nectPage" class="btn btn-default" (click)="nextPage()">( + )</button>
+    Seite: {{curPage + 1}} ({{rowCount}} Datensätze)
+  </p>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><a (click)="sortBy('id')">ID</a></th>
+            <th><a (click)="sortBy('name')">Name</a></th>
+            <th><a (click)="sortBy('vorname')">Vorname</a></th>
+            <th><a (click)="sortBy('adresse')">Adresse</a></th>
+            <th><a (click)="sortBy('klasse')">Klasse</a></th>
+            <th></th>
+            <th>Details</th>
+            <th>Ändern</th>
+            <th>Löschen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let schueler of schuelers">
+            <td>{{schueler.id}}</td>
+            <td>{{schueler.name}}</td>
+            <td>{{schueler.vorname}}</td>
+            <td>{{schueler.adresse}}<td>
+            <td>{{schueler.klasse}}</td>
+            <td><button type="button" id="details" class="btn btn-default" (click)="redirectToDetailsPage(schueler.id)">Details</button></td>
+            <td><button type="button" id="update" class="btn btn-success" (click)="onSelect(schueler)">Ändern</button></td>
+            <td><button type="button" id="delete" class="btn btn-danger" (click)="onDelete(schueler)">Löschen</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div>
+  <p>
+    <button type="button" id="previousPage" class="btn btn-default" (click)="previousPage()">( - )</button>
+    <button type="button" id="nectPage" class="btn btn-default" (click)="nextPage()">( + )</button>
+    Seite: {{curPage + 1}} ({{rowCount}} Datensätze)
+  </p>
+</div>
