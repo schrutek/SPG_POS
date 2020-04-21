@@ -1,0 +1,12 @@
+Repository anlegen:
+git init
+git add *
+git commit -m "initial"
+git remote add origin https://github.com/schrutek/SPG_POS.git
+git push -u origin master
+
+Änderungen ins Repository senden:
+
+git add *
+git commit -m "--"
+git push -u origin master
