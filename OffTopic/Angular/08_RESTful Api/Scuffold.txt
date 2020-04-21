@@ -1,0 +1,5 @@
+data source=WE20W8WS2000501\sqlexpress;initial catalog=School2000;integrated security=True
+
+
+
+Scaffold-DbContext "Data Source=WE20W8WS2000501\sqlexpress;initial catalog=School2000;integrated security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Model -UseDatabaseNames -Force -DataAnnotations

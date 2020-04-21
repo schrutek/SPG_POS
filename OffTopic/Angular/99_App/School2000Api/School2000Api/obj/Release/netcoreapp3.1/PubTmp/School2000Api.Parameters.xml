@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="School2000Api20200309023500" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\HTL\\Git_Vorebereitung\\Angular\\99_App\\School2000Api\\School2000Api\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
