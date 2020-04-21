@@ -1,6 +1,4 @@
-# Off Topic
-
-Wird aktuell nicht im Unterricht behandelt.
+# Installation von GIT
 
 ## Synchronisieren des Repositories in einen Ordner
 1. Lade von https://git-scm.com/downloads die Git Tools (Button *Download 2.20.1 for WIindows*)
