@@ -1,0 +1,10 @@
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\bin\Debug\netcoreapp2.2\CollectionsUebung.deps.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\bin\Debug\netcoreapp2.2\CollectionsUebung.runtimeconfig.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\bin\Debug\netcoreapp2.2\CollectionsUebung.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\bin\Debug\netcoreapp2.2\CollectionsUebung.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\obj\Debug\netcoreapp2.2\CollectionsUebung.csproj.CoreCompileInputs.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\obj\Debug\netcoreapp2.2\CollectionsUebung.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\obj\Debug\netcoreapp2.2\CollectionsUebung.AssemblyInfo.cs
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\bin\Debug\netcoreapp2.2\CollectionsUebung.pdb
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\obj\Debug\netcoreapp2.2\CollectionsUebung.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\CollectionsUebung\CollectionsUebung\obj\Debug\netcoreapp2.2\CollectionsUebung.pdb

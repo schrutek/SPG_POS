@@ -1,0 +1,10 @@
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\bin\Debug\netcoreapp2.2\VererbungUebung.deps.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\bin\Debug\netcoreapp2.2\VererbungUebung.runtimeconfig.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\bin\Debug\netcoreapp2.2\VererbungUebung.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\bin\Debug\netcoreapp2.2\VererbungUebung.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\bin\Debug\netcoreapp2.2\VererbungUebung.pdb
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\obj\Debug\netcoreapp2.2\VererbungUebung.csprojAssemblyReference.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\obj\Debug\netcoreapp2.2\VererbungUebung.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\obj\Debug\netcoreapp2.2\VererbungUebung.AssemblyInfo.cs
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\obj\Debug\netcoreapp2.2\VererbungUebung.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\VererbungUebung\VererbungUebung\obj\Debug\netcoreapp2.2\VererbungUebung.pdb
