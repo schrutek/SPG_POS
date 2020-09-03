@@ -1,11 +1,12 @@
 # Dependency Injection
+
 Eine praktische Anwendung von Interfaces findet sich in der Technik der *Dependency Injection*. In unserem
 Beispiel simulieren wir den Zugriff auf den GPS Sensor des Smartphones. Je nach Betriebssystem (Android oder iOS)
 benötigen wir spezifischen Code, um den Standort herauszufinden.
 
 Die Trackeranwendung selbst soll auf allen Geräten laufen. Daher müssen wir gerätespezifischen Code
-auslagern. Wir definieren einmal eine Klasse Point, die Längen- und Breitengrad speichert sowie ein 
-Interface ILocationProvider:
+auslagern. Wir definieren einmal eine Klasse Point, die Längen- und Breitengrad speichert sowie ein Interface ILocationProvider:
+
 ```c#
 public class Point
 {
@@ -23,7 +24,6 @@ interface ILocationProvider
     public DateTime LastMeasurement { get; }
     public Point GetLocation();
 }
-
 ```
 
 Damit wir unterschiedliche Betriebssysteme simulieren können, implementieren wir dieses Interface in
@@ -73,6 +73,7 @@ public class AndroidLocationProvider : ILocationProvider
     }
 }
 ```
+
 Der Tracker selbst soll geräteunabhängig sein. Um das zu erreichen, übergeben wir im Konstruktor einfach
 eine Instanz des Interfaces und verlangen nicht eine spezifische Implementierung als Parameter. Die Methode
 *DoTracking()* ruft dann einfach jede Sekunde die Methode *GetLocation()* auf:
@@ -102,6 +103,7 @@ class MyTracker
 
 Zum Testen instanzieren wir in unserer *Program* Klasse einmal mit einer Instanz von *AndroidLocationProvider*
 und einmal mit einer Instanz von *AppleLocationProvider*.
+
 ```c#
 class Program
 {
@@ -119,7 +121,8 @@ class Program
 ```
 
 In der Ausgabe erkennen wir die unterschiedlichen Intervalle bei der Aktualisierung der Werte.
-```
+
+```PowerShell
 Tracking mit ANDROID:
 Lat: -12.95°, Lng: 3.2°
 Lat: -12.95°, Lng: 3.2°
@@ -145,15 +148,18 @@ Lat: -13.71°, Lng: 86.0°
 ```
 
 ## Was bringt das?
+
 Diese Implementierung bietet viele Möglichkeiten:
+
 - Leichteres Testen: Wir können zum Testen unser Interface in einer "Dummy" Klasse implementieren, die Demowerte
   liefert.
 - Trennung von gerätespezifischem Code: Wir sagen nur was wir brauchen und nicht schon wie wir dazu kommen.
 - Erweiterbarkeit: Ein weiterer Gerätetyp kann ohne Änderung des Trackers angebunden werden.
 
 ## Übung
-Unser Tracker soll nicht fix auf der Konsole ausgeben, sondern über einen zu definierenden Logger schreiben. 
-Dabei wird der Logger in der Klasse *MyTracker* als Property definiert und von außen gesetzt.
+
+Unser Tracker soll nicht fix auf der Konsole ausgeben, sondern über einen zu definierenden Logger schreiben. Dabei wird der Logger in der Klasse *MyTracker* als Property definiert und von außen gesetzt.
+
 1. Verwende als Basis statt der obigen *MyTracker* und *Program* Klasse die untenstehenden Versionen.
 1. Schreibe ein Interface *ILogger*, welches die Methode *Log(string)* beinhaltet.
 1. Implementiere die Klasse *ConsoleLogger*, die den übergebenen String in der *Log()* Methode einfach in
@@ -202,5 +208,6 @@ class Program
 ```
 
 ## Weitere Informationen
-- https://www.codementor.io/mrfojo/c-with-dependency-injection-k2qfxbb8q
-- https://blogs.msdn.microsoft.com/dmx/2014/10/14/was-ist-eigentlich-dependency-injection-di/
+
+- <https://www.codementor.io/mrfojo/c-with-dependency-injection-k2qfxbb8q>
+- <https://blogs.msdn.microsoft.com/dmx/2014/10/14/was-ist-eigentlich-dependency-injection-di/>
