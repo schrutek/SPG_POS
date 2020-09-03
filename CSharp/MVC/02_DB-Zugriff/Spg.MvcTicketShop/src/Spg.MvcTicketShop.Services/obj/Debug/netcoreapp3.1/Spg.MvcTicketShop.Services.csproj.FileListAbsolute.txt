@@ -1,0 +1,10 @@
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\bin\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.deps.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\bin\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\obj\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\obj\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\obj\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.csprojAssemblyReference.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\bin\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\bin\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\bin\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\obj\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\01_Grundlagen\99_App\Spg.MvcTicketShop\src\Spg.MvcTicketShop.Services\obj\Debug\netcoreapp3.1\Spg.MvcTicketShop.Services.pdb

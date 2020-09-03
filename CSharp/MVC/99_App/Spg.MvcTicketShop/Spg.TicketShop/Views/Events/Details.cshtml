@@ -1,0 +1,57 @@
+﻿@model Spg.TicketShop.Services.Models.Events
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Events</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label asp-for="LastChangeDate"></label>
+        </dt>
+        <dd class="col-sm-10">
+            @Model.LastChangeDate
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="Name"></label>
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Name
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="Description"></label>
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Description
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="OnlineFrom"></label>
+        </dt>
+        <dd class="col-sm-10">
+            @Model.OnlineFrom
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="OnlineTo"></label>
+        </dt>
+        <dd class="col-sm-10">
+            @Model.OnlineTo
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="LaseChangeUserId"></label>
+        </dt>
+        <dd class="col-sm-10">
+            @Model.LaseChangeUserId
+        </dd>
+    </dl>
+</div>
+
+<partial name="../Shows/_Shows" model="Model.Shows" />
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EventId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

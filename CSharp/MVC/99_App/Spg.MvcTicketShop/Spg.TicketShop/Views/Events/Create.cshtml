@@ -1,0 +1,62 @@
+﻿@model Spg.TicketShop.Services.Models.Events
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Events</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EventId" class="control-label"></label>
+                <input asp-for="EventId" class="form-control" />
+                <span asp-validation-for="EventId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastChangeDate" class="control-label"></label>
+                <input asp-for="LastChangeDate" class="form-control" />
+                <span asp-validation-for="LastChangeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaseChangeUserId" class="control-label"></label>
+                <select asp-for="LaseChangeUserId" class ="form-control" asp-items="ViewBag.LaseChangeUserId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnlineFrom" class="control-label"></label>
+                <input asp-for="OnlineFrom" class="form-control" />
+                <span asp-validation-for="OnlineFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnlineTo" class="control-label"></label>
+                <input asp-for="OnlineTo" class="form-control" />
+                <span asp-validation-for="OnlineTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

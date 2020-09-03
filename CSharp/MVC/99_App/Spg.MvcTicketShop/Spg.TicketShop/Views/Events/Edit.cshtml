@@ -1,0 +1,73 @@
+﻿@model Spg.TicketShop.Services.Models.Events
+@inject Spg.TicketShop.Services.Services.LookupService LookupService
+
+@{
+    ViewData["Title"] = "Edit";
+    var validCatEventStates = LookupService.GetAllValidCatEventStates();
+}
+
+<h1>Edit</h1>
+
+<h4>Events</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="EventId" />
+            <div class="form-group">
+                <label asp-for="LastChangeDate" class="control-label"></label>
+                <input asp-for="LastChangeDate" class="form-control" />
+                <span asp-validation-for="LastChangeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaseChangeUserId" class="control-label"></label>
+                <select asp-for="LaseChangeUserId" class="form-control" asp-items="ViewBag.LaseChangeUserId"></select>
+                <span asp-validation-for="LaseChangeUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnlineFrom" class="control-label"></label>
+                <input asp-for="OnlineFrom" class="form-control" />
+                <span asp-validation-for="OnlineFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OnlineTo" class="control-label"></label>
+                <input asp-for="OnlineTo" class="form-control" />
+                <span asp-validation-for="OnlineTo" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="CatEventState" class="control-label"></label>
+                <select class="form-control">
+                    <option value="-1">--Select Genre--</option>
+                    @foreach (var item in validCatEventStates)
+                    {
+                        <option value="@item.CatEventStateId">@item.ShortName</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,61 @@
+﻿@model Spg.MvcTicketShop.Services.Models.Shows
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Shows</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ShowId" class="control-label"></label>
+                <input asp-for="ShowId" class="form-control" />
+                <span asp-validation-for="ShowId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastChangeDate" class="control-label"></label>
+                <input asp-for="LastChangeDate" class="form-control" />
+                <span asp-validation-for="LastChangeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaseChangeUserId" class="control-label"></label>
+                <select asp-for="LaseChangeUserId" class ="form-control" asp-items="ViewBag.LaseChangeUserId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CheckIn" class="control-label"></label>
+                <input asp-for="CheckIn" class="form-control" />
+                <span asp-validation-for="CheckIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Start" class="control-label"></label>
+                <input asp-for="Start" class="form-control" />
+                <span asp-validation-for="Start" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="End" class="control-label"></label>
+                <input asp-for="End" class="form-control" />
+                <span asp-validation-for="End" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EventId" class="control-label"></label>
+                <select asp-for="EventId" class ="form-control" asp-items="ViewBag.EventId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.MvcTicketShop.FrontEnd", "src\Spg.MvcTicketShop.FrontEnd\Spg.MvcTicketShop.FrontEnd.csproj", "{A129EE31-168F-413C-BC6A-5CEB0F61A118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.MvcTicketShop.Services", "src\Spg.MvcTicketShop.Services\Spg.MvcTicketShop.Services.csproj", "{BDE2C456-DEF2-4A2B-864F-9106844D33BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A129EE31-168F-413C-BC6A-5CEB0F61A118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A129EE31-168F-413C-BC6A-5CEB0F61A118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A129EE31-168F-413C-BC6A-5CEB0F61A118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A129EE31-168F-413C-BC6A-5CEB0F61A118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE2C456-DEF2-4A2B-864F-9106844D33BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE2C456-DEF2-4A2B-864F-9106844D33BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE2C456-DEF2-4A2B-864F-9106844D33BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE2C456-DEF2-4A2B-864F-9106844D33BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5921E2C-6488-4B5B-9553-0A4368243696}
+	EndGlobalSection
+EndGlobal

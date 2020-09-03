@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Spg.TicketShop.Services.Models.Shows>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastChangeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.End)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaseChangeUser)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastChangeDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckIn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Start)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.End)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaseChangeUser.FirstName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ShowId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ShowId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ShowId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

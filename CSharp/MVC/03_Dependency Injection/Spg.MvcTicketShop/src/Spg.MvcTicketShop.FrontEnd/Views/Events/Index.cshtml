@@ -1,0 +1,176 @@
+﻿@model Spg.MvcTicketShop.Services.Helper.PaginatedList<Spg.MvcTicketShop.Services.Models.Events>
+@inject Spg.MvcTicketShop.Services.Services.LookupService LookupService
+
+@{
+    ViewData["Title"] = "Index";
+    Spg.MvcTicketShop.Services.Models.Events firstEvent = Model.ToList().FirstOrDefault();
+    var validCatEventStates = LookupService.GetAllValidCatEventStates();
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form>
+    <div class="form-row align-items-center">
+        <div class="col-sm-3 my-1">
+            <input type="text" class="form-control" name="filter" value="@ViewData["currentFilter"]" placeholder="Suche...">
+        </div>
+        <div class="col-sm-3 my-1">
+            <select class="form-control" name="state">
+                <option value="-1">Status wählen...</option>
+                @foreach (var item in validCatEventStates)
+                {
+                    <option value="@item.CatEventStateId" selected="@(((ViewData["CurrentState"] != null)
+                        && (Guid)ViewData["CurrentState"] == item.CatEventStateId))">
+                        @item.ShortName
+                    </option>
+                }
+            </select>
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary">GO</button>
+        </div>
+    </div>
+</form>
+
+@if (Model != null 
+    && Model.Count > 0)
+{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-state="@ViewData["CurrentState"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-state="@ViewData["CurrentState"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <label asp-for="@firstEvent.LastChangeDate"></label>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">
+                        <label asp-for="@firstEvent.Name"></label>
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DescriptionSortParm"]">
+                        <label asp-for="@firstEvent.Description"></label>
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateFromSortParm"]">
+                        <label asp-for="@firstEvent.OnlineFrom"></label>
+                    </a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateToSortParm"]">
+                        <label asp-for="@firstEvent.OnlineTo"></label>
+                    </a>
+                </th>
+                <th>
+                    <label>Anz. Shows</label>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <label>@item.LastChangeDate</label>
+                    </td>
+                    <td>
+                        <a onclick="loadShows('@item.EventId', event)">@item.Name</a>
+                    </td>
+                    <td>
+                        <label>@item.Description</label>
+                    </td>
+                    <td>
+                        <label>@item.OnlineFrom</label>
+                    </td>
+                    <td>
+                        <label>@item.OnlineTo</label>
+                    </td>
+                    <td>
+                        <label>@item.Shows.Count</label>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.EventId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.EventId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.EventId">Delete</a> |
+                        <a asp-controller="Shows" asp-action="FilteredById" asp-route-eventid="@item.EventId">Shows</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-state="@ViewData["CurrentState"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-state="@ViewData["CurrentState"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+}
+else
+{
+    <label>Keine Ergebnisse gefunden!</label>
+}
+
+<div id="pvResults"></div>
+
+<script type="text/javascript">
+
+    function loadShows(eventId, e) {
+        if (e) {
+            e.preventDefault();
+        }
+
+        var url = '@Url.Action("FilteredByIdPartial", "Shows")';
+        var data = { eventId: eventId };
+
+        $.ajax({
+            type: 'GET',
+            contentType: 'application/json; charset=utf-8',
+            url: url,
+            data: { "eventId": eventId },
+            success: function (result) {
+                $('#pvResults').html('');
+                $('#pvResults').html(result);
+            },
+            error: function (success, message) {
+                window.location = '@Url.Action("Error", "Home")' //'https://localhost:5001/Home/Error'
+            }
+        });
+    }
+
+</script>

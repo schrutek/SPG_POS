@@ -1,0 +1,116 @@
+﻿@model Spg.MvcTicketShop.Services.Helper.PaginatedList<Spg.MvcTicketShop.Services.Dtos.UserDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Spg.MvcTicketShop.Services.Dtos.UserDto firstEvent = Model.ToList().FirstOrDefault();
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form>
+    <div class="form-row align-items-center">
+        <div class="col-sm-3 my-1">
+            <input type="text" class="form-control" name="filter" value="@ViewData["CurrentFilter"]" placeholder="Suche...">
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary">GO</button>
+        </div>
+    </div>
+</form>
+
+@if (firstEvent != null)
+{
+    if (Model.HasMore)
+    {
+        <label><b>Ergebnisse auf max. 100 beschränkt. Bitte die Filterung weiter einschränken!</b></label>
+        <br />
+    }
+
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    RegisterDateTime
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParm"]" asp-for="@firstEvent.FirstName">Name</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["LastNameSortParm"]" asp-for="@firstEvent.LastName">Name</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["EMailSortParm"]" asp-for="@firstEvent.EMail">Name</a>
+                </th>
+                <th>
+                    Role
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegisterDateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EMail)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+}
+else
+{
+    <label>Keine Ergebnisse gefunden!</label>
+}

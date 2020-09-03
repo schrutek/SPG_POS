@@ -1,0 +1,118 @@
+﻿@model Spg.TicketShop.Services.Helper.PaginatedList<Spg.TicketShop.Services.Models.Events>
+@inject Spg.TicketShop.Services.Services.LookupService LookupService
+
+@{
+    ViewData["Title"] = "Index";
+    Spg.TicketShop.Services.Models.Events firstEvent = Model.ToList().FirstOrDefault();
+    var validCatEventStates = LookupService.GetAllValidCatEventStates();
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form>
+    <div class="form-row align-items-center">
+        <div class="col-sm-3 my-1">
+            <input type="text" class="form-control" name="filter" value="@ViewData["currentFilter"]" placeholder="Suche...">
+        </div>
+        <div class="col-sm-3 my-1">
+            <select class="form-control" name="state">
+                <option value="-1">Status wählen...</option>
+                @foreach (var item in validCatEventStates)
+                {
+                    <option value="@item.CatEventStateId" selected="@(((ViewData["CurrentState"] != null) 
+                        && (Guid)ViewData["CurrentState"] == item.CatEventStateId))">@item.ShortName</option>
+                }
+            </select>
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary">GO</button>
+        </div>
+    </div>
+</form>
+
+@if (firstEvent != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    LastChangeDate
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-for="@firstEvent.Name">Name</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DescriptionSortParm"]" asp-for="@firstEvent.Description">Description</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateFromSortParm"]" asp-for="@firstEvent.OnlineFrom">OnlineFrom</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateToSortParm"]" asp-for="@firstEvent.OnlineTo">OnlineTo</a>
+                </th>
+                <th>
+                    Anz. Shows
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <label>@item.LastChangeDate</label>
+                    </td>
+                    <td>
+                        <label>@item.Name</label>
+                    </td>
+                    <td>
+                        <label>@item.Description</label>
+                    </td>
+                    <td>
+                        <label>@item.OnlineFrom</label>
+                    </td>
+                    <td>
+                        <label>@item.OnlineTo</label>
+                    </td>
+                    <td>
+                        <label>@item.Shows.Count</label>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.EventId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.EventId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.EventId">Delete</a> |
+                        <a asp-controller="Shows" asp-action="FilteredById" asp-route-eventid="@item.EventId">Shows</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-state="@ViewData["CurrentState"]"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       asp-route-state="@ViewData["CurrentState"]"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>}
+else
+{
+    <label>Keine Ergebnisse gefunden!</label>
+}
