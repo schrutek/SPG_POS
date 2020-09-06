@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\01_Basics\\01_CSharp_Java\\Spg.Basics\\src\\Spg.Basics.App\\Spg.Basics.App.csproj",
+      "projectUniqueName": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\01_CSharp_Java\\Spg.Basics\\src\\Spg.Basics.App\\Spg.Basics.App.csproj",
       "projectName": "Spg.Basics.App",
-      "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\01_Basics\\01_CSharp_Java\\Spg.Basics\\src\\Spg.Basics.App\\Spg.Basics.App.csproj",
+      "projectPath": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\01_CSharp_Java\\Spg.Basics\\src\\Spg.Basics.App\\Spg.Basics.App.csproj",
       "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-      "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\01_Basics\\01_CSharp_Java\\Spg.Basics\\src\\Spg.Basics.App\\obj\\",
+      "outputPath": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\01_CSharp_Java\\Spg.Basics\\src\\Spg.Basics.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

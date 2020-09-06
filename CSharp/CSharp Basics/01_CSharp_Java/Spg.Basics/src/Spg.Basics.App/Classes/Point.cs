@@ -19,8 +19,8 @@ namespace Spg.Basics.App.Classes
         /// <summary>
         /// Structs können keine Default-Konstruktor enthalten.
         /// </summary>
-        //public Point()
-        //{ }
+        ////public Point()
+        ////{ }
 
         /// <summary>
         /// Konstruktor

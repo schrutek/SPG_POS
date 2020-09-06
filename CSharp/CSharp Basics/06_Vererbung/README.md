@@ -1,6 +1,8 @@
 # Vererbung 1: Implementierung in C#
+
 Die Vererbung wird in C# in weiten Teilen wie in Java implementiert. Einige Besonderheiten treten
 allerdings auf:
+
 - Vererbung wird durch den Doppelpunkt (:) gekennzeichnet. Es gibt keinen Unterschied zwischen Klassen und Interfaces, also zwischen *extends* und *implements*.
 - Es kann genauso wie in Java nur von 1 Klasse geerbt werden, es können jedoch beliebig viele Interfaces implementiert werden.
 - Properties sind im Prinzip auch nur Methoden, daher können sie natürlich auch vererbt werden.
@@ -10,8 +12,10 @@ allerdings auf:
 
 Die Funktionsweise ist in den Kommentaren des nachfolgenden Codes erklärt.
 
-![](vererbung_diagram.png)
+![x](vererbung_diagram.png)
+
 ## Klasse Person
+
 ```c#
 abstract class Person
 {
@@ -55,6 +59,7 @@ abstract class Person
 ```
 
 ## Klasse Schueler
+
 ```c#
 class Schueler : Person
 {

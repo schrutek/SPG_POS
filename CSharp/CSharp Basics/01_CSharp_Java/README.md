@@ -91,7 +91,7 @@ Objekt werden in C# wie in Java behandelt.
 
 ### Boxing / Unboxing
 
-Eine Besonderheit ist das sog. Boxing und unboxing. Hier kann, wenn es der Datentyp zulässt, ein Wertetyp in einen Refereztyp umgewandelt (geboxt ("eingeschachtelt")) werden und umgekehrt (unboxing). Das ist manchmal ganz praktisch, sollte aber mit Bedacht und nur selten verwendet werden, das es recht Laufzeitintensiv ist, da der Speicherinhalt vom Hep in den Stack umgespeichert werden muss und umgekehrt! In diesem Beispiel wird ein Int-Objekt in einen Int umgewandelt.
+Eine Besonderheit ist das sog. Boxing und unboxing. Hier kann, wenn es der Datentyp zulässt, ein Wertetyp in einen Refereztyp umgewandelt (geboxt ("eingeschachtelt")) werden und umgekehrt (unboxing). Das ist manchmal ganz praktisch, sollte aber mit Bedacht und nur selten verwendet werden, da es recht Laufzeitintensiv ist, da der Speicherinhalt vom Heap in den Stack umgespeichert werden muss und umgekehrt! In diesem Beispiel wird ein Int-Objekt in einen Int umgewandelt.
 
 Alle Objekte leiten von ``object`` ab und können natürlich zu diesem gecastet werden. (Mehr zu Vererbung später)
 
@@ -116,13 +116,34 @@ public void ExampleWithObject()
 
 ## Structs
 
-* Structs sind Wertetpen, sie werden am Stack, nicht am Heap abgelegt.
-* Structs sind speichersparender als Objekte aus Klassen.
+* Structs sind Wertetypen, sie werden am Stack, nicht am Heap abgelegt.
+* Structs sind Speichersparender als Objekte aus Klassen.
 * Weil es Wertetypen sind, können Structs nicht ``NULL`` sein.
 * Structs können nicht vererbt werden und können nicht erben
 * Structs können Interfaces implementieren.
-* Structs können keine Default-Konstruktor enthalten.
+* Structs können keinen Default-Konstruktor enthalten.
 * Structs müssen nicht unbedingt mit new Instanziert werden.
+
+```C#
+public void UseAStruct()
+{
+    Console.WriteLine("*** UseAStruct ***");
+
+    Point p;
+    //p = new Point(3, 4);    // Der Konstruktor initialisiert ein Objekt am Stack.
+
+    // field access
+    p.x = 1;
+    p.y = 2;
+
+    // method call
+    p.MoveTo(10, 20);
+
+    Point q = p;
+
+    Console.WriteLine($"STRUCT Q: {q.x}, {q.y}");
+}
+```
 
 ## Die Kalsse String
 
@@ -135,9 +156,11 @@ string name = "Alfonso";
 ```
 
 * Die Klasse String ist "immutable". Für komplextere Strings bitte die Klasse ``StringBuilder`` verwenden.
-* Mit ``+`` können Strings einfach aneinander gefügt werden.
+* Mit ``+`` können Strings einfach aneinander gefügt werden. !Für komplextere Strings bitte die Klasse ``StringBuilder`` verwenden!
 * Zeichen können mit ``myString[i]`` lokalisiert werden.
 * Strings sind zwar Referenztpen, können aber mit ``==`` oder ``!=`` verglichen werden. In C# gibt es die Möglichkeit Operatoren zu überladen (mehr dazu süpäter).
+
+!!Für komplextere Strings bitte die Klasse ``StringBuilder`` verwenden!!
 
 Beispiele:
 
@@ -157,7 +180,7 @@ Console.WriteLine(name.Length);
 
 if (name.Substring(0, 3).ToLower() == "don")
 {
-    Console.WriteLine("ja, ist don");
+    Console.WriteLine("ja, ist Don");
 }
 else
 {
@@ -175,13 +198,15 @@ Console.WriteLine(
     @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
 et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
-ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
 eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
 et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
 est Lorem ipsum dolor sit amet."
     );
 
-// Hier wird, wie obenbeschrieben direkt in die Konsole geschreieben Das gleiche geht auch direkt mit String-Objekten:
+// Hier wird, wie obenbeschrieben direkt in die Konsole geschreieben. Das gleiche geht auch direkt mit String-Objekten:
 
 string myfirstLineText = String.Format("Hello {0} {1}", name, lastName);
 string myPath = String.Format(@"C:\HTL\3AHIF\Readme.md");
@@ -189,13 +214,13 @@ string myPath = String.Format(@"C:\HTL\3AHIF\Readme.md");
 
 ## Parameter
 
-* ``val``: **"call b value"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer  ändert sich aber nicht. Der vorherige Parameter wird kopiert.
+* ``val``: **"call b value"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer ändert sich aber nicht. Der vorherige Parameter wird kopiert.
 * ``ref``: **"call by reference"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer ändert sich. Es wird die Speicheradresse des vorherigen Parameters kopiert.
 * ``out``: Ähnlich wie ``ref``, aber der Parameter Aufrufer gibt keinen Parameter an die Methode.
 
-## Methodenüberadungen
+## Methodenüberladungen
 
-**Grundsätzlich gilt:** eine Methoden mit gleicher Sigbatur darf nur einmal vorkommen. Es kann aber eine Methode mit gleichem Namen öfter vorkommen, dann  allerdings müssen die Parameter unterschiedlich sein.
+**Grundsätzlich gilt:** eine Methoden mit gleicher Sigbatur darf nur einmal vorkommen. Es kann aber eine Methode mit gleichem Namen öfter vorkommen, dann allerdings müssen die Parameter unterschiedlich sein.
 
 ```C#
 public void PrintName()
@@ -228,11 +253,11 @@ Wie in Java, wird kein Kontruktor angegeben, wird vom Compiler ein Default-Konst
 
 ### Konstruktoren für Structs
 
-En Dwefault-Konstruktor wird für **jede** Struct erstellt.
+Ein Default-Konstruktor wird für **jede** Struct erstellt.
 
 ### Der Initializer
 
-x
+Felder in Objekten können über den Initializer direkt nach dem ``new``-Statement mit Daten befüllt werden. Es ist also nicht zwingend notwendig einen überladenben Konstruktor aufzurufen.
 
 ## Was werden wir noch benötigen
 
