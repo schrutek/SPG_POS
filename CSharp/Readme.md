@@ -7,10 +7,6 @@
 1. [Markdown Editing mit VS Code](markdown.md)
 1. Optional: [Installation von SQL Server 2017](SqlServerInstallation.md)
 
-## Lehrinhalte auf Basis von Microsoft .NET und C#
-
-![dotnet-bot](dotnet-bot.png)
-
 ## Weiterführende Unterlagen:
 - Moissenböck: C# (JKU Linz) http://dotnet.jku.at/courses/csharp/download/Agree.aspx?ReturnUrl=%2fcourses%2fcsharp%2fdownload%2fSlides.aspx
 - C# 7 in a Nutshell: http://2.238.16.249:8880/get/pdf/106
