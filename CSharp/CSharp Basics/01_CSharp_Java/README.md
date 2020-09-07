@@ -25,7 +25,6 @@ https://github.com/schletz/Pos3xhif/blob/master/VisualStudioInstallation.md
 
 * Reference parameters
 * Stack-allocated objects (structs)
-* Block matrices
 * Uniform type system
 * goto statement
 * Delegates
@@ -91,7 +90,7 @@ Objekt werden in C# wie in Java behandelt.
 
 ### Boxing / Unboxing
 
-Eine Besonderheit ist das sog. Boxing und unboxing. Hier kann, wenn es der Datentyp zulässt, ein Wertetyp in einen Refereztyp umgewandelt (geboxt ("eingeschachtelt")) werden und umgekehrt (unboxing). Das ist manchmal ganz praktisch, sollte aber mit Bedacht und nur selten verwendet werden, da es recht Laufzeitintensiv ist, da der Speicherinhalt vom Heap in den Stack umgespeichert werden muss und umgekehrt! In diesem Beispiel wird ein Int-Objekt in einen Int umgewandelt.
+Eine Besonderheit ist das sog. Boxing und unboxing. Hier kann, wenn es der Datentyp zulässt, ein Wertetyp in einen Refereztyp umgewandelt (geboxt ("eingeschachtelt")) werden und umgekehrt (unboxing). Das ist manchmal ganz praktisch, sollte aber mit Bedacht und nur selten verwendet werden, da es recht Laufzeitintensiv ist, weil der Speicherinhalt vom Heap in den Stack umgespeichert werden muss und umgekehrt! In diesem Beispiel wird ein Int-Objekt in einen Int umgewandelt.
 
 Alle Objekte leiten von ``object`` ab und können natürlich zu diesem gecastet werden. (Mehr zu Vererbung später)
 
@@ -220,7 +219,7 @@ string myPath = String.Format(@"C:\HTL\3AHIF\Readme.md");
 
 ## Methodenüberladungen
 
-**Grundsätzlich gilt:** eine Methoden mit gleicher Sigbatur darf nur einmal vorkommen. Es kann aber eine Methode mit gleichem Namen öfter vorkommen, dann allerdings müssen die Parameter unterschiedlich sein.
+**Grundsätzlich gilt:** eine Methoden mit gleicher Sigbatur darf nur einmal vorkommen. Es kann aber eine Methode mit gleichem Namen öfter vorkommen, dann müssen aber die Parameter unterschiedlich sein.
 
 ```C#
 public void PrintName()

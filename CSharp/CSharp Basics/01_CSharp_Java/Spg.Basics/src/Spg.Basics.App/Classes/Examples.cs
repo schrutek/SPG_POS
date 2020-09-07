@@ -13,6 +13,8 @@ namespace Spg.Basics.App.Classes
         /// </summary>
         public void WriteMyColor()
         {
+            Console.WriteLine("*** WriteMyColor ***");
+
             MyColor myColor = MyColor.Blue;
             Console.WriteLine(myColor);
         }
@@ -141,6 +143,8 @@ est Lorem ipsum dolor sit amet."
         /// </summary>
         public void OverflowChecks()
         {
+            Console.WriteLine("*** OverflowChecks ***");
+
             int index = 2147483647;
             Console.WriteLine(index);
 
@@ -153,7 +157,6 @@ est Lorem ipsum dolor sit amet."
             {
                 Console.WriteLine("Zahl ist zu groß");
             }
-
             Console.WriteLine(x);
         }
 
@@ -164,9 +167,9 @@ est Lorem ipsum dolor sit amet."
         /// </summary>
         public void ForEachStatement()
         {
-            int[] indexes = { 2, 5, 123, 85, 39, 42, 9, 17, 41, 32, 51 };
+            Console.WriteLine("*** ForEachStatement ***");
 
-            Console.WriteLine();
+            int[] indexes = { 2, 5, 123, 85, 39, 42, 9, 17, 41, 32, 51 };
             foreach (int index in indexes)
             {
                 Console.Write(index + ", ");
@@ -184,6 +187,8 @@ est Lorem ipsum dolor sit amet."
         /// </summary>
         public void OverrideExample()
         {
+            Console.WriteLine("*** OverrideExample ***");
+
             Person person = new Person() { FirstName = "Alfonso", LastName = "Bauer" };
             //person.FirstName = "Alfonso";
             //person.LastName = "Bauer";
