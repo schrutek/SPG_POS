@@ -32,6 +32,8 @@ namespace Spg.Basics.App
             examples.OverflowChecks();
             examples.ForEachStatement();
             examples.OverrideExample();
+            examples.SomeFunctiom();
+            examples.SomeMoreFunction();
         }
     }
 }

@@ -199,8 +199,14 @@ est Lorem ipsum dolor sit amet."
 
         public void SomeFunctiom()
         {
+            Console.WriteLine("*** SomeFunctiom ***");
+
             int index = 3;
             CopyByValue(index); // val == 3
+            Console.WriteLine(index);
+
+            CopyByReference(ref index); // val = 4
+            Console.WriteLine(index);
         }
 
         /// <summary>
@@ -230,10 +236,14 @@ est Lorem ipsum dolor sit amet."
         /// </summary>
         public void SomeMoreFunction()
         {
+            Console.WriteLine("*** SomeMoreFunction ***");
+
             int first;
             int next;
 
             Read(out first, out next);
+
+            Console.WriteLine($"first={first} next={next}");
         }
 
         /// <summary>
