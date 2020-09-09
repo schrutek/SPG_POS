@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IEplNXhrSTodaIFCPreJOfr8vdLn1uMNwyw7H5Nll9i+JyOBKztdx5wco6VaIzM2YNK22fAsOfq5+ZbhaIWzAg==",
+  "dgSpecHash": "mFJ/jMXHeuFk4BDh//VvDg1wt6gtv7f9KN9KyOzYkDNBARf0KI7KGqIPKFF+07nSEkD9SKk9T3moi9txmnq6kg==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

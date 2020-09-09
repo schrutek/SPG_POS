@@ -1,22 +1,22 @@
 # ASP.net Core MVC
 
-Auf MSDN ist sehr bviel Material über ASP.Net Core verfügbar:
+Auf MSDN ist sehr viel Information über ASP.Net Core verfügbar:
 
 <https://docs.microsoft.com/de-at/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio>
 
 ## Projekt anlegen
 
-Das Anlegeh eines neuen Projektes nochmal zusammengefasst:
+Das Anlegen eines neuen Projektes nochmal zusammengefasst:
 
-Blank Solution anlegen. Darin werden dann alle weiteren Projekte angelegt.
+Eine "Blank Solution" anlegen. Darin werden dann alle weiteren Projekte angelegt.
 
 ![Project01](Project01.png)
 
-Verzeichnis wählen, Nme vergeben. Die Konventiobn sieht vor: ``[Unternehmen].[Solutionname]``
+Verzeichnis wählen, und den Namen vergeben. Die Konvention sieht vor: ``[Unternehmen].[Solutionname]``
 
 ![Project02](Project02.png)
 
-Das Proekt hinzufügen. (ASP.NET Core Web-Application)
+Das Projekt hinzufügen. (ASP.NET Core Web-Application)
 
 ![Project03](Project03.png)
 
@@ -40,7 +40,7 @@ Wir legen ein weiters Projekt in der Solution an (Classs-Library(.NET Core))
 
 ## Projektstruktur
 
-Das ist das Ergebnis im Solution Explorer. Es ist notwendig eine Dependency auf das Services-projekt zu legen. (Dependencies, rechte Maustaste, ``Add Project Reference...)``
+Das ist das Ergebnis im Solution Explorer. Es ist notwendig eine Dependency auf das Services-Projekt zu legen. (Dependencies, rechte Maustaste, ``Add Project Reference...)``
 
 ![Project09](Project09.png)
 
@@ -56,11 +56,11 @@ Achtung! Darauf achten, dass man sich im Controllers-Ordner befindet.
 
 ![Controller03](Controller03.png)
 
-Der Controller übernimmt Parameter aus dem Query-String und stellt der View die daten in Form eines Models bereit.
+Der Controller übernimmt Parameter aus dem Query-String und stellt der View die Daten in Form eines Models bereit.
 
 ## View hinzufügen
 
-Das gleich gilt für die Views:
+Das gleiche gilt für die Views:
 
 ![View01](View01.png)
 
@@ -89,7 +89,7 @@ public class Guest
 }
 ```
 
-Die Verwendung im Controller wäre dann beispielsweise:
+Die Verwendung im Controller wäre dann zum Beispiel:
 
 ```C#
 [HttpGet()]
@@ -103,7 +103,7 @@ public IActionResult Guest()
 
 ## Data Annotations
 
-Mit Attributen (Data Annotations) können im Model Datentypen, Überprüfungen, Begrenzungen, ... festgelegt werden.
+Mit Attributen (Data Annotations) können im Model Datentypen, Überprüfungen, Begrenzungen, usw. festgelegt werden.
 
 ```C#
 [Required]

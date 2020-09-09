@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj": {}
   },
   "projects": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj": {
+    "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj",
         "projectName": "Spg.TicketShop.Services",
-        "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj": {
+    "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj",
         "projectName": "Spg.TicketShop",
-        "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -101,8 +101,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj": {
-                "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj"
+              "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj": {
+                "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj"
               }
             }
           }

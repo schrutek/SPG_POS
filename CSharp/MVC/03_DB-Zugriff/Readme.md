@@ -4,7 +4,7 @@ Wir wollen mit der Applikation natürlich Daten aus einer DB lesen und darstelle
 
 ## Model erstellen
 
-Das Domain Object Model erstellen wir wie gewohnt mittels DB-First über das Scuffold Commando im Pckage Manager:
+Das Domain Object Model erstellen wir, wie gewohnt mittels Database First-Ansatz, über das Scuffold Commando im Package Manager:
 
 ```Powersehll
 Scaffold-DbContext "Data Source=WE20W8WS2000501\SQLEXPRESS;Initial Catalog=TicketShop;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -UseDatabaseNames -Force -DataAnnotations
@@ -14,17 +14,18 @@ Alternativ kann natürlich auch ein Code-First Ansatz verwendet werden.
 
 ## Scuffolding des Models
 
-Wir Scuffolden nun ein Model um daraus Viewas und Controller erstellen zu können.
+Wir Scuffolden nun ein Model um daraus die Views und den Controller erstellen zu können.
 
 Dazu:
-Im Contextmenü: Add, New Scuffolded Item... ; MVC Controller with Views using EF
-DB Context angeben, usw.
+Im Contextmenü: Add, New Scuffolded Item... ; MVC Controller with Views using EF, DB Context angeben, usw.
 
 ![Scuffolding](Scuffolding.png)
 
-Wir erhalten jede Menge autogenerirten Code. Im Prinzip ost es aber recht einfach zu verstehen.
+<https://github.com/schrutek/SPG_POS/tree/master/CSharp/EF%20Core/ConnectionString.md>
 
-Es wird eine Controller-Klasse erstelltz und in einem eigenen Unterverzeichnis die dazugehörigen Views (Model-View-Controller)
+Wir erhalten jede Menge autogenerirten Code. Im Prinzip ist es aber recht einfach zu verstehen.
+
+Es wird eine Controller-Klasse erstellt und in einem eigenen Unterverzeichnis die dazugehörigen Views (Model-View-Controller)
 
 ![GeneratedCode](GeneratedCode.PNG)
 
@@ -41,7 +42,9 @@ Es wird eine Controller-Klasse erstelltz und in einem eigenen Unterverzeichnis d
 
 ## Die erste Liste
 
-Im Prinzip funktioniert der generierte Code bereits und liefert ein schönes Ergebnis. Aber man kann natürlich erweitern:
+Im Prinzip funktioniert der generierte Code bereits und liefert ein schönes Ergebnis. Aber man kann ihn natürlich erweitern:
+
+In diesem beispiel wird eine Meldung ausgegeben, dass keine Ergebnisse gefunden wurden, wenn das Modell (Liste) ``null`` oder leer ist .
 
 ```C#
 @if (Model != null
@@ -73,7 +76,7 @@ else
 
 Details hier: <https://docs.microsoft.com/en-us/aspnet/core/mvc/views/working-with-forms?view=aspnetcore-3.1#the-form-tag-helper>
 
-Tag-Helper werden mit den Prefix `asp-` versehen. Das ist aber lediglich Konvention. DAhinter steht, wi auch bei den alten Tag-Helpern eine C# Klasse, die HTML erzeugt.
+Tag-Helper werden mit den Prefix `asp-` versehen. Das ist aber lediglich Konvention. Dahinter steht, wie auch bei den alten Tag-Helpern eine C# Klasse, die HTML erzeugt.
 
 `asp-for` extrahiert den Namen des Properties und stellt diesen dar:
 

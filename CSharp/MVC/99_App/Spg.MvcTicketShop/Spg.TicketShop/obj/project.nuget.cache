@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AcylfYK0LPHTR1s3OK7bwwLxJFkGVEnrFK81eQuYazZPLPRNtAuG7E8+LLmsUrzuzKUe4QzVtbV7/EWKO6chcA==",
+  "dgSpecHash": "H7x6VZfw1sZhzTKkFEE/8GQupwi17jpsc6xzsdm8BDtLMLk0LZhs+pvx/QUVu55eFyuw48IGEmMnliR98snkLw==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop\\Spg.TicketShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
