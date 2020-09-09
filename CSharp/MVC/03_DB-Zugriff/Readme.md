@@ -12,6 +12,10 @@ Scaffold-DbContext "Data Source=WE20W8WS2000501\SQLEXPRESS;Initial Catalog=Ticke
 
 Alternativ kann natürlich auch ein Code-First Ansatz verwendet werden.
 
+Wichtig! Den Connection-String aus dem Context-File entfernen:
+
+<https://github.com/schrutek/SPG_POS/tree/master/CSharp/EF%20Core/ConnectionString.md>
+
 ## Scuffolding des Models
 
 Wir Scuffolden nun ein Model um daraus die Views und den Controller erstellen zu können.
@@ -20,8 +24,6 @@ Dazu:
 Im Contextmenü: Add, New Scuffolded Item... ; MVC Controller with Views using EF, DB Context angeben, usw.
 
 ![Scuffolding](Scuffolding.png)
-
-<https://github.com/schrutek/SPG_POS/tree/master/CSharp/EF%20Core/ConnectionString.md>
 
 Wir erhalten jede Menge autogenerirten Code. Im Prinzip ist es aber recht einfach zu verstehen.
 
@@ -84,7 +86,7 @@ Tag-Helper werden mit den Prefix `asp-` versehen. Das ist aber lediglich Konvent
 <label asp-for="@firstEvent.Name"></label>
 ```
 
-Eine andere Variante als die autogenerierte um die Items in der Tabelle darzustellen ist mittels dem HTML-Tag `label`:
+Eine andere Variante (als die autogenerierte) um die Items in der Tabelle darzustellen ist, mittels HTML-Tag `label`:
 
 ```HTML
 <label>@item.Name</label>
@@ -114,15 +116,13 @@ oder:
  <a asp-controller="Shows" asp-action="FilteredById" asp-route-eventid="@item.EventId">Shows</a>
  ```
 
- Der Parameter in der GET-Controllermethode würde hier `eventId` heißen. Man kann belibig viele `asp-route-` angeben. Gut ist es aber nicht (**Security-Isues**). Wenn möglich auf ID's beschr#nken. Keinesfalls Kontonummern, Kreditkartennummern oder Kennwörter in die URL schreiben!! (Achtung wegen Cross Site Scripting). Sogar Namen sollten vermieden werden.
-
-## Details Page
-
-x
+ Der Parameter in der GET-Controllermethode würde hier `eventId` heißen. Man kann belibig viele `asp-route-` angeben. Gut ist es aber nicht (**Security-Issue**). Wenn möglich auf ID's beschränken. Keinesfalls Kontonummern, Kreditkartennummern oder Kennwörter in die URL schreiben!! (Achtung Cross Site Scripting). Sogar Namen sollten (wenn geht) vermieden werden.
 
 ## Edit Page
 
-Der generierte Code muss im Normalfall nicht großertig verändert werden, aber die clientseitige validierung wäre erwähnenswert.
+Der generierte Code muss im Normalfall nicht großertig verändert werden, aber die clientseitige validierung wäre erwähnenswert. (JQuery-Validation)
+
+<https://docs.microsoft.com/de-de/aspnet/core/mvc/models/validation?view=aspnetcore-3.1>
 
 ```HTML
 <form asp-action="Edit">

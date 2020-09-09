@@ -2,7 +2,7 @@
 
 Das Prinzip von Inversion of Control ist ja bereits bekannt. Wir wollen es nun hier weiter vertiefen.
 
-Das wesentlichste dabei ist, eine Entkoppelung  der Komponenten zu bewirken. Je feiner granular Komponenten gestaltet werden und besser sie entkoppelt sind umso flexibler wird unser Softwaregerüst.
+Das wesentlichste dabei ist, eine Entkoppelung der Komponenten zu bewirken. Je feiner granular die Komponenten gestaltet werden und umso besser sie entkoppelt sind, desto flexibler wird unser Softwaregerüst.
 
 ## Services
 
@@ -11,11 +11,11 @@ Das wesentlichste dabei ist, eine Entkoppelung  der Komponenten zu bewirken. Je 
 
 ### Einen Event-Service anlegen
 
-Dazu im generiten namespace eine neue Klasse `EventService` erstellen. Code kann nun aus dem Controller in diese Klasse transferiert werden. Wir wollen alle Abhänmgigkeiten zum DB-Context aus dem Controller entfernen.
+Dazu im generierten Namespace eine neue Klasse `EventService` erstellen. Code kann nun aus dem Controller in diese Klasse transferiert werden. Wir wollen alle Abhängigkeiten zum DB-Context aus dem Controller entfernen.
 
-Im einfachsten Fall kann man den LinQ-Qiery aus dem Controller in eine neue Methode `GetAllAsync()` ohne Parameter kopieren.
+Im einfachsten Fall kann man den LinQ-Query aus dem Controller in eine neue Methode `GetAll()` `GetAllAsync()` kopieren.
 
-Später werden wir die Methode nach und nach um weitere Features erweitern, die wir ebenfalls implementieren wollen.
+Später werden wir die Methode nach und nach um weitere Features erweitern.
 
 ## DB-Context injecten
 
@@ -29,6 +29,8 @@ public EventService(TicketShopContext context)
     _context = context;
 }
 ```
+
+### List-Methode
 
 ```C#
 public async Task<IEnumerable<Events>> GetAllAsync()
@@ -53,7 +55,7 @@ public async Task<Events> CreateAsync(Events newModel)
 }
 ```
 
-### Delete.-Methode
+### Delete-Methode
 
 ```C#
 public async Task<Events> DeleteAsync(Guid? id)
@@ -80,13 +82,13 @@ public async Task<Events> EditAsync(Guid id, Events newModel)
     }
     catch (DbUpdateConcurrencyException)
     {
-        if (!EventsExists(newModel.EventId))
+        if (!EventsExists(model.EventId))
         {
-            throw new KeyNotFoundException("Datensatz wurde nicht gefunden!");
+            throw new ServiceLayerException("Datensatz ist nicht mehr aktuell und muss neu geladen werden!");
         }
         else
         {
-            throw;
+            throw new ServiceLayerException("Datensatz konnte nicht gefunden werden!");
         }
     }
 
@@ -99,11 +101,11 @@ private bool EventsExists(Guid id)
 }
 ```
 
-Im Service wird nicht zwischen GET und POST unterschieden. Diese Methoden manipulieren nur die Datenbank. Wir arbeiten generisch. D.h. diese Methoden sollen  für Applikationen, die aber ein anders Front End haben ebenfalls verwendbar sein. Das könnte sogar eine WPF oder Konslen-Applikation sein. Hier gäbe es keine HTTP-Requests.
+Im Service wird nicht zwischen GET und POST unterschieden. Diese Methoden manipulieren nur die Datenbank. Wir arbeiten generisch. D.h. diese Methoden sollen für Applikationen, die aber ein anderes Front End haben ebenfalls verwendbar sein. Das könnte auch eine WPF oder Konslen-Applikation sein. Hier gäbe es keine HTTP-Requests.
 
 ## Controller
 
-Im Controller werden die Metghoden dann noch aufgerufen. Auch hier wird eine Instanz vom Service benötigt:
+Im Controller werden die Methoden dann aufgerufen. Auch hier wird eine Instanz vom Service benötigt:
 
 ```C#
 private readonly IEventService _eventService;
@@ -181,18 +183,16 @@ public async Task<IActionResult> Edit(Guid id, [Bind("EventId,LastChangeDate,Las
     {
         try
         {
-            await _eventService.EditAsync(id, events);
+            await _eventService.Edit(id, events);
         }
-        catch (DbUpdateConcurrencyException)
-        {
-            throw;
-        }
-        catch (KeyNotFoundException)
+        catch (ServiceLayerException)
         {
             return NotFound();
         }
         return RedirectToAction(nameof(Index));
     }
+    ViewData["CatEventStateId"] = new SelectList(_lookupService.GetAllValidCatEventStates(), "CatEventStateId", "Key", events.CatEventStateId);
+    ViewData["LaseChangeUserId"] = new SelectList(_context.Users, "UserId", "FirstName", events.LaseChangeUserId);
     return View(events);
 }
 ```
@@ -233,8 +233,7 @@ public async Task<IActionResult> DeleteConfirmed(Guid id)
 
 ## Interfaces
 
-Hier wurden bereits Interfaces aös Typen für die jeweiligen Instanzen verwednet. Es 
-sollte immer eine Trennung durch die Erstellung von Interfaces vorgenommen werden.
+Hier wurden bereits Interfaces als Typen für die jeweiligen Instanzen verwendet. Es sollte immer eine Trennung durch die Erstellung von Interfaces vorgenommen werden.
 
 Registrieren der Services in der `Startup.cs`:
 
