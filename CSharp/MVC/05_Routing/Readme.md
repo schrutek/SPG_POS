@@ -6,10 +6,10 @@ Folgende Routing-Varianten stehen zur Verfügung:
 
 ## Endpoint Routing
 
-Seit Core 3.0 wird Endpoint-Routing unterstützt. Es ist die klassische und daher kompatibleste Variante des Routings.
+Seit Core 3.0 wird Endpoint-Routing unterstützt. Es ist die kompatibleste Variante des Routings.
 
 ```C#
-/app.UseEndpoints(endpoints =>
+app.UseEndpoints(endpoints =>
 {
     endpoints.MapGet("/", async context =>
     {
@@ -34,7 +34,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Dabei handelt es sich um das Konventionelle MVC-Routing. Das Pattern gibt die Routen an. `Controllername/Methode/ID` Die ID ist dabei Optional. Weitere Parameter (z.B.: State, Filter, ...) können alsURL-Parameter an die URL angefügt werden.
+Dabei handelt es sich um das konventionelle MVC-Routing. Das Pattern gibt die Routen an. `Controllername/Methode/ID` Die ID ist dabei optional. Weitere Parameter (z.B.: State, Filter, ...) können als URL-Parameter an die URL angefügt werden.
 
 ```HTTP
 https://localhost:5001/Events/Index?filter=danc&state=465604e4-21f3-4092-b09a-54744860b78e
@@ -42,7 +42,7 @@ https://localhost:5001/Events/Index?filter=danc&state=465604e4-21f3-4092-b09a-54
 
 ## Attribute Routing
 
-Die beste Form ist das attribute-Routing, da es dem Konzept von REST sehr nahe kommt. Wir werden also gleich mit dieser variante loslegen:
+Eine weitere Form ist das Attribute-Routing. Es wird auch bei REST-APIs verwendet
 
 In der `Startup.cs`:
 
@@ -53,10 +53,10 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Das aktiviert das Routing welches in den neinzelnen Controllern angegeben ist. Die Controller weden dann it den Route-Annotations bzw. den HTTP-Verben versehen:
+Dies aktiviert das Routing welches in den einzelnen Controllern angegeben ist. Die Controller werden dann mit den Route-Annotations bzw. den HTTP-Verben versehen:
 
-* Route-DataAnnotation (`[Route()]`)
-* Http-Verb (`[HttpGet()]`, `[HttpPost()]`)
+* Route-DataAnnotation (`[Route("[controller]/[action]")]`)
+* Http-Verb (`[HttpGet()]`, `[HttpGet({id})]`, `[HttpGet({state})]`, `[HttpPost()]`
 
 ```C#
 [Route("[controller]/[action]")]

@@ -213,9 +213,9 @@ string myPath = String.Format(@"C:\HTL\3AHIF\Readme.md");
 
 ## Parameter
 
-* ``val``: **"call b value"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer ändert sich aber nicht. Der vorherige Parameter wird kopiert.
-* ``ref``: **"call by reference"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer ändert sich. Es wird die Speicheradresse des vorherigen Parameters kopiert.
-* ``out``: Ähnlich wie ``ref``, aber der Parameter Aufrufer gibt keinen Parameter an die Methode.
+* ``value parameter``: **"call b value"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer ändert sich aber nicht. Der vorherige Parameter wird kopiert.
+* ``ref parameter``: **"call by reference"** Der Wert wird in der Methode erhöht, der Parameter vom Aufrufer ändert sich. Es wird die Speicheradresse des vorherigen Parameters kopiert.
+* ``out parameter``: Ähnlich wie ``ref``, aber der Parameter Aufrufer gibt keinen Parameter an die Methode.
 
 ## Methodenüberladungen
 

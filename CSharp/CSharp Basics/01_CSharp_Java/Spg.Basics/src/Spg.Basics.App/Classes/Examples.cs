@@ -16,7 +16,7 @@ namespace Spg.Basics.App.Classes
             Console.WriteLine("*** WriteMyColor ***");
 
             MyColor myColor = MyColor.Blue;
-            Console.WriteLine(myColor);
+            Console.WriteLine((int)myColor);
         }
 
         /// <summary>
