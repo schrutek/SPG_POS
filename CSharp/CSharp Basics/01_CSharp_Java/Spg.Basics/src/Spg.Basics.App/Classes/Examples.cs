@@ -259,5 +259,15 @@ dasd {name}";
             a = 5;
             b = 12;
         }
+
+        public void ExampleWithTpeCast()
+        {
+            Person person = new Person();
+
+            object myObject = person;
+
+            ((Person)myObject).FirstName = "";
+
+        }
     }
 }
