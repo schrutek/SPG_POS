@@ -144,7 +144,7 @@ public void UseAStruct()
 }
 ```
 
-## Die Kalsse String
+## Die Klasse String
 
 Die String-Klasse ist ein Referenztyp, hat aber einige Besonderheiten:
 

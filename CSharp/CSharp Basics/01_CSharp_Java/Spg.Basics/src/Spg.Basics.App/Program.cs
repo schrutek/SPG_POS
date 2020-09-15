@@ -34,6 +34,7 @@ namespace Spg.Basics.App
             examples.OverrideExample();
             examples.SomeFunctiom();
             examples.SomeMoreFunction();
+            examples.Irgendwas();
         }
     }
 }

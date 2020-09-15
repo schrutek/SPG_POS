@@ -55,8 +55,8 @@ namespace Spg.Basics.App.Classes
             }
 
             string lastName = "Bauer";
-            Console.WriteLine("Hello {0} {1}", name, lastName);
-            Console.WriteLine($"Hello {name} {lastName}");
+            Console.WriteLine("Hello {0} {1} {2}", name, lastName, " noch etwas");
+            Console.WriteLine($"Hello {name} xxxxxxx {lastName}");
 
             Console.WriteLine("C:\\HTL\\3AHIF\\Readme.md");
             Console.WriteLine(@"C:\HTL\3AHIF\Readme.md");
@@ -205,10 +205,10 @@ dasd {name}";
             Console.WriteLine("*** SomeFunctiom ***");
 
             int index = 3;
-            CopyByValue(index); // val == 3
+            CopyByValue(index); 
             Console.WriteLine(index);
 
-            CopyByReference(ref index); // val = 4
+            CopyByReference(ref index); 
             Console.WriteLine(index);
         }
 
@@ -269,5 +269,32 @@ dasd {name}";
             ((Person)myObject).FirstName = "";
 
         }
+
+        public void Irgendwas()
+        {
+            Person person = new Person() 
+            { 
+                Vorname = "sdfsdf", 
+                Nachname = "sdsd" 
+            };
+
+
+            int index = 0;
+            long longIndex = 10;
+
+            index = (int)longIndex;
+
+            int? nullableInt = null;
+
+            if (nullableInt.HasValue)
+            {
+
+            }
+            else 
+            {
+
+            }
+        }
+
     }
 }
