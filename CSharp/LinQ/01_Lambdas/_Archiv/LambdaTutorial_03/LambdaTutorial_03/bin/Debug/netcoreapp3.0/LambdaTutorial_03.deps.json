@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "LambdaTutorial_03/1.0.0": {
+        "runtime": {
+          "LambdaTutorial_03.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LambdaTutorial_03/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

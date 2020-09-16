@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VD6ALKeSnc6Lt6foLkozoN3rnF6bKfdQMRXJVfseWlmdtAEx4XJvzmnbgfuSPi9sPrG84hbzeDP/D6xhY/05dg==",
+  "dgSpecHash": "0ik8gcE0EDPtfsapdfU44bTUTTq9VtQwMshkROf5O/4vPhElu88mE/2Zgt9KVmMuoaXJpQL1W6Bl0S2ZMi6hGg==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\03_Linq\\01_Lambdas\\02_SPG.DelegateTutorial\\SPG.LambdaTutorial\\SPG.LambdaTutorial.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\LinQ\\01_Lambdas\\02_SPG.DelegateTutorial\\SPG.LambdaTutorial\\SPG.LambdaTutorial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",

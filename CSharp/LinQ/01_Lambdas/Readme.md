@@ -1,11 +1,8 @@
 # Lambdas in C#
-
 ## Intro in LINQ und Lambdas
-
 Als Einstieg definieren wir eine Klasse *Pupil*, die Daten von Schülern erfasst. Eine Klasse *PupilList*
 verwaltet diese in einer Liste. Wir möchten in dieser *PupilList* auch filtern können. Ein Filter, der
 alle Schüler einer Klasse heraussucht, kann so aussehen:
-
 ```c#
 class Pupil
 {
@@ -32,7 +29,6 @@ class PupilList : List<Pupil>
 ```
 
 Der Aufruf der Filtermethode ist wie erwartet:
-
 ```c#
 static void Main(string[] args)
 {
@@ -46,12 +42,9 @@ static void Main(string[] args)
 
     PupilList pupils3bhif = pupils.Filter("3BHIF");
 }
-
 ```
-
 Nun wollen wir auch nach dem Zunamen filtern. Unsere *Filter()* Funktion filtert fix nach der Klasse,
 daher haben wir mehrere Möglichkeiten:
-
 - Wir schreiben eine Funktion FilterLastname(). Der Code ist allerdings meist ident zur *Filter()* Methode,
   und Code kopieren ist bekanntlich das Schlechteste Design.
 - Wir könnten den Propertynamen, den wir filtern möchten, auch übergeben. Über Reflection wäre das zwar
@@ -64,12 +57,10 @@ static Typing um, das bedeutet, wir müssen dem Compiler einmal sagen, wie unser
 ist.
 
 ### Eine Reise durch die Geschichte: delegates
-
 Die nachfolgende Technik wird heute nicht mehr verwendet, falls jedoch einmal älterer Code bearbeitet
 werden soll, kann dieser mit dem Wissen verstanden werden.
 
 Wir ergänzen unsere Klasse *PupilList* um ein public Member *FilterDelegate*:
-
 ```c#
 class PupilList : List<Pupil>
 {
@@ -81,12 +72,13 @@ class PupilList : List<Pupil>
 }
 ```
 
-Ein *delegate* ist eine "Schablone" für eine Funktion. Er steht für alle Funktionen, die in diesem Fall *bool* zurückliefern und ein Argument vom Typ *Pupil* bekommen. Es ist ähnlich den Interfaces, die auch
+Ein *delegate* ist eine "Schablone" für eine Funktion. Er steht für alle Funktionen, die in diesem Fall
+*bool* zurückliefern und ein Argument vom Typ *Pupil* bekommen. Es ist ähnlich den Interfaces, die auch
 nur eine "Schablone" für Klassen, die es implementieren, darstellen.
 
-Wir können wir diese Funktion nun in unserem Filter verwenden? Da die konkrete Filterfunktion als Argument für die Filtermethode übergeben wird, können wir diese dort nutzen. Den Delegate selbst
+Wir können wir diese Funktion nun in unserem Filter verwenden? Da die konkrete Filterfunktion als 
+Argument für die Filtermethode übergeben wird, können wir diese dort nutzen. Den Delegate selbst
 können wir nicht aufrufen, da er ja nur eine Schablone und keine konkrete Funktion ist.
-
 ```c#
 class PupilList : List<Pupil>
 {
@@ -107,7 +99,6 @@ class PupilList : List<Pupil>
 ```
 
 Der konkrete Filter wird übergeben, das bedeutet er wird in der Program Klasse definiert:
-
 ```c#
 class Program
 {
@@ -125,7 +116,6 @@ class Program
 
 Das Ergebnis sind wieder alle Schüler der 3BHIF. Wir können jedoch jetzt mehrere Filter definieren.
 Im folgenden Beispiel wollen wir alle Schüler, dessen Id kleiner als 10 ist, bekommen:
-
 ```c#
 class Program
 {
@@ -142,9 +132,7 @@ class Program
 ```
 
 ### Generische Delegates und Lambdas helfen
-
 Der obere Ansatz ist für den Programmierer natürlich sehr mühsam:
-
 - Der delegate muss definiert werden.
 - Die Filtermethode muss mit Namen angelegt werden, auch wenn sie nur 1x verwendet wird.
 
@@ -152,7 +140,6 @@ Deswegen wurden mit C# 3 im Jahr 2007 einer der größen Schritte in der Entwick
 gemacht: Die Einführung von *Lambdas* und *Linq*.
 
 Unser Code kann mit C# 3 so aussehen:
-
 ```c#
 class PupilList : List<Pupil>
 {
@@ -180,7 +167,6 @@ class Program
     }
 }
 ```
-
 1. Mit den Generics in C# 2.0 konnten auch delegates, also unsere "Funktionsschablonen" generisch
    definiert werden. `Func<Pupil, bool>` steht für alle Funktionen, die Pupil als Argument bekommen
    und bool zurückgeben.

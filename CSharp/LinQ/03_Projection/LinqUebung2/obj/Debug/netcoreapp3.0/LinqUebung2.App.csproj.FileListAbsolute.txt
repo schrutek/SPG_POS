@@ -1,0 +1,13 @@
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\LinqUebung2.App.exe
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\LinqUebung2.App.deps.json
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\LinqUebung2.App.runtimeconfig.json
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\LinqUebung2.App.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\LinqUebung2.App.dll
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\LinqUebung2.App.pdb
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\obj\Debug\netcoreapp3.0\LinqUebung2.App.csprojAssemblyReference.cache
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\obj\Debug\netcoreapp3.0\LinqUebung2.App.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\obj\Debug\netcoreapp3.0\LinqUebung2.App.AssemblyInfo.cs
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\obj\Debug\netcoreapp3.0\LinqUebung2.App.csproj.CopyComplete
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\obj\Debug\netcoreapp3.0\LinqUebung2.App.dll
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\02 Linq\03_Projection\LinqUebung2\obj\Debug\netcoreapp3.0\LinqUebung2.App.pdb
