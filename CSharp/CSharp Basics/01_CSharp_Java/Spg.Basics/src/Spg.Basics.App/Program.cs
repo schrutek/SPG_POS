@@ -35,6 +35,10 @@ namespace Spg.Basics.App
             examples.SomeFunctiom();
             examples.SomeMoreFunction();
             examples.Irgendwas();
+            examples.StringSachen();
+
+            ReferenceTypesExamples referenceTypesExamples = new ReferenceTypesExamples();
+            referenceTypesExamples.DoSomething();
         }
     }
 }

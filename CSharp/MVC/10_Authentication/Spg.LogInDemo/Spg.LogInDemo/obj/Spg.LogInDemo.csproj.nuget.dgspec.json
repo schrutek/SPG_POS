@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\MVC\\10_Authentication\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj": {}
   },
   "projects": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj": {
+    "C:\\HTL\\POS\\CSharp\\MVC\\10_Authentication\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\MVC\\10_Authentication\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj",
         "projectName": "Spg.LogInDemo",
-        "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\10_Authentication\\Spg.LogInDemo\\Spg.LogInDemo\\Spg.LogInDemo.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\99_App\\Spg.LogInDemo\\Spg.LogInDemo\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\MVC\\10_Authentication\\Spg.LogInDemo\\Spg.LogInDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

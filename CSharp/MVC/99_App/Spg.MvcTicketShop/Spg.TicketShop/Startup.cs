@@ -45,6 +45,7 @@ namespace Spg.TicketShop
             
             services.AddScoped<IEventService, EventService>();
             services.AddScoped<IShowService, ShowService>();
+            services.AddScoped<ILogInService, LogInService>();
 
             services.AddTransient<LookupService>();
         }

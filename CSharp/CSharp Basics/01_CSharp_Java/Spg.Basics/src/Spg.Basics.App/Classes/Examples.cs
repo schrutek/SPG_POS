@@ -296,5 +296,25 @@ dasd {name}";
             }
         }
 
+
+        public void StringSachen()
+        {
+            string s1 = "Hello World!";
+
+            if (s1 != null)
+            {
+                int laenge = s1.Length;
+            }
+            else
+            {
+                Console.WriteLine("Ist null, geht nicht!");
+            }
+
+            int ab = s1?.Length ?? 0;
+
+
+
+        }
+
     }
 }

@@ -11,16 +11,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Spg.TicketShop.Data;
 using Spg.TicketShop.Extensions;
+using Spg.TicketShop.Services.Interfaces;
 
 namespace Spg.TicketShop
 {
     public class LoginModel : PageModel
     {
         private readonly ILogger<LoginModel> _logger;
+        private readonly ILogInService _logInService;
 
-        public LoginModel(ILogger<LoginModel> logger)
+        public LoginModel(ILogger<LoginModel> logger, ILogInService logInService)
         {
             _logger = logger;
+            _logInService = logInService;
         }
 
         [BindProperty]
@@ -71,7 +74,7 @@ namespace Spg.TicketShop
                 // on the email address maria.rodriguez@contoso.com with 
                 // any password that passes model validation.
 
-                var user = await AuthenticateUser(Input.Email, Input.Password);
+                var user = await AuthenticateUser();
 
                 if (user == null)
                 {
@@ -136,7 +139,7 @@ namespace Spg.TicketShop
             return Page();
         }
 
-        private async Task<ApplicationUser> AuthenticateUser(string email, string password)
+        private async Task<ApplicationUser> AuthenticateUser()
         {
             // For demonstration purposes, authenticate a user
             // with a static email address. Ignore the password.
@@ -144,8 +147,9 @@ namespace Spg.TicketShop
 
             await Task.Delay(500);
 
-            if (email == "maria.rodriguez@contoso.com")
+            if (Input.Email == "maria.rodriguez@contoso.com")
             {
+                _logInService.Test();
                 return new ApplicationUser()
                 {
                     Email = "maria.rodriguez@contoso.com",
