@@ -1,0 +1,13 @@
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\bin\Debug\netcoreapp3.1\Spg.Basics.App.exe
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\bin\Debug\netcoreapp3.1\Spg.Basics.App.deps.json
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\bin\Debug\netcoreapp3.1\Spg.Basics.App.runtimeconfig.json
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\bin\Debug\netcoreapp3.1\Spg.Basics.App.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\bin\Debug\netcoreapp3.1\Spg.Basics.App.dll
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\bin\Debug\netcoreapp3.1\Spg.Basics.App.pdb
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.AssemblyInfo.cs
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.dll
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.pdb
+C:\HTL\POS\CSharp\CSharp Basics\01_CSharp_Java\Spg.Basics\src\Spg.Basics.App\obj\Debug\netcoreapp3.1\Spg.Basics.App.genruntimeconfig.cache
