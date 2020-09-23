@@ -7,6 +7,12 @@ eingebunden werden:
 using System.Collections.Generic;
 ```
 
+## Interfacestruktur
+
+Im .Net Framework (.Net Core) ist folgende Vererbungshierarchie der Collection-Interfaces festgelegt.
+
+![ListsInterfaces.png](ListsInterfaces.png)
+
 ## Generic Collection Interfaces
 
 Die Vererbungsstruktur der generischen Interfaces für Collections sieht folgendermaßen aus:
