@@ -1,213 +1,111 @@
 # Dependency Injection
 
-Eine praktische Anwendung von Interfaces findet sich in der Technik der *Dependency Injection*. In unserem
-Beispiel simulieren wir den Zugriff auf den GPS Sensor des Smartphones. Je nach Betriebssystem (Android oder iOS)
-benötigen wir spezifischen Code, um den Standort herauszufinden.
+Eine praktische Anwendung von Interfaces findet sich in der Technik der *Dependency Injection*.
 
-Die Trackeranwendung selbst soll auf allen Geräten laufen. Daher müssen wir gerätespezifischen Code
-auslagern. Wir definieren einmal eine Klasse Point, die Längen- und Breitengrad speichert sowie ein Interface ILocationProvider:
+Stellen wir uns eine Applikation vor, die Daten aus einer Datenquelle holt. Diese Applikation ist aus Architekturgründen in mehrere Layer unterteilt. Ein Client steht ganz oben. Dieser Instanziert einen Service, der vielleicht etwas Ablauflogik enthält. Der Service wiederum instanziert eine Data Access-Klasse, die dann die Daten aus der Datenquelle ließt.
 
-```c#
-public class Point
+Diese Konfiguratzion ist zwar sehr übersichtlich und aus technischer Sicht auch gut, aber sehr starr, da in jedem Layer, Klassen des darunterliegenden Layers instanziert werden.
+
+Abhilfe schafft hier Dependency-Injection
+
+Das folgene Beispiel ist eine Applikation, die in 3 Layer unterteilt ist. Sie gibt letztlich nur einen String in der Konsiole aus.
+
+* Program: Der Client der letztlich den String in die Konsole schreibt.
+* Service: Ein Service, der normalerweise Businessentscheidungen trifft (in unserem einfachen Fall aber nicht)
+* DataAccess: Hier weden die Daten aus einer Datenquelle gelesen. In unserem einfachen Fall wird nur ein String retuniert.
+
+## Starke Kopplung
+
+Zuerst die "klassische" starke Kopplung. Das funktioniert so natürlich, hat aber einen Nachteil. Wollen wir Daten aus einer anderen Datenquelle anfordern, müssen wir im Service eine Instanz der anderen Data Layer-Klasse erstellen. Wir müssen also einen Service ändern, den wir nicht unbedingt ändern wollen.
+
+Interface:
+
+```C#
+public interface ICustomerDataAccess
 {
-    public double Lat { get; }
-    public double Lng { get; }
-    public Point(double lat, double lng)
-    {
-        Lat = lat;
-        Lng = lng;
-    }
-
-}
-interface ILocationProvider
-{
-    public DateTime LastMeasurement { get; }
-    public Point GetLocation();
+    string GetCustomerName(int id);
 }
 ```
 
-Damit wir unterschiedliche Betriebssysteme simulieren können, implementieren wir dieses Interface in
-2 Klassen: *AppleLocationProvider* und *AndroidLocationProvider*. Sie liefern beide in unserer Demo Zufallszahlen,
-jedoch liefert die Apple Version nur alle 5 Sekunden einen neuen Standort, während die Android Version alle
-2 Sekunden einen neuen Standort liefert:
+Data Access Layer:
 
-```c#
-public class AppleLocationProvider : ILocationProvider
+```C#
+public class CustomerDataAccess : ICustomerDataAccess
 {
-    private Point currentPoint;
-    // Ein set ist möglich, obwohl im Interface nur get "vorgeschrieben" ist.
-    public DateTime LastMeasurement { get; private set; } = DateTime.MinValue;
-
-    public Point GetLocation()
+    public string GetCustomerName(int id)
     {
-        // DEVICE SPECIFIC CODE
-
-        Random rnd = new Random();
-        DateTime now = DateTime.Now;
-        if ((now - LastMeasurement).TotalSeconds > 5)
-        {
-            LastMeasurement = now;
-            currentPoint = new Point(rnd.NextDouble() * 180 - 90, rnd.NextDouble() * 360);
-        }
-        return currentPoint;
-    }
-}
-
-public class AndroidLocationProvider : ILocationProvider
-{
-    private Point currentPoint;
-    public DateTime LastMeasurement { get; private set; } = DateTime.MinValue;
-
-    public Point GetLocation()
-    {
-        // DEVICE SPECIFIC CODE
-
-        Random rnd = new Random();
-        DateTime now = DateTime.Now;
-        if ((now - LastMeasurement).TotalSeconds > 2)
-        {
-            LastMeasurement = now;
-            currentPoint = new Point(rnd.NextDouble() * 180 - 90, rnd.NextDouble() * 360);
-        }
-        return currentPoint;
+        return $"Dummy Customer Name with id {id}";
     }
 }
 ```
 
-Der Tracker selbst soll geräteunabhängig sein. Um das zu erreichen, übergeben wir im Konstruktor einfach
-eine Instanz des Interfaces und verlangen nicht eine spezifische Implementierung als Parameter. Die Methode
-*DoTracking()* ruft dann einfach jede Sekunde die Methode *GetLocation()* auf:
+Service-Layer:
 
-```c#
-class MyTracker
+```C#
+public class CustomerService
 {
-    private readonly ILocationProvider locator;
-    // Die "Injection" erfolgt im Konstruktor.
-    public MyTracker(ILocationProvider locator)
+    private ICustomerDataAccess _customerDataAccess;
+
+    public CustomerService()
     {
-        this.locator = locator;
+        _customerDataAccess = new CustomerDataAccess();
     }
 
-    public void DoTracking(int seconds)
+    public string GetCustomerName(int id)
     {
-        DateTime start = DateTime.Now;
-        while ((DateTime.Now - start).TotalSeconds < seconds)
-        {
-            Point position = locator.GetLocation();
-            Console.WriteLine($"Lat: {position.Lat:0.00}°, Lng: {position.Lng:0.00}°");
-            System.Threading.Thread.Sleep(1000);
-        }
+        return _customerDataAccess.GetCustomerName(id);
     }
 }
 ```
 
-Zum Testen instanzieren wir in unserer *Program* Klasse einmal mit einer Instanz von *AndroidLocationProvider*
-und einmal mit einer Instanz von *AppleLocationProvider*.
-
-```c#
-class Program
+```C#
+public class Program
 {
-    static void Main(string[] args)
+    CustomerService _cusomerService;
+
+    public Program()
     {
-        MyTracker tracker;
-        Console.WriteLine("Tracking mit ANDROID:");
-        tracker = new MyTracker(new AndroidLocationProvider());
-        tracker.DoTracking(10);
-        Console.WriteLine("Tracking mit APPLE:");
-        tracker = new MyTracker(new AppleLocationProvider());
-        tracker.DoTracking(10);
+        _cusomerService = new CustomerService();
+    }
+
+    public void ProcessCustomerName()
+    {
+        Console.WriteLine(_cusomerService.GetCustomerName(12));
+    }
+
+    public static void Main(string[] args)
+    {
+        Program program = new Program();
+        program.ProcessCustomerName();
     }
 }
 ```
 
-In der Ausgabe erkennen wir die unterschiedlichen Intervalle bei der Aktualisierung der Werte.
+## Lose Kopplung
 
-```PowerShell
-Tracking mit ANDROID:
-Lat: -12.95°, Lng: 3.2°
-Lat: -12.95°, Lng: 3.2°
-Lat: 45.51°, Lng: 26.2°
-Lat: 45.51°, Lng: 26.2°
-Lat: -8.77°, Lng: 3.5°
-Lat: -8.77°, Lng: 3.5°
-Lat: -56.19°, Lng: 232.6°
-Lat: -56.19°, Lng: 232.6°
-Lat: -27.74°, Lng: 185.7°
-Lat: -27.74°, Lng: 185.7°
-Tracking mit APPLE:
-Lat: -7.93°, Lng: 202.5°
-Lat: -7.93°, Lng: 202.5°
-Lat: -7.93°, Lng: 202.5°
-Lat: -7.93°, Lng: 202.5°
-Lat: -7.93°, Lng: 202.5°
-Lat: -13.71°, Lng: 86.0°
-Lat: -13.71°, Lng: 86.0°
-Lat: -13.71°, Lng: 86.0°
-Lat: -13.71°, Lng: 86.0°
-Lat: -13.71°, Lng: 86.0°
-```
+Besser ist es dem Service gleich die Instanzen mitzugeben (einzuimpfen) die er letztlich benutzen soll. So kann ausschließlich der CLient entscheiden, welche Data Access-Klasse zu verwenden ist.
 
-## Was bringt das?
-
-Diese Implementierung bietet viele Möglichkeiten:
-
-- Leichteres Testen: Wir können zum Testen unser Interface in einer "Dummy" Klasse implementieren, die Demowerte
-  liefert.
-- Trennung von gerätespezifischem Code: Wir sagen nur was wir brauchen und nicht schon wie wir dazu kommen.
-- Erweiterbarkeit: Ein weiterer Gerätetyp kann ohne Änderung des Trackers angebunden werden.
+Die Lösung wird im Unterricht behandelt. Ich bitte um daher um gute Mitarbeit!
 
 ## Übung
 
-Unser Tracker soll nicht fix auf der Konsole ausgeben, sondern über einen zu definierenden Logger schreiben. Dabei wird der Logger in der Klasse *MyTracker* als Property definiert und von außen gesetzt.
+* Erstelle eine Blank Solution mit dem Namen `Spg.DependencyInjection`
+* Erstelle eine Console-App im Unerverzeichnis `src`
+* Erstelle 3 Namespaces innerhalb der Console-App (Interfaces, Services, DataAccess, Model)
+* Erstelle im Namespace `Model` eine Klasse `Product`. Sie soll mindestens 4 Properties beinhalten, sie sind frei wählbar.
+* Erstelle im Namespace `Interfaces` das Interface `IProductDataAccess`.
+* Das Interface soll folgende Methode beinhalten: `Product GetProduct(long id);`
+* Erstelle im Namespace DataAccess, die Klassen `ProductDataAccess` und `ProductDataAccessMock`. Beide Klassen sollen das Interface implementieren.
+* Erstelle im Namespace `Services` eine Klasse `ProductSevce`. Sie soll eine Methode enthalten, welche die Methode in der Data Access-Klasse aufruft und ein Prduct zurückgiebt. Die Service-Klasse soll dabei Dependency-Injection verwenden, also es soll keine Instanz der Data Access-Klasse in der Service-Klasse erstellt werden.
+* Implementiere in der `Proram.cs` eine Methode, die den Service verwendet um eine Instanz von Product zu erhalten. Die Inhalte von Product sind frei wählbar. Achtung! Verwende hier Dependency Injection. Die Klasse `Program` soll einen KOnstruktor enthalten, der eine Instanz der Service-Klasse enthält. Dabei soll der Service-Klasse die zu verwendende Data Access-Klasse injeziert werden. Ob die data-Access-Klasse, oder die Mock-Data-Access-Klasse verwendet wird ist frei wählbar.
 
-1. Verwende als Basis statt der obigen *MyTracker* und *Program* Klasse die untenstehenden Versionen.
-1. Schreibe ein Interface *ILogger*, welches die Methode *Log(string)* beinhaltet.
-1. Implementiere die Klasse *ConsoleLogger*, die den übergebenen String in der *Log()* Methode einfach in
-   der Konsole ausgibt.
-1. Implementieren die Klasse *FileLogger*, die den Übergeben String einfach in den beim Instanzieren gewählten
-   Dateinamen schreibt. Hinweis: Mit *System.IO.File.AppendAllText(pfad, inhalt)* kann Text zu einer Datei
-   hinzugefügt werden.
-1. Ergänze das Property Logger in der Klasse *MyTracker* mit dem korrekten Datentyp.
+Challange 1:
 
-```c#
-class MyTracker
-{
-    private readonly ILocationProvider locator;
-    public MyTracker(ILocationProvider locator)
-    {
-        this.locator = locator;
-    }
+* Kopiere das Ergebnis und ändere die kopierte Solution folgendermaßen:
+* Versuche nun statt der Constructor Injection, Property Injection zu verwenden. Bei der Property Injection wird die Instanz nicht über den Konstruktor, sondern über ein Property in der Service-Klasse, an die Service-Klasse übergeben.
 
-    public void DoTracking(int seconds)
-    {
-        DateTime start = DateTime.Now;
-        while ((DateTime.Now - start).TotalSeconds < seconds)
-        {
-            Point position = locator.GetLocation();
-            Logger?.Log($"Lat: {position.Lat:0.00}°, Lng: {position.Lat:0.00}°");
-            System.Threading.Thread.Sleep(1000);
-        }
-    }
-}
+Challange 2:
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        MyTracker tracker;
-        Console.WriteLine("Tracking mit ANDROID:");
-        tracker = new MyTracker(new AndroidLocationProvider());
-        tracker.Logger = new ConsoleLogger();
-        tracker.DoTracking(10);
-        Console.WriteLine("Tracking mit APPLE:");
-        tracker = new MyTracker(new AppleLocationProvider());
-        tracker.Logger = new FileLogger("locations.txt");
-        tracker.DoTracking(10);
-    }
-}
-```
+* Kopiere das erste Ergebnis und ändere die kopierte Solution folgendermaßen:
+* Versuche nun statt der Constructor Injection, Method Injection zu verwenden. Bei der Method Injection wird die Instanz nicht über den Konstruktor, sondern über eine Methode in der Service-Klasse, an die Service-Klasse übergeben.
 
-## Weitere Informationen
-
-- <https://www.codementor.io/mrfojo/c-with-dependency-injection-k2qfxbb8q>
-- <https://blogs.msdn.microsoft.com/dmx/2014/10/14/was-ist-eigentlich-dependency-injection-di/>
