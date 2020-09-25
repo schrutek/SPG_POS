@@ -2,6 +2,7 @@ Scaffold-DbContext "Data Source=WE20W8WS2000501\SQLEXPRESS;Initial Catalog=Ticke
 
 Scaffold-DbContext "Data Source=.\SQLEXPRESS;Initial Catalog=TicketShop;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -UseDatabaseNames -Force -DataAnnotations
 
+Scaffold-DbContext "Data Source=C:\Temp\Tests.db" Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models -UseDatabaseNames -Force -DataAnnotations
 
 Identit Package importieren:
 dotnet aspnet-codegenerator identity -dc Spg.LogInDemo.Data.ApplicationDbContext

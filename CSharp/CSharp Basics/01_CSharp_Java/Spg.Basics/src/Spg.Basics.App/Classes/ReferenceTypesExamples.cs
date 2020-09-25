@@ -29,7 +29,7 @@ namespace Spg.Basics.App.Classes
             User user2 = pupil;
             user2.age = 18;
 
-            //Pupil pupil2 = (Pupil)user;
+            Pupil pupil2 = (Pupil)user;
 
             object pupilObject = pupil;
             pupilObject.ToString();
@@ -49,7 +49,6 @@ namespace Spg.Basics.App.Classes
             bool r8 = pupil is User;
 
             User user3 = pupil as Pupil ?? new Pupil();
-
         }
     }
 }
