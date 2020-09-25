@@ -6,6 +6,20 @@ namespace SPG.LambdaTutorial
 {
     public class SchuelerList : List<Schueler>
     {
+        public SchuelerList Filter(string klasse)
+        {
+            SchuelerList resultList = new SchuelerList();
+            foreach (Schueler schueler in this)
+            {
+                if (schueler.Klasse == klasse)
+                {
+                    resultList.Add(schueler);
+                }
+            }
+            return resultList;
+        }
+
+
         public delegate bool FilterHandler(Schueler s);
 
         public SchuelerList Filter(FilterHandler predicate)
