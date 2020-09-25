@@ -119,15 +119,15 @@ if (ModelState.IsValid)
 
 ## Übung
 
-* Erstzelle eine neue Solution mit dem Namen `Spg.PupilAdministration`.
-* Erstelle darin ein MVC Projekt im Unterverzeichnis `src` mit dem Namen `Spg.PupilAdministration`.
+* Erstelle eine neue Solution mit dem Namen `Spg.PupilAdministration`.
+* Erstelle darin ein MVC Projekt im Unterverzeichnis `src` mit dem Namen `Spg.PupilAdministration.WebApp`.
 * Erstelle einen Controller um eine Seite  mit Pupils anzuzeigen. Erstelle auch eine dafür notwendige View im richtigen Veerzeichnis in der Solution.
 * Erstelle eine Klasse `Pupil` im Namespace `Models` und eine Klasse `Schoolclass`.
-* `Pupil` soll folgende Properties enthalten: Id, Firstname, Lastname, Class, Gender (alle Strings)
-* `Schoolclass` soll folgende Properties enthalten: Name, Abteilung
-* Erstelle noch eine Klasse `SchuelerDb` in diesem namespace und kopiere den Inhal ganz unten dort hinein.
+* `Pupil` soll folgende Properties enthalten: Id, Firstname, Lastname, Class, Gender (alles Strings)
+* `Schoolclass` soll folgende Properties enthalten: Name, Abteilung (alles Strings)
+* Erstelle noch eine Klasse `SchuelerDb` in diesem Namespace und kopiere den Inhalt ganz unten dort hinein.
 * Erweitere die View um die Angabe eines Models und um eine Ausgabe der Pupils. Form und formatierung der Ausgabe ist dabei frei wählbar.
-* Erweitere den Controller so, dass die Pupil-Daten aus der SchuelerDb geladen werden und ein Model an die BView ausgegeben wird.
+* Erweitere den Controller so, dass die Pupil-Daten aus der SchuelerDb geladen werden und ein Model an die View ausgegeben wird.
 
 ### Ergebis
 
