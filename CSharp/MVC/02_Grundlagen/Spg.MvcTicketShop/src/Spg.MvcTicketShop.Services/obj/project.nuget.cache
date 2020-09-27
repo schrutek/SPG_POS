@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W6vPEkxlqsB0h5v5cTMwrngs3VLtPpZSMZoaDScK8rMpPNmtgTa1tLGUnsduEV3iQt5lRd2yejPYR9y/aAwA5g==",
+  "dgSpecHash": "J0DZqRbNRez267s2d3Vw3Z4NpzcZ8QPnUmYcPwSuAkxbPYI3k+TZiGd/iMQiYja2QOltujk+jSGl2eguRUn8Xw==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\01_Grundlagen\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.Services\\Spg.MvcTicketShop.Services.csproj",
+  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\02_Grundlagen\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.Services\\Spg.MvcTicketShop.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.0-preview3.20122.2\\microsoft.data.sqlclient.2.0.0-preview3.20122.2.nupkg.sha512",
