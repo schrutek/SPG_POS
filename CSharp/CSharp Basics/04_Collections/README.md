@@ -1,8 +1,6 @@
 # Collections in .NET
-
 Der Zugang zu Collections führt über den Namespace *System.Collections.Generic*. Er muss mit *using*
 eingebunden werden:
-
 ```c#
 using System.Collections.Generic;
 ```
@@ -13,10 +11,7 @@ Die Vererbungsstruktur der generischen Interfaces für Collections sieht folgend
 
 ![ListsInterfaces](ListsInterfaces.png)
 
-## Beispiel
-
 Für unsere Beispiele verwenden wir die Klasse Person, eine datenhaltende Klasse mit 3 Properties:
-
 ```c#
 class Person
 {
@@ -31,10 +26,8 @@ class Person
 ```
 
 ## Die Liste (ArrayList in Java)
-
 Listen sind die am meisten verwendete Collection. Sie werden generisch durch Angabe des zu speichernden
 Typs erstellt. Nützlich in C#: Auch der Initializer kann verwendet werden.
-
 ```c#
 List<Person> persList1 = new List<Person>();
 List<Person> persList2 = new List<Person>
@@ -46,11 +39,9 @@ List<Person> persList2 = new List<Person>
 ```
 
 ### Abfragen, Hinzufügen und Löschen von Elementen
-
 Der Indexer ([]) greift - wie bei einem Array - nullbasierend auf das n-te Element zu. Mit der Methode
 *Add()* wird ein neues Element in die Liste eingefügt. Natürlich kann auch mit *foreach* durch die Liste
 iteriert werden.
-
 ```c#
 persList2.Add(new Person() { Id = 4, Zuname = "Zuname4", Vorname = "Vorname4" });
 
@@ -63,7 +54,6 @@ foreach (Person p in persList2)
 
 Werden Elemente gelöscht, wird über die *Equals()* Methode nach Elementen in der Liste gesucht. Daher wird
 die Person mit der ID 1 nicht gelöscht, da pe eine andere Rerefenzadresse besitzt.
-
 ```c#
 persList2.Remove(found);
 Person pe = new Person() { Id = 1, Zuname = "Zuname1", Vorname = "Vorname1" };
@@ -71,13 +61,11 @@ persList2.Remove(pe);
 ```
 
 ## Das Dictionary (HashMap in Java)
-
 Oft gibt es bei datenhaltenden Klassen ein Property, welches als Key dient. Dies ist eindeutig und kann
 in einem Dictionary verwendet werden. Das Dictionary entspricht einer Datenbanktabelle, über dem Key
 kann auf den Datensatz zugegriffen werden.
 
 Das folgende Beispiel erstellt ein Dictionary mit einem *int* Feld als Key und einer Person als Wert:
-
 ```c#
 Dictionary<int, Person> personDict = new Dictionary<int, Person>();
 personDict.Add(1, new Person() { Id = 1, Zuname = "Zuname1", Vorname = "Vorname1" });
@@ -88,23 +76,19 @@ personDict.Add(3, new Person() { Id = 3, Zuname = "Zuname3", Vorname = "Vorname3
 Wird in einem Dictionary versucht, einen bestehenden Key hinzuzufügen, wird eine *ArgumentException
 (An item with the same key has already been added)* ausgelöst. Um das zu vermeiden, können die Methoden
 *ContainsKey()* bzw. *TryAdd()* verwendet werden.
-
 ```c#
 // ArgumentException: An item with the same key has already been added
 personDict.Add(1, new Person() { Id = 4, Zuname = "Zuname4", Vorname = "Vorname4" });
 ```
 
 Das Löschen von Elementen wird mit *Remove()* über den Key durchgeführt:
-
 ```c#
 personDict.Remove(2);
 ```
 
 ### Der Indexer
-
 Der Zugriff mit dem Indexoperator ([]) ist im Gegensatz zu Java flexibler, denn er kann überladen werden.
 Im Dictionary bedeutet dieser Operator den Zugriff über den Key.
-
 ```c#
 Dictionary<string, string> lehrerDict = new Dictionary<string, string>();
 lehrerDict.Add("SIL", "Siller");
@@ -115,11 +99,9 @@ string lookup = lehrerDict["SZ"];
 ```
 
 ## HashSet (HashSet in Java)
-
 Einen Spezialfall stellt das Hashset dar. Oft sollen - wie bei *DISTINCT* in SQL - doppelte Werte entfernt
 werden. Das Hashset speichert durch *Add()* nur den ersten Wert, nachfolgende idente Werte werden ignoriert.
 Die Gleichheit wird bei Referenztypen auch über *Equals()* ermittelt.
-
 ```c#
 HashSet<string> lehrerHashSet = new HashSet<string>();
 lehrerHashSet.Add("SZ");
@@ -128,11 +110,10 @@ lehrerHashSet.Add("SZ");
 foreach(string lehrer in lehrerHashSet)
 {
     Console.WriteLine(lehrer);
-}
+}            
 ```
 
 ## Übung
-
 Erstelle eine Soluition ExCollections mit dem Projekt ExCollection.App. Installiere danach das Paket
 *Newtonsoft.Json*, indem du in Visual Studio mittels *Tools* - *NuGet Package Manager* - *Package Manager Console*
 die Konsole öffnest. Das Paket kann durch die Eingabe von *Install-Package Newtonsoft.Json* in der Konsole
@@ -219,9 +200,8 @@ namespace ExCollection.App
 
 ```
 
-### Korrekte Ausgabe
-
-```PowerShell
+### Korrekte Ausgabe:
+```
 s sitzt in der Klasse 3AHIF mit dem KV KV1.
 3AHIF vor ChangeKlasse:
 [{"Id":1001,"Zuname":"ZN1","Vorname":"VN1"},{"Id":1002,"Zuname":"ZN2","Vorname":"VN2"},{"Id":1003,"Zuname":"ZN3","Vorname":"VN3"}]
