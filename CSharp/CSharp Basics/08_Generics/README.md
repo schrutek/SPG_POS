@@ -93,6 +93,24 @@ Wenn wir generisch arbeiten, benötigen wir nur eine Liste, die auf den jeweilig
 
 Hier ist zu beachten. Damit man auf Hours zugreifen kann muss der Typ ``T`` von einer Klasse oder einem Interface erben, die/das ``Hours`` zur Verfügung stellt. So kann der Compiler bereits zur Entwurfszeit sicherstellen, dass das Property ``Hours`` im noch unbekannten Typ ``T`` vorhanden sein wird. Das nennt man **Constraint**.
 
+Das Interface für den Constraint:
+
+```C#
+public interface IPerson
+{
+    int Hours { get; set; }
+}
+```
+
+Natürlich müssen nun die beiden Entity-Klassen dieses Interface implementieren:
+
+```C#
+public class Teacher : IPerson
+{
+    ...
+}
+```
+
 Die ``where``-Signatur enthält also folgende Funktion:
 
 * Der Typ ``T`` leitet vom Interface ``IPerson`` ab. (``T : IPErson``)
