@@ -8,7 +8,7 @@ Man kann also sagen: **Delegates übergeben Funktion als Parameter**
 
 ![delegate-mapping](delegate-mapping.png)
 
-## Delegates aös Parameter
+## Delegates als Parameter
 
 Das ist die häufigste Anwendung für Delegates.
 
@@ -57,11 +57,11 @@ public class OldSchool
 }
 ```
 
-Es wird die Methode ``GreatMethodForNearlyEverything`` aufgerufen. Nehmen wir an, diese Methode ist sehr umfangreich und könnte so für eine große Anzahl an Projekten eingesetzt werden. Leider aber muss eine Prüfung darin (bool result = CompareEqual(x, y);) für jeden neuen Einsatz geändert werden. Mal nöchte man auf Equel, mal auf NotEqual, mal auf kleineer, mal auf größer, ... prüfen. Die Zeile in der Methode muss also immer geändert werden. Das ist nicht gut, besser wäre es eine Lösung zu entwickeln in der diese Zeile nicht geändert werden muss und trotzdem unterschiedliche Vergleiche durchgeführt werden können.
+Es wird die Methode ``GreatMethodForNearlyEverything`` aufgerufen. Nehmen wir an, diese Methode ist sehr umfangreich und könnte so für eine große Anzahl an Projekten eingesetzt werden. Leider aber muss eine Prüfung darin (``bool result = CompareEqual(x, y);``) für jeden neuen Einsatz geändert werden. Mal nöchte man auf gleichheit, mal auf ungleichheit, mal auf kleiner, mal auf größer, ... prüfen. Die Zeile in der Methode muss also immer geändert werden. Das ist nicht gut, besser wäre es eine Lösung zu entwickeln in der diese Zeile nicht geändert werden muss und trotzdem unterschiedliche Vergleiche durchgeführt werden können.
 
 ## Ein Delegates
 
-Delegates sind hierfür die Lösung.
+Delegates sind hierfür eine Lösung.
 
 ```C#
 public class WithDelegate
