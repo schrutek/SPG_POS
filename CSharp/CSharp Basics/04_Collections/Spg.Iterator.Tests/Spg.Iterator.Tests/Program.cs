@@ -14,22 +14,24 @@ namespace SpgCollections.Tests
         }
     }
 
-    public class MyPersonList<T> : List<T>
-        where T : Person, new()
+    public class MyPersonList : List<Person>
     {
         /// <summary>
         /// Mein überladener Indexer, der die Person nach dem Zunamen sucht
         /// </summary>
         /// <param name="zuname"></param>
         /// <returns></returns>
-        public T this[string zuname]
+        public Person this[string zuname]
         {
             get
             {
-                T result = null;
-                foreach (T item in this)
+                Person result = null;
+                foreach (Person item in this)
                 {
-                    result = item.Zuname == zuname ? item : result;
+                    if (item.Zuname == zuname)
+                    {
+                        return item;
+                    }
                 }
                 return result;
             }
@@ -40,7 +42,7 @@ namespace SpgCollections.Tests
     {
         public static void Main(string[] args)
         {
-            MyPersonList<Person> list = new MyPersonList<Person>()
+            MyPersonList list = new MyPersonList()
             {
                 new Person() {Id = 1, Zuname = "Zuname1", Vorname = "Vorname1"},
                 new Person() {Id = 2, Zuname = "Zuname2", Vorname = "Vorname2"},

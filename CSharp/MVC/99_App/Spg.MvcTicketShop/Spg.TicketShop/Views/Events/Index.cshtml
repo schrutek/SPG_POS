@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Index";
     Spg.TicketShop.Services.Models.Events firstEvent = Model.ToList().FirstOrDefault();
+
     var validCatEventStates = LookupService.GetAllValidCatEventStates();
 }
 
