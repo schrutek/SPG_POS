@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Equality.Tests", "Spg.Equality.Tests\Spg.Equality.Tests.csproj", "{00CACC69-C45A-4938-A7AC-9A6E69799887}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Equality.Tests", "Spg.Equality.Tests\Spg.Equality.Tests.csproj", "{B7D5ACB0-928F-4B0D-AE00-A2CDC9CF7B91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00CACC69-C45A-4938-A7AC-9A6E69799887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00CACC69-C45A-4938-A7AC-9A6E69799887}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00CACC69-C45A-4938-A7AC-9A6E69799887}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00CACC69-C45A-4938-A7AC-9A6E69799887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D5ACB0-928F-4B0D-AE00-A2CDC9CF7B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D5ACB0-928F-4B0D-AE00-A2CDC9CF7B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D5ACB0-928F-4B0D-AE00-A2CDC9CF7B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D5ACB0-928F-4B0D-AE00-A2CDC9CF7B91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {948CD8D2-8007-49CE-A347-9BBE7B931903}
+		SolutionGuid = {EAD8109A-6B79-45C1-AA0A-6555E1AEF5DB}
 	EndGlobalSection
 EndGlobal

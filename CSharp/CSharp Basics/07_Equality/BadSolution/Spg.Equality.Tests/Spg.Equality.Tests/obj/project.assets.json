@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HTL\\tmp\\Spg.Equality.Tests\\Spg.Equality.Tests\\Spg.Equality.Tests.csproj",
+      "projectUniqueName": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\07_Equality\\Spg.Equality.Tests\\Spg.Equality.Tests\\Spg.Equality.Tests.csproj",
       "projectName": "Spg.Equality.Tests",
-      "projectPath": "C:\\HTL\\tmp\\Spg.Equality.Tests\\Spg.Equality.Tests\\Spg.Equality.Tests.csproj",
+      "projectPath": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\07_Equality\\Spg.Equality.Tests\\Spg.Equality.Tests\\Spg.Equality.Tests.csproj",
       "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-      "outputPath": "C:\\HTL\\tmp\\Spg.Equality.Tests\\Spg.Equality.Tests\\obj\\",
+      "outputPath": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\07_Equality\\Spg.Equality.Tests\\Spg.Equality.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

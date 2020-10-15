@@ -96,7 +96,7 @@ Die Lösung wird im Unterricht behandelt. Ich bitte um daher um gute Mitarbeit!
 * Erstelle im Namespace `Interfaces` das Interface `IProductDataAccess`.
 * Das Interface soll folgende Methode beinhalten: `Product GetProduct(long id);`
 * Erstelle im Namespace DataAccess, die Klassen `ProductDataAccess` und `ProductDataAccessMock`. Beide Klassen sollen das Interface implementieren.
-* Erstelle im Namespace `Services` eine Klasse `ProductService`. Sie soll eine Methode enthalten, welche die Methode in der Data Access-Klasse aufruft und ein Prduct zurückgiebt. Die Service-Klasse soll dabei Dependency-Injection verwenden, also es soll keine Instanz der Data Access-Klasse in der Service-Klasse erstellt werden.
+* Erstelle im Namespace `Services` eine Klasse `ProductService`. Sie soll eine Methode enthalten, welche die Methode in der Data Access-Klasse aufruft und ein Prduct zurück giebt. Die Service-Klasse soll dabei Dependency-Injection verwenden, also es soll keine Instanz der Data Access-Klasse in der Service-Klasse erstellt werden.
 * Implementiere in der `Proram.cs` eine Methode, die den Service verwendet um eine Instanz von Product zu erhalten. Die Inhalte von Product sind frei wählbar. Achtung! Verwende hier Dependency Injection. Die Klasse `Program` soll einen KOnstruktor enthalten, der eine Instanz der Service-Klasse enthält. Dabei soll der Service-Klasse die zu verwendende Data Access-Klasse injeziert werden. Ob die data-Access-Klasse, oder die Mock-Data-Access-Klasse verwendet wird ist frei wählbar.
 
 Challange 1:

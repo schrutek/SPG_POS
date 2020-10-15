@@ -6,74 +6,72 @@ namespace Spg.Equality.Tests
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            List<Teacher> techers = new List<Teacher>()
+            List<Engine> engines = new List<Engine>()
             {
-                new Teacher(){ FirstName="Martin", LastName="Bauer", Income=1230.45M, Hours=12 },
-                new Teacher(){ FirstName="Bob", LastName="Meier", Income=789.15M, Hours=26 },
-                new Teacher(){ FirstName="Thomas", LastName="Müller", Income=1952.14M, Hours=10 },
-                new Teacher(){ FirstName="Michi", LastName="Mayer", Income=93.25M, Hours=6 },
-                new Teacher(){ FirstName="Doris", LastName="Hofer", Income=257.45M, Hours=29 },
-                new Teacher(){ FirstName="Irene", LastName="Bauer", Income=126.96M, Hours=21 },
-                new Teacher(){ FirstName="Sandra", LastName="Wolf", Income=6541.55M, Hours=23 },
-                new Teacher(){ FirstName="Sonja", LastName="Simon", Income=364.70M, Hours=22 },
-                new Teacher(){ FirstName="Gerhard", LastName="Berger", Income=1347.69M, Hours=14 },
-                new Teacher(){ FirstName="Bob", LastName="Meier", Income=789.15M, Hours=26 },
+                new Engine("VW", 1923, 798),
+                new Engine("BMW", 2289, 637),
+                new Engine("Chrycler", 5023, 721),
+                new Engine("Fiat", 1657, 315),
+                new Engine("Peugeot", 2892, 347),
             };
 
-            List<Pupil> pupils = new List<Pupil>()
+            Console.WriteLine("------ Sort 1 Brand (aufsteigend)  ------");
+            engines.Sort();
+            foreach (Engine item in engines) Console.WriteLine(item);
+
+            Console.WriteLine("------ Sort 2 Brand (aufsteigend)  ------");
+            engines.Sort(new BrandsComparer());
+            foreach (Engine item in engines) Console.WriteLine(item);
+
+            Console.WriteLine("------ Sort 3 Brand (aufsteigend)  ------");
+            engines.Sort(CompareBrands);
+            foreach (Engine item in engines) Console.WriteLine(item);
+
+            Console.WriteLine("------ Sort 4 Brand (aufsteigend)  ------");
+            engines.Sort((x, y) =>
             {
-                new Pupil(){ Name="Name 1", Hours=36 },
-                new Pupil(){ Name="Name 2", Hours=34 },
-                new Pupil(){ Name="Name 3", Hours=38 },
-                new Pupil(){ Name="Name 4", Hours=32 },
-                new Pupil(){ Name="Name 2", Hours=34 },
-            };
-
-            Console.WriteLine($"Pupil 1 == Pupil 2:                   {pupils[1] == pupils[4]}");
-            Console.WriteLine($"Pupil 1 Equals Pupil 2:               {pupils[1].Equals(pupils[4])}");
-
-            Console.WriteLine($"Teacher 1 == Teacher 2:               {techers[1] == techers[9]}");
-            Console.WriteLine($"Teacher 1 Equals Teacher 2:           {techers[1].Equals(techers[9])}");
-            Console.WriteLine($"Teacher 1 ReferenceEquals Teacher 2:  {object.ReferenceEquals(techers[1], techers[9])}");
-
-            Console.WriteLine("------ Sort 1  Name gesammt (aufsteigend)  ------");
-
-            techers.Sort();
-            foreach (Teacher item in techers) Console.WriteLine(item);
-
-            Console.WriteLine("------ Sort 2  Nachname (aufsteigend)  ------");
-
-            techers.Sort(new Comparer());
-            foreach (Teacher item in techers) Console.WriteLine(item);
-
-            Console.WriteLine("------ Sort 3  Vorname (absteigend)  ------");
-
-            //techers.Sort(Compare);
-
-            //techers.Sort(delegate (Teacher x, Teacher y)
-            //    {
-            //        return (y.FirstName).CompareTo(x?.FirstName);
-            //    }
-            //);
-
-            techers.Sort((x, y) => (y.FirstName).CompareTo(x?.FirstName));
-
-            foreach (Teacher item in techers) Console.WriteLine(item);
+                if (x == null)
+                {
+                    if (y == null)
+                    {
+                        return 0;
+                    }
+                    return -1;
+                }
+                return x.Brand.CompareTo(y.Brand);
+            });
+            foreach (Engine item in engines) Console.WriteLine(item);
         }
 
-        public static int Compare([AllowNull] Person x, [AllowNull] Person y)
+        public static int CompareBrands([AllowNull] Engine x, [AllowNull] Engine y)
         {
-            return (y.FirstName).CompareTo(x?.FirstName);
+            if (x == null)
+            {
+                if (y == null)
+                {
+                    return 0;
+                }
+                return -1;
+            }
+            return x.Brand.CompareTo(y.Brand);
         }
     }
 
-    public class Comparer : IComparer<Person>
+    public class BrandsComparer : IComparer<Engine>
     {
-        public int Compare([AllowNull] Person x, [AllowNull] Person y)
+        public int Compare([AllowNull] Engine x, [AllowNull] Engine y)
         {
-            return (x.LastName).CompareTo(y?.LastName);
+            if (x == null)
+            {
+                if (y == null)
+                {
+                    return 0;
+                }
+                return -1;
+            }
+            return x.Brand.CompareTo(y.Brand);
         }
     }
 }
