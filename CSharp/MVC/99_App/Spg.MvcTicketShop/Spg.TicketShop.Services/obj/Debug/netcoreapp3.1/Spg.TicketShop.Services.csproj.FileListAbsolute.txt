@@ -1,0 +1,12 @@
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\bin\Debug\netcoreapp3.1\Spg.TicketShop.Services.deps.json
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\bin\Debug\netcoreapp3.1\Spg.TicketShop.Services.runtimeconfig.json
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\bin\Debug\netcoreapp3.1\Spg.TicketShop.Services.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\bin\Debug\netcoreapp3.1\Spg.TicketShop.Services.dll
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\bin\Debug\netcoreapp3.1\Spg.TicketShop.Services.pdb
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.AssemblyInfo.cs
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.dll
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.pdb
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop.Services\obj\Debug\netcoreapp3.1\Spg.TicketShop.Services.genruntimeconfig.cache

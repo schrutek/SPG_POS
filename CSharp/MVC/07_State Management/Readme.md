@@ -13,63 +13,65 @@ Cookies sind keine Dateien die likal gespeichert werden. Sie können Daten entha
 Folgednes Beispiel legt im POST-REquest einen Benutezrnamen in einem Cookie ab und ließt ihn im GET-REquest wieder aus.
 
 ```c#
-public class HomeController : Controller
+[HttpGet()]
+public IActionResult Index()
 {
-    public IActionResult Index()
-    {
-        //read cookie from Request object  
-        string userName = Request.Cookies["UserName"];
-        return View("Index", userName);
-    }
+    string userName = Request.Cookies["UserName"];
 
-    [HttpPost]
-    public IActionResult Index(IFormCollection form)
-    {
-        string userName = form["userName"].ToString();
+    return View("Index", new Login() { UserName = userName });
+}
 
-        //set the key value in Cookie
+[HttpPost()]
+public IActionResult Index([FromForm] Login model)
+{
+    string userName = model.UserName;
+
+    if (userName == "xy")
+    {
         CookieOptions option = new CookieOptions();
         option.Expires = DateTime.Now.AddMinutes(10);
         Response.Cookies.Append("UserName", userName, option);
 
-        return RedirectToAction(nameof(Index));
+        return View("Index", new Login() { UserName = userName });
     }
+    return RedirectToAction("Index", "Home");
+}
 
-    public IActionResult RemoveCookie()
-    {
-        //Delete the cookie
-        Response.Cookies.Delete("UserName");
-        return View("Index");
-    }
+[HttpGet("removecookie")]
+public IActionResult RemoveCookie()
+{
+    Response.Cookies.Delete("UserName");
+    return View("Index");
 }
 ```
 
 Die dazgehörige View:
 
 ```c#
-@model string
+@model Spg.MvcTestsAdmin.Service.Models.Login
 
 @{
-   ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
 }
 
-@if (!string.IsNullOrWhiteSpace(Model))
+@if (Model != null 
+    && !String.IsNullOrEmpty(Model.UserName))
 {
-   @:
-   <div>Welcome back, @Model</div>
-   @Html.ActionLink("Forget Me", "RemoveCookie")
+    @:
+    <div>Welcome back, @Model.UserName</div>
+    @Html.ActionLink("Forget Me", "RemoveCookie")
 }
 else
 {
-   @:
-   <form asp-action="Index">
-       <span>Hey, seems like it's your first time here!</span><br />
-       <label>Please provide your name:</label>
-       @Html.TextBox("userName")
-       <div class="form-group">
-           <input type="submit" value="Update" class="btn btn-primary" />
-       </div>
-   </form>
+    @:
+    <form asp-action="Index">
+        <span>Hey, seems like it's your first time here!</span><br />
+        <label>Please provide your name:</label>
+        @Html.TextBox("userName")
+        <div class="form-group">
+            <input type="submit" value="Login" class="btn btn-primary" />
+        </div>
+    </form>
 }
 ```
 

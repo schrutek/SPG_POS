@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.TestAdministrator.WebApp", "src\Spg.TestAdministrator.WebApp\Spg.TestAdministrator.WebApp.csproj", "{694040DD-A7AE-4655-8F94-542F363E27EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.TestAdministrator.Services", "src\Spg.TestAdministrator.Services\Spg.TestAdministrator.Services.csproj", "{8F7065B7-DF81-40BF-8200-A19AEB3B71FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{694040DD-A7AE-4655-8F94-542F363E27EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{694040DD-A7AE-4655-8F94-542F363E27EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{694040DD-A7AE-4655-8F94-542F363E27EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{694040DD-A7AE-4655-8F94-542F363E27EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F7065B7-DF81-40BF-8200-A19AEB3B71FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F7065B7-DF81-40BF-8200-A19AEB3B71FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F7065B7-DF81-40BF-8200-A19AEB3B71FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F7065B7-DF81-40BF-8200-A19AEB3B71FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DE91250-68C7-4987-AEA8-6D7EA8E3BBEC}
+	EndGlobalSection
+EndGlobal

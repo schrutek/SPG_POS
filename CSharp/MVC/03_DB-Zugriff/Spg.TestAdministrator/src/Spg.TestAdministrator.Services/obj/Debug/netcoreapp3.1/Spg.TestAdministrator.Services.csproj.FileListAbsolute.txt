@@ -1,0 +1,12 @@
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\bin\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.deps.json
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\bin\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.runtimeconfig.json
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\bin\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\bin\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.dll
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\bin\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.pdb
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.AssemblyInfo.cs
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.dll
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.pdb
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.genruntimeconfig.cache
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.TestAdministrator\src\Spg.TestAdministrator.Services\obj\Debug\netcoreapp3.1\Spg.TestAdministrator.Services.csprojAssemblyReference.cache
