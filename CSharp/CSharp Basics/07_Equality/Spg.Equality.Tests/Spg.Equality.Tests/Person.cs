@@ -19,7 +19,7 @@ namespace Spg.Equality.Tests
 
         public int CompareTo(object obj)
         {
-            return CompareTo((Person)obj);
+            return CompareTo(obj as Person);
         }
 
         public bool Equals([AllowNull] Person other)
@@ -29,7 +29,7 @@ namespace Spg.Equality.Tests
 
         public override bool Equals(object obj)
         {
-            return Equals((Person)obj);
+            return Equals(obj as Person);
         }
 
         public override int GetHashCode()
@@ -43,6 +43,7 @@ namespace Spg.Equality.Tests
         }
 
         public static bool operator ==(Person p1, Person p2) => p1.Equals(p2);
+
         public static bool operator !=(Person p1, Person p2) => !p1.Equals(p2);
     }
 }
