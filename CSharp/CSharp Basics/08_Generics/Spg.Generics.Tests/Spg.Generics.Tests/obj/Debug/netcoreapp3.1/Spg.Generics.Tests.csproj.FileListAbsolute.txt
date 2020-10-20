@@ -1,13 +1,12 @@
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.exe
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.deps.json
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.runtimeconfig.json
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.runtimeconfig.dev.json
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.dll
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.pdb
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.csprojAssemblyReference.cache
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.AssemblyInfoInputs.cache
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.AssemblyInfo.cs
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.csproj.CoreCompileInputs.cache
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.dll
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.pdb
-C:\HTL\POS\CSharp\CSharp Basics\08_Generics\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.genruntimeconfig.cache
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.AssemblyInfo.cs
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.exe
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.deps.json
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.runtimeconfig.json
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.dll
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\bin\Debug\netcoreapp3.1\Spg.Generics.Tests.pdb
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.dll
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.pdb
+C:\HTL\tmp\Spg.Generics.Tests\Spg.Generics.Tests\obj\Debug\netcoreapp3.1\Spg.Generics.Tests.genruntimeconfig.cache

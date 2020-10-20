@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HTL\\tmp\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\MVC\\02_Grundlagen\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\HTL\\tmp\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj": {
+    "C:\\HTL\\POS\\CSharp\\MVC\\02_Grundlagen\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\tmp\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\MVC\\02_Grundlagen\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj",
         "projectName": "Spg.MvcTest.WebApp",
-        "projectPath": "C:\\HTL\\tmp\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\02_Grundlagen\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\tmp\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\MVC\\02_Grundlagen\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

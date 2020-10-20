@@ -1,0 +1,12 @@
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.exe
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.deps.json
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.runtimeconfig.json
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.dll
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.pdb
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.AssemblyInfo.cs
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.dll
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.pdb
+C:\HTL\tmp\Spg.DependencyInjection.Demo\Spg.DependencyInjection.Demo\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Demo.genruntimeconfig.cache

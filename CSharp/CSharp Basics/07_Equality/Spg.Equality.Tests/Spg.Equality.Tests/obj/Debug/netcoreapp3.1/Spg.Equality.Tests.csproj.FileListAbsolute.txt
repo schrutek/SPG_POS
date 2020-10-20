@@ -1,0 +1,13 @@
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\bin\Debug\netcoreapp3.1\Spg.Equality.Tests.exe
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\bin\Debug\netcoreapp3.1\Spg.Equality.Tests.deps.json
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\bin\Debug\netcoreapp3.1\Spg.Equality.Tests.runtimeconfig.json
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\bin\Debug\netcoreapp3.1\Spg.Equality.Tests.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\bin\Debug\netcoreapp3.1\Spg.Equality.Tests.dll
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\bin\Debug\netcoreapp3.1\Spg.Equality.Tests.pdb
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.AssemblyInfo.cs
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.dll
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.pdb
+C:\HTL\POS\CSharp\CSharp Basics\07_Equality\Spg.Equality.Tests\Spg.Equality.Tests\obj\Debug\netcoreapp3.1\Spg.Equality.Tests.genruntimeconfig.cache

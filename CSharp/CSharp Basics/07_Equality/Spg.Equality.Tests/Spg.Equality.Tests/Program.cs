@@ -11,6 +11,7 @@ namespace Spg.Equality.Tests
             List<Engine> engines = new List<Engine>()
             {
                 new Engine("VW", 1923, 798),
+                null,
                 new Engine("BMW", 2289, 637),
                 new Engine("Chrycler", 5023, 721),
                 new Engine("Fiat", 1657, 315),
@@ -18,7 +19,7 @@ namespace Spg.Equality.Tests
             };
 
             Console.WriteLine("------ Sort 1 Brand (aufsteigend)  ------");
-            engines.Sort();
+            //engines.Sort();
             foreach (Engine item in engines) Console.WriteLine(item);
 
             Console.WriteLine("------ Sort 2 Brand (aufsteigend)  ------");
@@ -55,7 +56,7 @@ namespace Spg.Equality.Tests
                 }
                 return -1;
             }
-            return x.Brand.CompareTo(y.Brand);
+            return x.Brand.CompareTo(y?.Brand);
         }
     }
 
@@ -71,7 +72,7 @@ namespace Spg.Equality.Tests
                 }
                 return -1;
             }
-            return x.Brand.CompareTo(y.Brand);
+            return x.Brand.CompareTo(y?.Brand);
         }
     }
 }

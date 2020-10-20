@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9C3Lpl9GhscC31kMH4we6QAF3mV1yFtVDVXTfPkeXeZS/ML/bEaBcibmMYGoAuCJbthjDh11YpymflwbtIDd5g==",
+  "dgSpecHash": "Z/UqOrnOcDX2klq3GDeVBZ23kCsO49iG2yWrahoZt7WLjEWEKhd7Cbj2ym81xvewX8cTdgdP+G5Hv2wZtsRQsQ==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\tmp\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\02_Grundlagen\\Spg.MvcTest\\src\\Spg.MvcTest.WebApp\\Spg.MvcTest.WebApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

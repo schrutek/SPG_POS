@@ -16,6 +16,10 @@ Wichtig! Den Connection-String aus dem Context-File entfernen:
 
 <https://github.com/schrutek/SPG_POS/tree/master/CSharp/EF%20Core/ConnectionString.md>
 
+Logging für EF-Core aktivieren:
+
+<https://github.com/schrutek/SPG_POS/tree/master/CSharp/EF%20Core/EFLogger.md>
+
 ## Scuffolding des Models
 
 Wir Scuffolden nun ein Model um daraus die Views und den Controller erstellen zu können.

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HTL\\POS\\CSharp\\CSharp Basics\\08_Generics\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj": {}
+    "C:\\HTL\\tmp\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj": {}
   },
   "projects": {
-    "C:\\HTL\\POS\\CSharp\\CSharp Basics\\08_Generics\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj": {
+    "C:\\HTL\\tmp\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\08_Generics\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj",
+        "projectUniqueName": "C:\\HTL\\tmp\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj",
         "projectName": "Spg.Generics.Tests",
-        "projectPath": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\08_Generics\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj",
+        "projectPath": "C:\\HTL\\tmp\\Spg.Generics.Tests\\Spg.Generics.Tests\\Spg.Generics.Tests.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\POS\\CSharp\\CSharp Basics\\08_Generics\\Spg.Generics.Tests\\Spg.Generics.Tests\\obj\\",
+        "outputPath": "C:\\HTL\\tmp\\Spg.Generics.Tests\\Spg.Generics.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
