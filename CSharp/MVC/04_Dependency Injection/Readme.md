@@ -2,7 +2,7 @@
 
 Das Prinzip von Inversion of Control ist ja bereits bekannt. Wir wollen es nun hier weiter vertiefen.
 
-Das wesentlichste dabei ist, eine Entkoppelung der Komponenten zu bewirken. Je feiner granular die Komponenten gestaltet werden und umso besser sie entkoppelt sind, desto flexibler wird unser Softwaregerüst.
+Das wesentlichste dabei ist, eine Entkoppelung  der Komponenten zu bewirken. Je feiner granular Komponenten gestaltet werden und besser sie entkoppelt sind umso flexibler wird unser Softwaregerüst.
 
 ## Services
 
@@ -11,122 +11,158 @@ Das wesentlichste dabei ist, eine Entkoppelung der Komponenten zu bewirken. Je f
 
 ### Einen Event-Service anlegen
 
-Dazu im generierten Namespace eine neue Klasse `EventService` erstellen. Code kann nun aus dem Controller in diese Klasse transferiert werden. Wir wollen alle Abhängigkeiten zum DB-Context aus dem Controller entfernen.
+Dazu im generiten namespace eine neue Klasse `SchoolclassService` erstellen. Code kann nun aus dem Controller in diese Klasse transferiert werden. Wir wollen alle Abhänmgigkeiten zum DB-Context aus dem Controller entfernen.
 
-Im einfachsten Fall kann man den LinQ-Query aus dem Controller in eine neue Methode `GetAll()` `GetAllAsync()` kopieren.
+Im einfachsten Fall kann man den LinQ-Query aus dem Controller in eine neue Methode `GetAllAsync()` ohne Parameter kopieren.
 
-Später werden wir die Methode nach und nach um weitere Features erweitern.
+Später werden wir die Methode nach und nach um weitere Features erweitern, die wir ebenfalls implementieren wollen.
 
 ## DB-Context injecten
 
 Der Service benötigt den DB-Context:
 
 ```C#
-private readonly TicketShopContext _context;
+private readonly TestsAdministratorContext _context;
 
-public EventService(TicketShopContext context)
+public SchoolclassService(TestsAdministratorContext context)
 {
     _context = context;
 }
 ```
 
-### List-Methode
-
 ```C#
-public async Task<IEnumerable<Events>> GetAllAsync()
+public async Task<IEnumerable<Schoolclass>> GetAllAsync()
 {
-    var result = await _context.Events
-        .Include(c => c.Shows)
+    return await _context.Schoolclass
+        .Include(s => s.C_ClassTeacherNavigation)
         .ToListAsync();
-    return result;
 }
 ```
 
 ### Create-Methode
 
 ```C#
-public async Task<Events> CreateAsync(Events newModel)
+public async Task<Schoolclass> CreateAsync(Schoolclass newModel)
 {
-    newModel.EventId = Guid.NewGuid();
-    _context.Add(newModel);
-    await _context.SaveChangesAsync();
-
+    try
+    {
+        _context.Add(newModel);
+        await _context.SaveChangesAsync();
+    }
+    catch (InvalidOperationException ex)
+    {
+        _logger.LogError(ex, "Methode CreateAsync(Schoolclass) ist fehlgeschlagen!");
+        throw new ServiceLayerException("Methode CreateAsync(Schoolclass) ist fehlgeschlagen!", ex);
+    }
     return newModel;
 }
 ```
 
-### Delete-Methode
+### Delete.-Methode
 
 ```C#
-public async Task<Events> DeleteAsync(Guid? id)
+public async Task DeleteAsync(string id)
 {
-    var result = await _context.Events.FindAsync(id);
-    _context.Events.Remove(result);
-    await _context.SaveChangesAsync();
-
-    return result;
+    try
+    {
+        var schoolclass = await _context.Schoolclass.FindAsync(id);
+        _context.Schoolclass.Remove(schoolclass);
+        await _context.SaveChangesAsync();
+    }
+    catch (InvalidOperationException ex)
+    {
+        _logger.LogError(ex, "Methode DeleteAsync(long) ist fehlgeschlagen!");
+        throw new ServiceLayerException("Methode DeleteAsync(long) ist fehlgeschlagen!", ex);
+    }
 }
 ```
 
 ### Edit-Methode
 
 ```C#
-public async Task<Events> EditAsync(Guid id, Events newModel)
+public async Task<Schoolclass> EditAsync(string id, Schoolclass newModel)
 {
+    if (id != newModel.C_ID)
+    {
+        throw new KeyNotFoundException("Datensatz wurde nicht gefunden!");
+    }
+
     try
     {
-        newModel.LastChangeDate = DateTime.Now;
-
-        _context.Update(newModel);
-        await _context.SaveChangesAsync();
-    }
-    catch (DbUpdateConcurrencyException)
-    {
-        if (!EventsExists(model.EventId))
+        Schoolclass existingSchoolclass = _context.Schoolclass.Find(id);
+        if (existingSchoolclass == null)
         {
-            throw new ServiceLayerException("Datensatz ist nicht mehr aktuell und muss neu geladen werden!");
+            throw new KeyNotFoundException("Datensatz wurde nicht gefunden!");
         }
         else
         {
-            throw new ServiceLayerException("Datensatz konnte nicht gefunden werden!");
+            existingSchoolclass.C_ClassTeacher = newModel.C_ClassTeacher;
+            existingSchoolclass.C_Department = newModel.C_Department;
+
+            _context.Update(existingSchoolclass);
+            await _context.SaveChangesAsync();
         }
     }
-
+    catch (InvalidOperationException ex)
+    {
+        _logger.LogError(ex, "Methode EditAsync(long, Schoolclass) ist fehlgeschlagen!");
+        throw new ServiceLayerException("Methode EditAsync(long, Schoolclass) ist fehlgeschlagen!", ex);
+    }
+    catch (DbUpdateConcurrencyException)
+    {
+        if (!EntityExists(newModel.C_ID))
+        {
+            throw new KeyNotFoundException("Datensatz wurde nicht gefunden!");
+        }
+        throw;
+    }
     return newModel;
 }
 
-private bool EventsExists(Guid id)
+private bool EntityExists(string id)
 {
-    return _context.Events.Any(e => e.EventId == id);
+    return _context.Schoolclass.Any(e => e.C_ID == id);
 }
 ```
 
-Im Service wird nicht zwischen GET und POST unterschieden. Diese Methoden manipulieren nur die Datenbank. Wir arbeiten generisch. D.h. diese Methoden sollen für Applikationen, die aber ein anderes Front End haben ebenfalls verwendbar sein. Das könnte auch eine WPF oder Konslen-Applikation sein. Hier gäbe es keine HTTP-Requests.
+Im Service wird nicht zwischen GET und POST unterschieden. Diese Methoden manipulieren nur die Datenbank. Wir arbeiten generisch. D.h. diese Methoden sollen für Applikationen, die aber ein anders Front End haben ebenfalls verwendbar sein. Das könnte sogar eine WPF oder Konslen-Applikation sein. Hier gäbe es keine HTTP-Requests.
 
 ## Controller
 
-Im Controller werden die Methoden dann aufgerufen. Auch hier wird eine Instanz vom Service benötigt:
+Im Controller werden die Methoden dann noch aufgerufen. Auch hier wird eine Instanz vom Service benötigt:
 
 ```C#
-private readonly IEventService _eventService;
+private readonly TestsAdministratorContext _context;
+private readonly ILogger<SchoolclassService> _logger;
 
-public EventsController(IEventService eventService)
+public SchoolclassService(TestsAdministratorContext context, ILogger<SchoolclassService> logger)
 {
-    _eventService = eventService;
+    _context = context;
+    _logger = logger;
 }
-```
-
-```C#
-PaginatedList<Events> model = (PaginatedList<Events>)await _eventService.GetAllAsync();
-return View(model);
 ```
 
 ### Details
 
-Hierfür habe ich eine Methode `GetSingleOrDefaultAsync` erstellt. Die Anmensgebung ebntspricht der üblichen Konvetion.
+Hierfür habe ich eine Methode `GetSingleOrDefaultAsync` erstellt. Die Namensgebung entspricht der üblichen Konvetion.
 
 ```C#
-var events = await _eventService.GetSingleOrDefaultAsync(id.Value);
+public async Task<IActionResult> Details(string id)
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
+
+    var model = await _schoolclassService.GetSingleOrDefaultAsync(id);
+
+    if (model == null)
+    {
+        return NotFound();
+    }
+
+    return View(model);
+}
 ```
 
 ### Create-POST
@@ -134,36 +170,43 @@ var events = await _eventService.GetSingleOrDefaultAsync(id.Value);
 ```C#
 [HttpPost]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> Create([Bind("EventId,LastChangeDate,LaseChangeUserIdId,Name,Description,OnlineFrom,OnlineTo")] Events events)
+public async Task<IActionResult> Create([Bind("C_ID,C_Department,C_ClassTeacher")] Schoolclass schoolclass)
 {
     if (ModelState.IsValid)
     {
-        await _eventService.CreateAsync(events);
-
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            await _schoolclassService.CreateAsync(schoolclass);
+            return RedirectToAction(nameof(Index));
+        }
+        catch (ServiceLayerException)
+        {
+            return StatusCode(500);
+        }
     }
-    return View(events);
+    ViewData["C_ClassTeacher"] = new SelectList(await _techerService.GetAllAsync(), "T_ID", "T_ID", schoolclass.C_ClassTeacher);
+    return View(schoolclass);
 }
 ```
 
 ### Edit-GET
 
 ```C#
-[HttpGet()]
-public async Task<IActionResult> Edit(Guid? id)
+public async Task<IActionResult> Edit(string id)
 {
     if (id == null)
     {
         return NotFound();
     }
 
-    var result = await _eventService.GetSingleOrDefaultAsync(id.Value);
+    var schoolclass = await _schoolclassService.GetSingleOrDefaultAsync(id);
 
-    if (result == null)
+    if (schoolclass == null)
     {
         return NotFound();
     }
-    return View(result);
+    ViewData["C_ClassTeacher"] = new SelectList(await _techerService.GetAllAsync(), "T_ID", "T_ID", schoolclass.C_ClassTeacher);
+    return View(schoolclass);
 }
 ```
 
@@ -172,28 +215,31 @@ public async Task<IActionResult> Edit(Guid? id)
 ```C#
 [HttpPost]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> Edit(Guid id, [Bind("EventId,LastChangeDate,LaseChangeUserIdId,Name,Description,OnlineFrom,OnlineTo")] Events events)
+public async Task<IActionResult> Edit(string id, [Bind("C_ID,C_Department,C_ClassTeacher")] Schoolclass schoolclass)
 {
-    if (id != events.EventId)
+    if (id != schoolclass.C_ID)
     {
-        return NotFound();
+        return Conflict();
     }
 
     if (ModelState.IsValid)
     {
         try
         {
-            await _eventService.Edit(id, events);
+            await _schoolclassService.EditAsync(id, schoolclass);
         }
-        catch (ServiceLayerException)
+        catch (KeyNotFoundException)
         {
             return NotFound();
         }
+        catch (ServiceLayerException)
+        {
+            return StatusCode(500);
+        }
         return RedirectToAction(nameof(Index));
     }
-    ViewData["CatEventStateId"] = new SelectList(_lookupService.GetAllValidCatEventStates(), "CatEventStateId", "Key", events.CatEventStateId);
-    ViewData["LaseChangeUserId"] = new SelectList(_context.Users, "UserId", "FirstName", events.LaseChangeUserId);
-    return View(events);
+    ViewData["C_ClassTeacher"] = new SelectList(await _techerService.GetAllAsync(), "T_ID", "T_ID", schoolclass.C_ClassTeacher);
+    return View(schoolclass);
 }
 ```
 
@@ -223,20 +269,29 @@ public async Task<IActionResult> Delete(Guid? id)
 ```C#
 [HttpPost, ActionName("Delete")]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> DeleteConfirmed(Guid id)
+public async Task<IActionResult> DeleteConfirmed(string id)
 {
-    await _eventService.DeleteAsync(id);
-
-    return RedirectToAction(nameof(Index));
+    try
+    {
+        await _schoolclassService.DeleteAsync(id);
+        return RedirectToAction(nameof(Index));
+    }
+    catch (ServiceLayerException)
+    {
+        return StatusCode(500);
+    }
 }
 ```
 
 ## Interfaces
 
-Hier wurden bereits Interfaces als Typen für die jeweiligen Instanzen verwendet. Es sollte immer eine Trennung durch die Erstellung von Interfaces vorgenommen werden.
+Hier wurden bereits Interfaces als Typen für die jeweiligen Instanzen verwednet. Es sollte immer eine Trennung durch die Erstellung von Interfaces vorgenommen werden.
 
 Registrieren der Services in der `Startup.cs`:
 
 ```C#
-services.AddScoped<IEventService, EventService>();
+services.AddTransient<ISchoolclassService, SchoolclassService>();
+services.AddTransient<ILessonService, LessonService>();
+services.AddTransient<IPeriodService, PeriodService>();
+services.AddTransient<ITeacherService, TeacherService>();
 ```

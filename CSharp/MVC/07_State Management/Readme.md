@@ -1,16 +1,16 @@
 # ASP.net Core MVC (State Management)
 
-Das Web st Stateless, wir müssen uns daher um den State seöbtst kümmern. Der State stellt Informationen dar, die im Verlauf einer Webseite nicht in "Vergessenheit geraten" sollten um die Usability zu verbessern.
+Das Web ist Stateless, wir müssen uns daher um den State selbst kümmern. Der State stellt Informationen dar, die im Verlauf einer Webseite nicht in "Vergessenheit geraten" sollten um die Usability zu verbessern.
 
-Beispiel:
+**Beispiel:**
 
-Es wäre sehr unpraktosch wenn man sich in einem Web-Shop jedes mal neu anmelden müsste, wenn man einen neuen Artikel ansurft. Lösung: Das System merkt sich die Anmeldung.
+Es wäre sehr unpraktisch wenn man sich in einem Web-Shop jedes mal neu anmelden müsste, wenn man einen neuen Artikel ansurft. Lösung: Das System merkt sich die Anmeldung.
 
 ## Cookies
 
-Cookies sind keine Dateien die likal gespeichert werden. Sie können Daten enthaltn. Max. Größe der Dateien: 4096 bytes.
+Cookies sind kleine Dateien die lokal gespeichert werden. Sie können Daten enthaltn. Max. Größe der Dateien: 4096 bytes.
 
-Folgednes Beispiel legt im POST-REquest einen Benutezrnamen in einem Cookie ab und ließt ihn im GET-REquest wieder aus.
+Folgednes Beispiel legt im POST-Request einen Benutezrnamen in einem Cookie ab und ließt ihn im GET-REquest wieder aus.
 
 ```c#
 [HttpGet()]
@@ -54,7 +54,7 @@ Die dazgehörige View:
     ViewData["Title"] = "Home Page";
 }
 
-@if (Model != null 
+@if (Model != null
     && !String.IsNullOrEmpty(Model.UserName))
 {
     @:
@@ -97,7 +97,7 @@ Bei der Arbeit mit dem Session States sollten wir Folgendes berücksichtigen:
 
 Middleware hinzufügen, bzw. usen `Startup.cs`
 
-Wichtig!! `UseSession()` immer vor `UseMvc()`!
+Wichtig!! `UseSession()` immer vor `UseMvc()` setzen!
 
 ```C#
 public class WelcomeController : Controller
@@ -125,7 +125,7 @@ public class WelcomeController : Controller
 
 ## Query String Parameter
 
-Eine einfache Variante Informationen von eineer Seite auf die andere mithzugeben, besteht darm, einen oder mehrere Parameter an die URL anzuhängen.
+Eine einfache Variante Informationen von eineer Seite auf die andere mithzugeben, besteht darin, einen oder mehrere Parameter an die URL anzuhängen.
 
 Der erste Parameter wird mit einem vorangefügten Fragezeichen angehängt, alle weiteren mit `&`.
 
@@ -168,11 +168,27 @@ public IActionResult SetHiddenFieldValue(IFormCollection keyValues)
 
 ## Temp Data
 
-Hält die Daten nur für einen einzigen Request-Response-Zyklus. Aber mit `TempData.Keep();`, `TempData.Peek();` lässt sich die lebensdauer verlängern.
+Hält die Daten nur für einen einzigen Request-Response-Zyklus. Aber mit `TempData.Keep();`, `TempData.Peek();` lässt sich die Lebensdauer verlängern.
 
 ## Daten an die View geben
 
-x
+Der Controller gibt ein Model an die View weiter,
+
+```C#
+[HttpGet()]
+public async Task<IActionResult> Index()
+{
+    var model = await _schoolclassService.GetAllAsync();
+
+    return View(model);
+}
+```
+
+welches in der View abgearbeitet werden kann. Daher folgende Zeile nicht vergessen!
+
+```C#
+@model IEnumerable<Spg.MvcTestsAdmin.Service.Models.Schoolclass>
+```
 
 ### Strongly Typed Data
 
@@ -223,7 +239,7 @@ public class ViewDataController : Controller
 User Id : @userId
 ```
 
-Oder ein Beispiel aus unserer Applikation:
+Oder ein anderes Beispiel:
 
 ```C#
 ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";

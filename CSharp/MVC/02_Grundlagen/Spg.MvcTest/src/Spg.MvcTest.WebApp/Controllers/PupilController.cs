@@ -13,7 +13,17 @@ namespace Spg.MvcTest.WebApp.Controllers
         {
             SchuelerDb db = SchuelerDb.FromMockup();
 
-            IEnumerable<Pupil> result = db.Pupil;
+            ICollection<Pupil> result = (ICollection<Pupil>)db.Pupil;
+
+            for (int i = 0; i <= result.Count; i++)
+            {
+            }
+
+            foreach (Pupil item in result)
+            {
+                Conslole.Writeline($"{item.Firstname}");
+            }
+
 
             return View(result);
         }

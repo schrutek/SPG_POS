@@ -5792,11 +5792,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.FrontEnd\\Spg.MvcTicketShop.FrontEnd.csproj",
+      "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\02_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.FrontEnd\\Spg.MvcTicketShop.FrontEnd.csproj",
       "projectName": "Spg.MvcTicketShop.FrontEnd",
-      "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.FrontEnd\\Spg.MvcTicketShop.FrontEnd.csproj",
+      "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\02_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.FrontEnd\\Spg.MvcTicketShop.FrontEnd.csproj",
       "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-      "outputPath": "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.FrontEnd\\obj\\",
+      "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\02_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.FrontEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5817,8 +5817,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.Services\\Spg.MvcTicketShop.Services.csproj": {
-              "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.Services\\Spg.MvcTicketShop.Services.csproj"
+            "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\02_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.Services\\Spg.MvcTicketShop.Services.csproj": {
+              "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\02_DB-Zugriff\\Spg.MvcTicketShop\\src\\Spg.MvcTicketShop.Services\\Spg.MvcTicketShop.Services.csproj"
             }
           }
         }
@@ -5849,7 +5849,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

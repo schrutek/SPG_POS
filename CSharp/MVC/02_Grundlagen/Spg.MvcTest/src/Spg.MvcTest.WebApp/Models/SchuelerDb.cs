@@ -9,6 +9,7 @@ namespace Spg.MvcTest.WebApp.Models
     {
         public IEnumerable<Schoolclass> Schoolclass { get; private set; } = new List<Schoolclass>();
         public IEnumerable<Pupil> Pupil { get; private set; } = new List<Pupil>();
+
         public static SchuelerDb FromMockup()
         {
             SchuelerDb db = new SchuelerDb();

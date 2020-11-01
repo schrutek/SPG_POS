@@ -1,0 +1,115 @@
+﻿@model Spg.MvcTestsAdmin.Service.Services.PagenatedList<Spg.MvcTestsAdmin.Service.Models.Lesson>
+
+@{
+    var schoolclassId = ViewData["schoolclassId"];
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<form>
+    <div class="form-row align-items-center">
+        <div class="col-sm-3 my-1">
+            <input type="text" class="form-control" name="filter" value="@ViewData["CurrentFilter"]" placeholder="Suche...">
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary">GO</button>
+        </div>
+    </div>
+</form>
+
+@if (schoolclassId == null)
+{
+    <a asp-action="Index"
+       asp-route-pageIndex="@(Model.PageIndex - 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-pageIndex="@(Model.PageIndex + 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+    <label>(@Model.TotalPages Seiten)</label>
+}
+else
+{
+    <a asp-action="IndexByLessonId"
+       asp-route-pageIndex="@(Model.PageIndex - 1)"
+       asp-route-schoolclassId="@schoolclassId"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @prevDisabled">
+        Previous
+    </a>
+    <a asp-action="IndexByLessonId"
+       asp-route-pageIndex="@(Model.PageIndex + 1)"
+       asp-route-schoolclassId="@schoolclassId"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @nextDisabled">
+        Next
+    </a>
+    <label>(@Model.TotalPages Seiten)</label>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Untis_ID
+            </th>
+            <th>
+                Subject
+            </th>
+            <th>
+                Room
+            </th>
+            <th>
+                Day
+            </th>
+            <th>
+                ClassNavigation
+            </th>
+            <th>
+                HourNavigation
+            </th>
+            <th>
+                TeacherNavigation
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Untis_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Day)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_ClassNavigation.C_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_HourNavigation.P_Nr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_TeacherNavigation.T_ID)
+                </td>
+                <td>
+                    <a asp-controller="Lessons" asp-action="Edit" asp-route-id="@item.L_ID">Edit</a> |
+                    <a asp-controller="Lessons" asp-action="Details" asp-route-id="@item.L_ID" asp-route-schoolclassId="@schoolclassId">Details</a> |
+                    <a asp-controller="Lessons" asp-action="Delete" asp-route-id="@item.L_ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

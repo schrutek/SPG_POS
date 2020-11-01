@@ -6,10 +6,10 @@ Folgende Routing-Varianten stehen zur Verfügung:
 
 ## Endpoint Routing
 
-Seit Core 3.0 wird Endpoint-Routing unterstützt. Es ist die kompatibleste Variante des Routings.
+Seit Core 3.0 wird Endpoint-Routing unterstützt. Es ist die klassische und daher kompatibleste Variante des Routings.
 
 ```C#
-app.UseEndpoints(endpoints =>
+/app.UseEndpoints(endpoints =>
 {
     endpoints.MapGet("/", async context =>
     {
@@ -34,15 +34,15 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Dabei handelt es sich um das konventionelle MVC-Routing. Das Pattern gibt die Routen an. `Controllername/Methode/ID` Die ID ist dabei optional. Weitere Parameter (z.B.: State, Filter, ...) können als URL-Parameter an die URL angefügt werden.
+Dabei handelt es sich um das konventionelle MVC-Routing. Das Pattern gibt die Routen an. `Controllername/Methode/ID` Die ID ist dabei Optional. Weitere Parameter (z.B.: State, Filter, ...) können als URL-Parameter an die URL angefügt werden.
 
 ```HTTP
-https://localhost:5001/Events/Index?filter=danc&state=465604e4-21f3-4092-b09a-54744860b78e
+https://localhost:44398/Lessons/byid/1AFIT?filter=SRM
 ```
 
 ## Attribute Routing
 
-Eine weitere Form ist das Attribute-Routing. Es wird auch bei REST-APIs verwendet
+Die beste Form ist das Attribute-Routing, da es dem Konzept von REST entspricht. Wir werden also gleich mit dieser Variante loslegen:
 
 In der `Startup.cs`:
 
@@ -53,62 +53,65 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Dies aktiviert das Routing welches in den einzelnen Controllern angegeben ist. Die Controller werden dann mit den Route-Annotations bzw. den HTTP-Verben versehen:
+Das aktiviert das Routing welches in den neinzelnen Controllern angegeben ist. Die Controller werden dann mit den Route-Annotations bzw. den HTTP-Verben versehen:
 
-* Route-DataAnnotation (`[Route("[controller]/[action]")]`)
-* Http-Verb (`[HttpGet()]`, `[HttpGet({id})]`, `[HttpGet({state})]`, `[HttpPost()]`
+* Route-DataAnnotation (`[Route()]`)
+* Http-Verb (`[HttpGet()]`, `[HttpPost()]`)
 
 ```C#
 [Route("[controller]/[action]")]
-public class EventsController : Controller
+[ApiController()]
+public class SchoolclassesController : Controller
 {
-    private readonly IEventService _eventService;
+    private readonly TestsAdministratorContext _context;
 
-    public EventsController(IEventService eventService)
+    public SchoolclassesController(TestsAdministratorContext context)
     {
-        _eventService = eventService;
+        _context = context;
     }
+
+    ...
 }
 ```
 
 bzw. das Verb:
 
 ```C#
-// GET: Events
+// GET: Schoolclasses
 [HttpGet()]
 public async Task<IActionResult> Index()
 {
-    PaginatedList<Events> model = (PaginatedList<Events>)await _eventService.GetAllAsync();
-    return View(model);
+    var testsAdministratorContext = _context.Schoolclass.Include(s => s.C_ClassTeacherNavigation);
+    return View(await testsAdministratorContext.ToListAsync());
 }
 ```
 
-oder Post:
+... oder Post:
 
 ```C#
-// POST: Events/Create
-// To protect from overposting attacks, enable the specific properties you want to bind to, for
-// more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-[HttpPost]
+// POST: Schoolclasses/Create
+[HttpPost()]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> Create([Bind("EventId,LastChangeDate,LaseChangeUserIdId,Name,Description,OnlineFrom,OnlineTo")] Events events)
+public async Task<IActionResult> Create([FromForm()] Schoolclass schoolclass)
 {
     if (ModelState.IsValid)
     {
-        await _eventService.CreateAsync(events);
+        _context.Add(schoolclass);
+        await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
-    return View(events);
+    ViewData["C_ClassTeacher"] = new SelectList(_context.Teacher, "T_ID", "T_ID", schoolclass.C_ClassTeacher);
+    return View(schoolclass);
 }
 ```
 
 ## View Injection
 
-Eine weitere interessante Sache ist View Injection. Ähnlich wei beim Kapitel Dependency-Injection kann man einen Service direkt in eine View injecten.
+Eine weitere interessante Sache ist View Injection. Ähnlich wie beim Kapitel Dependency-Injection kann man einen Service direkt in eine View injecten.
 
 Das Schlüsselwort hoerfür ist die Direktive `@inject`:
 
-```HTML
+```C#
 @model Spg.MvcTicketShop.Services.Helper.PaginatedList<Spg.MvcTicketShop.Services.Models.Events>
 @inject Spg.MvcTicketShop.Services.Services.LookupService LookupService
 
@@ -125,7 +128,7 @@ Das Schlüsselwort hoerfür ist die Direktive `@inject`:
 </p>
 ```
 
-Der Lookup-Service retuniert eine simple Liste bestehend aus Objekten. Diese sollen dnnn in einer Combobox dargestellt werden:
+Der Lookup-Service retuniert eine simple Liste bestehend aus Objekten. Diese sollen dann in einer Combobox dargestellt werden:
 
 ```C#
 public class LookupService
@@ -144,7 +147,7 @@ public class LookupService
 }
 ```
 
-Der Service kann nun direkt verwemdet werden:
+Der Service kann nun direkt verwendet werden:
 
 ```HTML
 <form>

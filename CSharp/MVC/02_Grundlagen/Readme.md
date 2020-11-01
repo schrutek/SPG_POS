@@ -114,15 +114,8 @@ public string Name { get; set; }
 ## Model State
 
 Create Methode:
-
-```C#
+Eine Create View ohne DB zeigen, nur ModelState.IsValid. Wenn OK, redirect to Index, sonst return View(model);
 if (ModelState.IsValid)
-{
-    // ... do somethong
-    return RedirectToAction(nameof(Index));
-}
-return View(schoolclass);
-```
 
 ## Übung
 

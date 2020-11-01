@@ -74,3 +74,12 @@ C:\HTL\POS\CSharp\MVC\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug
 C:\HTL\POS\CSharp\MVC\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.pdb
 C:\HTL\POS\CSharp\MVC\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.genruntimeconfig.cache
 C:\HTL\POS\CSharp\MVC\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.csproj.CopyComplete
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.csprojAssemblyReference.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.csproj.CoreCompileInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.RazorAssemblyInfo.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.RazorAssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\02_Grundlagen\Spg.MvcTest\src\Spg.MvcTest.WebApp\obj\Debug\netcoreapp3.1\Spg.MvcTest.WebApp.pdb

@@ -1,0 +1,36 @@
+﻿@model Spg.MvcTestsAdmin.Service.Models.Schoolclass
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Schoolclass</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.C_Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.C_Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.C_ClassTeacherNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.C_ClassTeacherNavigation.T_ID)
+        </dd>
+    </dl>
+</div>
+
+<hr />
+
+<h1>Lessons</h1>
+<partial name="../Lessons/_Lessons" model="Model.Lesson" />
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.C_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
