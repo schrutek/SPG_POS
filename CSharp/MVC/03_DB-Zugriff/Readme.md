@@ -4,7 +4,7 @@ Wir wollen mit der Applikation natürlich Daten aus einer DB lesen und darstelle
 
 ## Model erstellen
 
-<https://github.com/schrutek/SPG_POS/tree/master/CSharp/MVC/Scuffolding.md>
+<https://github.com/schrutek/SPG_POS/blob/master/CSharp/MVC/03_DB-Zugriff/Scuffolding.md>
 
 ## Scuffolding des Models
 
