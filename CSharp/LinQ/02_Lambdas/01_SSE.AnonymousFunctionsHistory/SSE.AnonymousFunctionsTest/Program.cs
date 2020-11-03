@@ -23,8 +23,6 @@ namespace SSE.AnonymousFunctionsTest
                 Console.WriteLine("Fehler beim Konvertieren nach double");
             }
 
-
-
             Functions f = new Functions();
             f.Work();
 

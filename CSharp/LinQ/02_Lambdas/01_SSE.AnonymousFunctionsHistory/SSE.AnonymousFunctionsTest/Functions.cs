@@ -9,16 +9,16 @@ namespace SSE.AnonymousFunctionsTest
 {
     public class Functions
     {
-        public delegate void MessageDelegate(string message);
+        public delegate void MessageDelegate(string s);
 
         private void Write(string message)
         {
             Console.WriteLine(message);
         }
 
+        // History of Lambdas
         public void Work()
         {
-            // History of Lambdas
             MessageDelegate testDelA = new MessageDelegate(Write);
             testDelA("Test-Delegate .Net 1.0");
 
