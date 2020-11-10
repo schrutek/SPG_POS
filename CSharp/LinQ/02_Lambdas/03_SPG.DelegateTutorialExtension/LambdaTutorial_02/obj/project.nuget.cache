@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sUO+XeFgunI6Uligr5+JW3pD9yvEJi9aNgpJV5aWaOWDfiiWyYnUh3smWk/e0FmLBbGC1nxiksTrc5142TZbQg==",
+  "dgSpecHash": "MYVBhuZZguKhQBkx1diqyQbeo88DR91UfzjgV5Ct0Um2PcsIUpib9+iKsQCjmzN6mL8rbLZzo/L9jqn16QvkDw==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\03_Linq\\01_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\LambdaTutorial_02.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\LinQ\\02_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\LambdaTutorial_02.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",

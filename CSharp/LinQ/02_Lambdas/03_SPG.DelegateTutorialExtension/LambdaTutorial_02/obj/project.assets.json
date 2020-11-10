@@ -693,11 +693,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\03_Linq\\01_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\LambdaTutorial_02.csproj",
+      "projectUniqueName": "C:\\HTL\\POS\\CSharp\\LinQ\\02_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\LambdaTutorial_02.csproj",
       "projectName": "LambdaTutorial_02",
-      "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\03_Linq\\01_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\LambdaTutorial_02.csproj",
+      "projectPath": "C:\\HTL\\POS\\CSharp\\LinQ\\02_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\LambdaTutorial_02.csproj",
       "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-      "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\03_Linq\\01_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\obj\\",
+      "outputPath": "C:\\HTL\\POS\\CSharp\\LinQ\\02_Lambdas\\03_SPG.DelegateTutorialExtension\\LambdaTutorial_02\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

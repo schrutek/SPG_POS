@@ -9,21 +9,11 @@ namespace Spg.MvcTest.WebApp.Controllers
 {
     public class PupilController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Xy()
         {
             SchuelerDb db = SchuelerDb.FromMockup();
 
             ICollection<Pupil> result = (ICollection<Pupil>)db.Pupil;
-
-            for (int i = 0; i <= result.Count; i++)
-            {
-            }
-
-            foreach (Pupil item in result)
-            {
-                Conslole.Writeline($"{item.Firstname}");
-            }
-
 
             return View(result);
         }

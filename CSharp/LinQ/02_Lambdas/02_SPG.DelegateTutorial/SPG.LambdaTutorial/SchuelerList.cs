@@ -35,18 +35,18 @@ namespace SPG.LambdaTutorial
             return resultList;
         }
 
-        public SchuelerList Where(Func<Schueler, bool> predicate)
-        {
-            SchuelerList resultList = new SchuelerList();
-            foreach (Schueler schueler in this)
-            {
-                if (predicate(schueler))
-                {
-                    resultList.Add(schueler);
-                }
-            }
-            return resultList;
-        }
+        //public SchuelerList Where(Func<Schueler, bool> predicate)
+        //{
+        //    SchuelerList resultList = new SchuelerList();
+        //    foreach (Schueler schueler in this)
+        //    {
+        //        if (predicate(schueler))
+        //        {
+        //            resultList.Add(schueler);
+        //        }
+        //    }
+        //    return resultList;
+        //}
 
         public int CalculateSum(Func<int, int, int> predicate)
         {

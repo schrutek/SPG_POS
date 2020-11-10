@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Spg.MvcTest.WebApp.Models
 {
+    /// <summary>
+    /// Entity
+    /// </summary>
     public class Pupil
     {
         public int Id { get; set; }

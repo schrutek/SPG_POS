@@ -1,0 +1,35 @@
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.exe
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.deps.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.runtimeconfig.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.pdb
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.csprojAssemblyReference.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.AssemblyInfo.cs
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\Lambda\SPG.LambdaTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.pdb
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.exe
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.deps.json
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.dll
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.pdb
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.csprojAssemblyReference.cache
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.dll
+C:\HTL\Git_Vorebereitung\Pos3xHif\02_Linq\01_Lambdas\01_SPG.DelegateTutorial\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.pdb
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.exe
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.deps.json
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.runtimeconfig.json
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.dll
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\bin\Debug\netcoreapp3.0\SPG.LambdaTutorial.pdb
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.AssemblyInfo.cs
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.dll
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.pdb
+C:\HTL\POS\CSharp\LinQ\02_Lambdas\02_SPG.DelegateTutorial - Kopie\SPG.LambdaTutorial\obj\Debug\netcoreapp3.0\SPG.LambdaTutorial.genruntimeconfig.cache

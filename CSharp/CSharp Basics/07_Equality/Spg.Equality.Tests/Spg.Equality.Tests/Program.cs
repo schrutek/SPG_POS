@@ -41,7 +41,7 @@ namespace Spg.Equality.Tests
                     }
                     return -1;
                 }
-                return x.Brand.CompareTo(y.Brand);
+                return x.Brand.CompareTo(y?.Brand);
             });
             foreach (Engine item in engines) Console.WriteLine(item);
         }
