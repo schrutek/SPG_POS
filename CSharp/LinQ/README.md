@@ -8,3 +8,4 @@ Weitere Informationen
 - Projection Operations: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/projection-operations
 - Join Operations: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/join-operations
 - Grouping: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/grouping-data
+- <https://www.tutorialsteacher.com/linq/linq-tutorials>
