@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\02 Linq\\04_QuerySyntax\\QuerySyntax.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\LinQ\\05_QuerySyntax\\QuerySyntax.csproj": {}
   },
   "projects": {
-    "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\02 Linq\\04_QuerySyntax\\QuerySyntax.csproj": {
+    "C:\\HTL\\POS\\CSharp\\LinQ\\05_QuerySyntax\\QuerySyntax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\02 Linq\\04_QuerySyntax\\QuerySyntax.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\LinQ\\05_QuerySyntax\\QuerySyntax.csproj",
         "projectName": "QuerySyntax",
-        "projectPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\02 Linq\\04_QuerySyntax\\QuerySyntax.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\LinQ\\05_QuerySyntax\\QuerySyntax.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\02 Linq\\04_QuerySyntax\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\LinQ\\05_QuerySyntax\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -31,6 +31,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -77,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

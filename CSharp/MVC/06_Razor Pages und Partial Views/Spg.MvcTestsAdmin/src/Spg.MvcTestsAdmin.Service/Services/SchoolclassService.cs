@@ -26,6 +26,7 @@ namespace Spg.MvcTestsAdmin.Service.Services
             return await _context.Schoolclass
                 .Include(s => s.C_ClassTeacherNavigation)
                 .Include(s => s.Lesson)
+                .Include(s => s.Pupil)
                 .ToListAsync();
         }
 

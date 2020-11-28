@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xgl2Va1uBzEMRpNisaJsj9k9nfLHgrntMywr0RXz/Z5fbCHCIaXDq15lcjjC4gx+ycs1BfBpgaZpORdr9Br51g==",
+  "success": true,
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\LinQ\\04_Projection\\LinqUebung2 - Kopie\\LinqUebung2.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\schrutem\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

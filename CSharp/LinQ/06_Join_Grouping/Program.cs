@@ -18,6 +18,64 @@ namespace Grouping
         {
             TestsData data = TestsData.FromFile("../db/tests.json");
 
+            //Welche Klassen hat die 5CAIF am Freitag? Gib auch die Lehrer aus:
+
+            var demo1 = data.Lesson
+                .Where(l => l.L_Class == "5CAIF" && l.L_Day == 5);
+
+            foreach (var l in demo1)
+            {
+                Console.WriteLine($"{l.L_Hour}, {l.L_Subject}, {l.L_TeacherNavigation.T_Lastname}");
+            }
+
+
+            var demo2 = data.Schoolclass;
+            foreach (var s in demo2)
+            {
+                foreach (var p in s.Pupils)
+                {
+                    Console.WriteLine($"{p.P_Lastname}");
+                }
+            }
+
+
+
+
+
+
+
+
+
+            var result = data.Lesson
+            .Where(l => l.L_Subject == "D")
+            .GroupBy(l => new { l.L_Class, l.L_Teacher })
+            .Select(g => new
+            {
+                Class = g.Key.L_Class,
+                Lehrer = g.Key.L_Teacher,
+                Count = g.GroupBy(g2 => g2.L_Day)
+                    .Select(g2 => new
+                    {
+                        g2.Key,
+                        Rooms = g2.Select(r => r.L_Room)
+                    })
+            });
+            Console.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
+
+
+
+            var result2 = data.Lesson
+                .GroupBy(l => l.L_Class)
+                .Select(g => new
+                {
+                    Class = g.Key,
+                    Count = g.Count(),
+                    MaxHour = g.Max(x => x.L_Hour)
+                });
+
+            return;
+
+
             // *************************************************************************************
             // Schreibe in den nachfolgenden Übungen statt der Zeile
             // object resultX = null;

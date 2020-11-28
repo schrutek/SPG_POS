@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0ITW2ytWcMzxOWY5Ii7sC8GM3U7pfhOJNEWCuKFPCwvHv90pKmG3VD6uXx5CS/lh9/0PMXKjwp5SZVB7O3ONSQ==",
+  "dgSpecHash": "6+bWWw3D5UQJnqyXgVGXuduIJV1bWWR9ReBbTXFHfIxiqHJcd99Pq1j4RRDMCRO+noK2ME1+Kv7irI3hfp7Exg==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\03_DB-Zugriff\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WebApp\\Spg.MvcTestsAdmin.WebApp.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WebApp\\Spg.MvcTestsAdmin.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

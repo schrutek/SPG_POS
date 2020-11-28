@@ -18,6 +18,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.C_ClassTeacherNavigation)
             </th>
+            <th>
+                Anz. Stunden
+            </th>
+            <th>
+                Anz. Schüler
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -29,6 +35,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.C_ClassTeacherNavigation.T_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lesson.Count)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pupil.Count)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.C_ID">Edit</a> |
