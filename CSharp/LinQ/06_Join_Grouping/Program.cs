@@ -23,57 +23,57 @@ namespace Grouping
             var demo1 = data.Lesson
                 .Where(l => l.L_Class == "5CAIF" && l.L_Day == 5);
 
-            foreach (var l in demo1)
-            {
-                Console.WriteLine($"{l.L_Hour}, {l.L_Subject}, {l.L_TeacherNavigation.T_Lastname}");
-            }
+            //foreach (var l in demo1)
+            //{
+            //    Console.WriteLine($"{l.L_Hour}, {l.L_Subject}, {l.L_TeacherNavigation.T_Lastname}");
+            //}
 
 
-            var demo2 = data.Schoolclass;
-            foreach (var s in demo2)
-            {
-                foreach (var p in s.Pupils)
-                {
-                    Console.WriteLine($"{p.P_Lastname}");
-                }
-            }
-
-
-
+            //var demo2 = data.Schoolclass;
+            //foreach (var s in demo2)
+            //{
+            //    foreach (var p in s.Pupils)
+            //    {
+            //        Console.WriteLine($"{p.P_Lastname}");
+            //    }
+            //}
 
 
 
 
 
 
-            var result = data.Lesson
-            .Where(l => l.L_Subject == "D")
-            .GroupBy(l => new { l.L_Class, l.L_Teacher })
-            .Select(g => new
-            {
-                Class = g.Key.L_Class,
-                Lehrer = g.Key.L_Teacher,
-                Count = g.GroupBy(g2 => g2.L_Day)
-                    .Select(g2 => new
-                    {
-                        g2.Key,
-                        Rooms = g2.Select(r => r.L_Room)
-                    })
-            });
-            Console.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
 
 
 
-            var result2 = data.Lesson
-                .GroupBy(l => l.L_Class)
-                .Select(g => new
-                {
-                    Class = g.Key,
-                    Count = g.Count(),
-                    MaxHour = g.Max(x => x.L_Hour)
-                });
+            //var demo3 = data.Lesson
+            //.Where(l => l.L_Subject == "D")
+            //.GroupBy(l => new { l.L_Class, l.L_Teacher })
+            //.Select(g => new
+            //{
+            //    Class = g.Key.L_Class,
+            //    Lehrer = g.Key.L_Teacher,
+            //    Count = g.GroupBy(g2 => g2.L_Day)
+            //        .Select(g2 => new
+            //        {
+            //            g2.Key,
+            //            Rooms = g2.Select(r => r.L_Room)
+            //        })
+            //});
+            //Console.WriteLine(JsonSerializer.Serialize(demo3, new JsonSerializerOptions { WriteIndented = true }));
 
-            return;
+
+
+            //var demo4 = data.Lesson
+            //    .GroupBy(l => l.L_Class)
+            //    .Select(g => new
+            //    {
+            //        Class = g.Key,
+            //        Count = g.Count(),
+            //        MaxHour = g.Max(x => x.L_Hour)
+            //    });
+
+            //return;
 
 
             // *************************************************************************************
@@ -83,26 +83,55 @@ namespace Grouping
             // *************************************************************************************
             // ÜBUNG 1: Wie viele Klassen gibt es pro Abteilung?
             // *************************************************************************************
-            object result1 = null;
+
+            var result1 = data
+                .Schoolclass
+                .GroupBy(s => s.C_Department)
+                .Select(s => new
+                {
+                    Department = s.Key,
+                    Count = s.Count()
+                });
+
             Console.WriteLine("RESULT1");
-            Console.WriteLine(JsonSerializer.Serialize(result1));
+            Console.WriteLine(JsonSerializer.Serialize(result1, new JsonSerializerOptions { WriteIndented = true }));
 
             // *************************************************************************************
             // ÜBUNG 2: Wie (1), allerdings sind nur Abteilungen mit mehr als 10 Klassen auszugeben.
             //          Hinweis: Filtere mit Where nach dem Erstellen der Objekte mit Department
             //                   und Count
             // *************************************************************************************
-            object result2 = null;
+
+            object result2 = data
+                .Schoolclass
+                .GroupBy(s => s.C_Department)
+                .Where(s => s.Count() > 10)
+                .Select(s => new
+                {
+                    Department = s.Key,
+                    Count = s.Count()
+                });
+
             Console.WriteLine("RESULT2");
-            Console.WriteLine(JsonSerializer.Serialize(result2));
+            Console.WriteLine(JsonSerializer.Serialize(result2, new JsonSerializerOptions { WriteIndented = true }));
 
             // *************************************************************************************
             // ÜBUNG 3: Wann ist der letzte Test (Max von TE_Date) pro Lehrer und Fach der 5AHIF
             //          in der Tabelle Test?
             // *************************************************************************************
-            object result3 = null;
+
+            object result3 = data
+                .Test
+                .Where(t => t.TE_Class == "5AHIF")
+                .GroupBy(t => new { t.TE_Teacher, t.TE_Subject })
+                .Select(g => new
+                {
+                    g.Key,
+                    LastTest = g.Max(g => g.TE_Date)
+                });
+
             Console.WriteLine("RESULT3");
-            Console.WriteLine(JsonSerializer.Serialize(result3));
+            Console.WriteLine(JsonSerializer.Serialize(result3, new JsonSerializerOptions { WriteIndented = true }));
 
             // *************************************************************************************
             // ÜBUNG 4
@@ -116,10 +145,21 @@ namespace Grouping
             // als Standardwert false geliefert werden. Achte außerdem auf die Rangfolge der Operatoren
             // ?? und &&.
             // *************************************************************************************
-            object result4 = null;
+
+            object result4 = data.Lesson
+                .GroupBy(l => new { l.L_Room, l.L_Day, l.L_Hour, l.L_Teacher, l.L_Class })
+                .Where(g => g.Max(s => s.L_Hour) == data.Lesson.Max(l2 => l2.L_Hour) 
+                    && (g.Key.L_Room?.StartsWith("C2") ?? false) 
+                    && g.Key.L_Day == 1 )
+                .Select(g =>
+                new
+                {
+                    g.Key,
+                });
+
             // {"Room":"C2.09","Day":1,"Hour":16,"Teacher":"PUC","Class":"5BBIF"}              
             Console.WriteLine("RESULT4");
-            Console.WriteLine(JsonSerializer.Serialize(result4));
+            Console.WriteLine(JsonSerializer.Serialize(result4, new JsonSerializerOptions { WriteIndented = true }));
 
             // *************************************************************************************
             // ÜBUNG 5 (schwer!)
@@ -135,9 +175,11 @@ namespace Grouping
             //     join y in table2 on new { X1 = x.Field1, X2 = Field2 } equals new { X1 = y.Field1, X2 = y.Field2 }
             // Die Ausgabe muss natürlich dem Beispiel 4 entsprechen.
             // *************************************************************************************
+
             object result5 = null;
+
             Console.WriteLine("RESULT5");
-            Console.WriteLine(JsonSerializer.Serialize(result5));
+            Console.WriteLine(JsonSerializer.Serialize(result5, new JsonSerializerOptions { WriteIndented = true }));
 
         }
     }
