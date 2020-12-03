@@ -188,32 +188,28 @@ CREATE TABLE Task (
 );
 ```
 
-Erstelle danach auf deiner Festplatte einen Ordner *Projects* und kopiere die Datenbank in diesen
-Ordner. Danach erzeuge mit den CLI Tools eine neue Konsolenapplikation mit diesem Namen.
-Füge danach - ebenfalls mit den CLI Tools - die NuGet Pakete
-hinzu und generiere aus der Datenbank *Projects.db* die Modelklassen in einen Unterordner *Model*
+Erstelle danach auf deiner Festplatte einen Ordner *Projects* und erzeuge eine neue Konsolenapplikation mit dem Namen *Spg.EfCore.Tests*.
+Füge danach die NuGet Pakete hinzu und generiere aus der Datenbank die Modelklassen in einen Unterordner *Model*
 
-Passe danach die Datentypen und Autoincrement Properties deiner Modelklassen und des Context an.
-Außerdem wähle bei der Datenbankdatei *Projects.db* im Solution Explorer in Visual Studio
-bei *Copy to Output Directory* die Option *Copy always* . Sonst ist der Pfad zur Datenbank ungültig,
-da beim Kompilieren die Applikation in einen Unterordner erzeugt wird. Außerdem wird die Datenbank
-immer neu kopiert, was die Änderungen zurücksetzt.
-
-Wer in VS Code arbeitet, kann in der Datei *Projects.csproj* das Kopieren der Datenbank in das
-Ausgabeverzeichnis direkt eintragen:
-
-```xml
-<ItemGroup>
-<None Update="Projects.db">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-</None>
-</ItemGroup>
-```
-
-Kopiere danach den Inhalt der Datei [Program.cs](Program.cs) und lasse das Programm laufen. Es
+Kopiere danach folgenden Inhalt in die `Program.cs`, ergänze den Code und lasse das Programm laufen. Es
 sollte folgende Ausgabe erscheinen:
 
 ```text
-[{"ProjectId":1,"ProjectName":"First Project","TaskCount":3,"FirstTask":"2019-01-01T00:00:00"},
- {"ProjectId":2,"ProjectName":"Second Project","TaskCount":2,"FirstTask":"2019-03-01T00:00:00"}]
+
+RESULT1
+[{"DisplayMonth":"AH","Tests":1},{"DisplayMonth":"BH","Tests":2},{"DisplayMonth":"GC","Tests":3},{"DisplayMonth":"GRJ","Tests":2},{"DisplayMonth":"HAF","Tests":1},{"DisplayMonth":"HIK","Tests":1},{"DisplayMonth":"HW","Tests":1},{"DisplayMonth":"KSR","Tests":1},{"DisplayMonth":"KUE","Tests":1},{"DisplayMonth":"NAI","Tests":2},{"DisplayMonth":"PC","Tests":2},{"DisplayMonth":"PUA","Tests":1},{"DisplayMonth":"RA","Tests":1},{"DisplayMonth":"SH","Tests":1},{"DisplayMonth":"SK","Tests":1},{"DisplayMonth":"SO","Tests":2},{"DisplayMonth":"SWH","Tests":1},{"DisplayMonth":"SZ","Tests":1},{"DisplayMonth":"TT","Tests":1}]
+
+RESULT2
+[{"Day":4,"Hour":3,"ClassCount":69},{"Day":2,"Hour":4,"ClassCount":68},{"Day":3,"Hour":4,"ClassCount":67},{"Day":2,"Hour":3,"ClassCount":67},{"Day":3,"Hour":3,"ClassCount":67}]
+RESULT3
+[{"Department":"AIF","KlassenCount":12},{"Department":"BIF","KlassenCount":9},{"Department":"BKU","KlassenCount":2},{"Department":"CIF","KlassenCount":6},{"Department":"CMN","KlassenCount":6},{"Department":"FIT","KlassenCount":7},{"Department":"HBG","KlassenCount":9},{"Department":"HIF","KlassenCount":23},{"Department":"HKU","KlassenCount":5},{"Department":"HMN","KlassenCount":10},{"Department":"HWI","KlassenCount":11},{"Department":"KIF","KlassenCount":6},{"Department":"KKU","KlassenCount":4},{"Department":"O","KlassenCount":1},{"Department":"VIF","KlassenCount":5}]
+
+RESULT4
+[{"Department":"AIF","KlassenCount":12},{"Department":"HIF","KlassenCount":23},{"Department":"HWI","KlassenCount":11}]
+
+RESULT5
+[{"TE_Teacher":"PC","TE_Subject":"AMx","LastTest":"2020-04-01T00:00:00"},{"TE_Teacher":"PC","TE_Subject":"AMy","LastTest":"2020-04-01T00:00:00"},{"TE_Teacher":"GRJ","TE_Subject":"BAP","LastTest":"2019-11-11T00:00:00"},{"TE_Teacher":"HAF","TE_Subject":"BAP","LastTest":"2020-06-24T00:00:00"},{"TE_Teacher":"GC","TE_Subject":"BWM1","LastTest":"2020-01-08T00:00:00"},{"TE_Teacher":"GC","TE_Subject":"BWM2","LastTest":"2019-09-05T00:00:00"},{"TE_Teacher":"GC","TE_Subject":"BWM3","LastTest":"2020-06-14T00:00:00"},{"TE_Teacher":"HIK","TE_Subject":"DBI1","LastTest":"2020-02-15T00:00:00"},{"TE_Teacher":"RA","TE_Subject":"DBI1","LastTest":"2019-12-26T00:00:00"},{"TE_Teacher":"NAI","TE_Subject":"Dx","LastTest":"2019-11-24T00:00:00"},{"TE_Teacher":"NAI","TE_Subject":"Dy","LastTest":"2020-04-24T00:00:00"},{"TE_Teacher":"SO","TE_Subject":"E1x","LastTest":"2020-01-01T00:00:00"},{"TE_Teacher":"SO","TE_Subject":"E1y","LastTest":"2020-04-08T00:00:00"},{"TE_Teacher":"KSR","TE_Subject":"GAD","LastTest":"2019-09-29T00:00:00"},{"TE_Teacher":"SK","TE_Subject":"GAD","LastTest":"2019-12-04T00:00:00"},{"TE_Teacher":"HW","TE_Subject":"IOT","LastTest":"2019-12-13T00:00:00"},{"TE_Teacher":"PUA","TE_Subject":"IOT","LastTest":"2019-11-03T00:00:00"},{"TE_Teacher":"BH","TE_Subject":"NVS1","LastTest":"2020-07-02T00:00:00"},{"TE_Teacher":"SWH","TE_Subject":"NVS1","LastTest":"2020-01-16T00:00:00"},{"TE_Teacher":"AH","TE_Subject":"OPS","LastTest":"2020-04-30T00:00:00"},{"TE_Teacher":"BH","TE_Subject":"OPS","LastTest":"2020-05-26T00:00:00"},{"TE_Teacher":"GRJ","TE_Subject":"POS1","LastTest":"2020-02-15T00:00:00"},{"TE_Teacher":"SZ","TE_Subject":"POS1","LastTest":"2020-02-22T00:00:00"},{"TE_Teacher":"KUE","TE_Subject":"PRE","LastTest":"2019-09-30T00:00:00"},{"TE_Teacher":"SH","TE_Subject":"PRE","LastTest":"2020-04-07T00:00:00"},{"TE_Teacher":"TT","TE_Subject":"PRE","LastTest":"2019-12-21T00:00:00"}]
+
+RESULT6
+[{"TeacherId":"AF","Subjects":[{"L_Subject":"RISL"}]},{"TeacherId":"AGU","Subjects":[{"L_Subject":"AP4"},{"L_Subject":"WPT_4"}]},{"TeacherId":"AH","Subjects":[{"L_Subject":"NVS1"},{"L_Subject":"OPS"}]},{"TeacherId":"AMA","Subjects":[{"L_Subject":"NWT1"},{"L_Subject":"NVS1"},{"L_Subject":"NVS1x"},{"L_Subject":"NWT_1x"},{"L_Subject":"AP4"},{"L_Subject":"NWT_1y"},{"L_Subject":"NVS1y"},{"L_Subject":"ITPR"},{"L_Subject":"NWT_4A"}]},{"TeacherId":"AT","Subjects":[{"L_Subject":"Dx"},{"L_Subject":"RE"},{"L_Subject":"D"}]},{"TeacherId":"BAE","Subjects":[{"L_Subject":"KGKP"},{"L_Subject":"MTKG"},{"L_Subject":"EWD"}]},{"TeacherId":"BAM","Subjects":[{"L_Subject":"POS1"},{"L_Subject":"DBI1"}]},{"TeacherId":"BAN","Subjects":[{"L_Subject":"DBI1y"},{"L_Subject":"DBI2x"},{"L_Subject":"DBI1"}]},{"TeacherId":"BAR","Subjects":[{"L_Subject":"BMG2"},{"L_Subject":"SOPK"},{"L_Subject":"FMGTK"}]},{"TeacherId":"BEC","Subjects":[{"L_Subject":"MPAN"},{"L_Subject":"MGAN"},{"L_Subject":"SOPK"}]}]
 ```
