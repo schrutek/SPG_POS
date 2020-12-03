@@ -166,28 +166,6 @@ Spalte ersetzt werden.
 
 ## Übung
 
-Erzeuge in DBeaver oder einem anderen Tool eine SQLite Datenbank mit dem Namen *Project.db*. Sie
-soll folgendes Schema haben: 
-
-```sql
-DROP TABLE IF EXISTS Task;
-DROP TABLE IF EXISTS Project;
-
-CREATE TABLE Project (
-    ID            INTEGER PRIMARY KEY AUTOINCREMENT,
-    Name          VARCHAR(200) NOT NULL,
-    EstimatedCost NUMERIC(9,4)
-);
-
-CREATE TABLE Task (
-    Project       INTEGER REFERENCES Project(ID),
-    Name          VARCHAR(200) NOT NULL,
-    DateStarted   DATETIME,
-    DateFinished  DATETIME,
-    PRIMARY KEY (Project, Name)
-);
-```
-
 Erstelle danach auf deiner Festplatte einen Ordner *Projects* und erzeuge eine neue Konsolenapplikation mit dem Namen *Spg.EfCore.Tests*.
 Füge danach die NuGet Pakete hinzu und generiere aus der Datenbank die Modelklassen in einen Unterordner *Model*
 
