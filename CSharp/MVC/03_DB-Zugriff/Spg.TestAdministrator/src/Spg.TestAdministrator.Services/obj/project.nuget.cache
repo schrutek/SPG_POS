@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OCXBnHj20YZVLN4Uyt4WlXGW+J2x+YlhqmoBDOG9F1RkobM+b2tMfxONTFVSD/fv3a74PVWrFc7GzIB4illWXg==",
+  "dgSpecHash": "YTAGebRPTVHJoV7ZO4NFp2z+kwvoOi5nrX8B6CS4ZnT/JoLPvEzY2OozhvWBP8Jl034rEPLe+bJGSIzFSVTG5g==",
   "success": true,
   "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\03_DB-Zugriff\\Spg.TestAdministrator\\src\\Spg.TestAdministrator.Services\\Spg.TestAdministrator.Services.csproj",
   "expectedPackageFiles": [
