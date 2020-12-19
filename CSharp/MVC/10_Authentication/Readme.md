@@ -18,15 +18,21 @@ In der `ConfigureServices` Methode benötigen wir:
 /// *** Authentication, Authorization hinzufügen
 services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-services.AddRazorPages()
-    .AddRazorPagesOptions(options =>
-    {
-        options.Conventions.AuthorizePage("/Contact");
-    });
-
 services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie();
 /// ***
+```
+
+**Zusatz**
+Hier wird das Default-Scheme angegeben. Die Settings sind vorgegeben und man kann das so verwenden. Soll z.B. die URL  zur Login-View anders heißen, kann man das mit einer Lanbda Expression konfigurieren:
+
+```C#
+services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, config =>
+        {
+            config.Cookie.Name = "UserLoginCookie";
+            config.LoginPath = "/Account/MyLogin";
+        });
 ```
 
 In der `Configure` Methode benötigen wir (am besten nach `UseRouting()`):
