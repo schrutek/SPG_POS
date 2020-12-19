@@ -49,7 +49,6 @@ C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieA
 C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\bin\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.pdb
 C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\bin\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.Views.dll
 C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\bin\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.Views.pdb
-C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\obj\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.csprojAssemblyReference.cache
 C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\obj\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.AssemblyInfoInputs.cache
 C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\obj\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.AssemblyInfo.cs
 C:\HTL\POS\CSharp\MVC\10_Authentication\Spg.CoocieAuthentication.Mvc\Spg.CoocieAuthentication.Mvc\obj\Debug\netcoreapp3.1\Spg.CoocieAuthentication.Mvc.csproj.CoreCompileInputs.cache

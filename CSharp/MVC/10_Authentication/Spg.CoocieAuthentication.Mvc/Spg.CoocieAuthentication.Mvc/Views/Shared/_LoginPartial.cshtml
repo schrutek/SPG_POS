@@ -5,7 +5,7 @@
     <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <span class="nav-link">Welcome @User.Identity.Name!</span>
+                <span class="nav-link">Welcome @HttpContextAccessor.HttpContext.User.Claims.ElementAt(1).Value!</span>
             </li>
             <li class="nav-item">
                 <button type="submit" class="nav-link btn btn-light">Sign out</button>

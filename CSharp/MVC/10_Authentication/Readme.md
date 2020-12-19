@@ -330,3 +330,19 @@ Das besondere an dieser View ist die erste Zeile. Hier wird der HTTP-Context inj
     </ul>
 </div>
 ```
+
+### Die Authentifizierung im Controller überprüfen
+
+Jetzte ist ein Benutzer im HTTP-Context aurhentifiziert. Diese Authentifizierung müssen wir nun auch im Controller überprüfen. Dazu verwendet man das Attribute `Authorize`.
+
+Am Beispiel der  Methode `Privacy` im Home Controller ist die verdeutlicht:
+
+```C#
+[Authorize(Roles = "User,Administrator")]
+public IActionResult Privacy()
+{
+    return View();
+}
+```
+
+Durch das Attribut `Authorize` dürfen nun nur noch Benutzer diese Methode aufrufen, die den Rollen User oder Administrator angehören. Ist man nicht authentifiziert, wird man automatiwsch auf die Login-Seite umgeleitet.

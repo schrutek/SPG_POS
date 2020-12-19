@@ -105,10 +105,11 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
 
         private async Task<ApplicationUser> AuthenticateUser(string email, string password)
         {
-            // For demonstration purposes, authenticate a user
-            // with a static email address. Ignore the password.
-            // Assume that checking the database takes 500ms
-
+            // Lediglich zu Demonstrationszwecken wird hier der User nur 
+            // mittels E-Mail-Adresse (schrutek@spengergasse.at") validiert. 
+            // Das Kennwort wird ignoriert
+            //
+            // Das Delay simuliert einen Datenbankzugriff der ja einige Zeit dauern kann
             await Task.Delay(500);
 
             if (email == "schrutek@spengergasse.at")
