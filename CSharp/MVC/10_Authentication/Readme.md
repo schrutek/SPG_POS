@@ -24,7 +24,7 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 ```
 
 **Zusatz**
-Hier wird das Default-Scheme angegeben. Die Settings sind vorgegeben und man kann das so verwenden. Soll z.B. die URL  zur Login-View anders heißen, kann man das mit einer Lanbda Expression konfigurieren:
+Soll z.B. die URL  zur Login-View anders heißen, kann man das mit einer Lanbda Expression konfigurieren:
 
 ```C#
 services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
