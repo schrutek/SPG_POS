@@ -181,6 +181,8 @@ public async Task<IActionResult> Login(ApplicationUser model, string returnUrl =
 
         if (!String.IsNullOrEmpty(returnUrl))
         {
+            // Senden von 302 Redirect (nicht RedirectToPage, denn hier würde kein neuer Request
+            // des Browsers gestartet werden).
             return LocalRedirect(Url.GetLocalUrl(returnUrl));
         }
         else
