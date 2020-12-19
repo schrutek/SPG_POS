@@ -91,8 +91,7 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
 
                 if (!String.IsNullOrEmpty(returnUrl))
                 {
-                    // Senden von 302 Redirect (nicht RedirectToPage, denn hier würde kein neuer Request
-                    // des Browsers gestartet werden).
+                    //return RedirectToLocal(returnUrl); 
                     return LocalRedirect(Url.GetLocalUrl(returnUrl));
                 }
                 else
