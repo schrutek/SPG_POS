@@ -5,8 +5,10 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Spg.CoocieAuthentication.Mvc.Extensions;
 using Spg.CoocieAuthentication.Mvc.Models;
 
 namespace Spg.CoocieAuthentication.Mvc.Controllers
@@ -23,7 +25,7 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
         [HttpGet()]
         public async Task<IActionResult> Login(string returnUrl = null)
         {
-            // Clear the existing external cookie
+            // Löscht das existierende Cookie
             await HttpContext.SignOutAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme);
             return View();
@@ -34,13 +36,9 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Use Input.Email and Input.Password to authenticate the user
-                // with your custom authentication logic.
-                //
-                // For demonstration purposes, the sample validates the user
-                // on the email address maria.rodriguez@contoso.com with 
-                // any password that passes model validation.
-
+                // Lediglich zu Demonstrationszwecken wird hier der User nur 
+                // mittels E-Mail-Adresse (schrutek@spengergasse.at") validiert. 
+                // Das Kennwort wird ignoriert
                 var user = await AuthenticateUser(model.Email, model.FullName);
 
                 if (user == null)
@@ -93,15 +91,16 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
 
                 if (!String.IsNullOrEmpty(returnUrl))
                 {
-                    return RedirectToLocal(returnUrl); 
-                    //return LocalRedirect(Url.GetLocalUrl(returnUrl));
+                    // Senden von 302 Redirect (nicht RedirectToPage, denn hier würde kein neuer Request
+                    // des Browsers gestartet werden).
+                    return LocalRedirect(Url.GetLocalUrl(returnUrl));
                 }
                 else
                 {
                     return LocalRedirect("/Home/Index");
                 }
             }
-            // Something failed. Redisplay the form.
+            // Im Fehlerfall wird wieder die View  mit leeren Textfeldern retuniert.
             return View();
         }
 
@@ -143,22 +142,22 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                // Redirect to home page if the user is authenticated.
+                // Redirect zu Home wenn der User nicht authentifiziert ist
                 return RedirectToPage("/Index");
             }
             return View();
         }
 
-        private ActionResult RedirectToLocal(string returnUrl)
-        {
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
-        }
+        //private ActionResult RedirectToLocal(string returnUrl)
+        //{
+        //    if (Url.IsLocalUrl(returnUrl))
+        //    {
+        //        return Redirect(returnUrl);
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Index", "Home");
+        //    }
+        //}
     }
 }

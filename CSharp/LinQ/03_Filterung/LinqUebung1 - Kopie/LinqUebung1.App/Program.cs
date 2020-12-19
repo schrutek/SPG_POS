@@ -6,9 +6,9 @@ using LinqUebung1.App.Model;
 
 namespace LinqUebung1.App
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             PruefDb db = PruefDb.FromMockup();
 
@@ -44,23 +44,25 @@ namespace LinqUebung1.App
             int result5 = db.Pruefungen
                 .Where(p => p.Pruefer == "FAV")
                 .Max(p => p.Note);
-
+            
             Console.WriteLine($"Beispiel 5: FAV gab schlechtestens die Note {result5}.");
 
             // 6. Welchen Notendurchschnitt haben die weiblichen Schülerinnen in POS?
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result6 (kein var verwenden!).
 
             double result6 = db.Pruefungen
-                .Where(p => p.Fach == "POS" && p.Schueler.Geschlecht == "w")
+                .Where(p => p.Fach == "POS" 
+                    && p.Schueler.Geschlecht == "w")
                 .Average(p => p.Note);
-
+            
             Console.WriteLine($"Beispiel 6: Notenschnitt der Schülerinnen in POS: {result6:0.00}");
 
             // 7. Welche Schüler haben 6 oder mehr Prüfungen? Gib eine Liste von Schülern zurück und gib Sie aus.
-            // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result7 (kein var verwenden!).  
+            // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result7 (kein var verwenden!).            
 
-            IEnumerable<Schueler> result7 = db.Schuelers.Where(s => s.Pruefungen.Count() >= 6);
-
+            IEnumerable<Schueler> result7 = db.Schuelers
+                .Where(s => s.Pruefungen.Count() >= 6);
+            
             Console.WriteLine("Beispiel 7: Schüler mit mehr als 6 Prüfungen.");
             result7.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} hat mehr 6 oder mehr Prüfungen."); });
 
@@ -69,9 +71,8 @@ namespace LinqUebung1.App
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result8 (kein var verwenden!).
 
             IEnumerable<Schueler> result8 = db.Schuelers
-                .Where(s => s.Pruefungen
-                .Any(p => p.Fach == "DBI"));
-
+                .Where(s => s.Pruefungen.Any(p => p.Fach == "DBI"));
+            
             Console.WriteLine("Beispiel 8: Schüler mit DBI Prüfungen.");
             result8.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} hat eine DBI Prüfung."); });
 
@@ -81,12 +82,7 @@ namespace LinqUebung1.App
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result9 (kein var verwenden!).
 
             IEnumerable<Schueler> result9 = db.Schuelers
-                .Where(s => s.Pruefungen
-                .All(p => p.Fach == "POS"));
-
-            IEnumerable<Schueler> result9a = db.Schuelers
-                .Where(s => !s.Pruefungen
-                .Any(p => p.Fach != "POS"));
+                .Where(s => s.Pruefungen.All(p => p.Fach == "POS"));
 
             Console.WriteLine("Beispiel 9: Schüler, die nur in POS eine Prüfung haben.");
             result9.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} hat nur in POS eine Prüfung."); });
@@ -96,12 +92,10 @@ namespace LinqUebung1.App
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result10 (kein var verwenden!).
 
             IEnumerable<Schueler> result10 = db.Schuelers
-                .Where(s => s.Pruefungen
-                .All(p => p.Fach != "POS"));
+                .Where(s => s.Pruefungen.All(p => p.Fach != "POS"));
 
             IEnumerable<Schueler> result10a = db.Schuelers
-                .Where(s => !s.Pruefungen
-                .Any(p => p.Fach == "POS"));
+                .Where(s => !s.Pruefungen.Any(p => p.Fach == "POS"));
 
             Console.WriteLine("Beispiel 10: Schüler, die keine POS Prüfung haben.");
             result10.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} hat keine POS Prüfung."); });
@@ -111,21 +105,21 @@ namespace LinqUebung1.App
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result11 (kein var verwenden!).
 
             IEnumerable<Schueler> result11 = db.Schuelers
-                .Where(s => s.Pruefungen.Count == 0);
+                .Where(s => s.Pruefungen.Count() == 0);
 
             IEnumerable<Schueler> result11a = db.Schuelers
-                .Where(s => s.Pruefungen.Any() == false);
+                .Where(s => !s.Pruefungen.Any());
 
             Console.WriteLine("Beispiel 11: Schüler, die überhaupt keine Prüfung haben.");
             result11.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} hat keine Prüfung."); });
 
-            // 12. Welche Schüler hatten in Juni AM Prüfungen? Gib eine Liste von Prüfungen zurück und gib sie mit dem Schülernamen aus.
+            // 12. Welche Schüler hatten im Juni AM Prüfungen? Gib eine Liste von Prüfungen zurück und gib sie mit dem Schülernamen aus.
             //     Hinweis: Verwende das Month Property des Datum Feldes.
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result12 (kein var verwenden!).
 
             IEnumerable<Pruefung> result12 = db.Pruefungen
-                .Where(p => p.Fach == "AM" && p.Datum.Month == 6);
-
+                .Where(p => p.Fach== "AM" && p.Datum.Month == 6);
+            
             Console.WriteLine("Beispiel 12: Schüler, die im Juni eine AM Prüfung hatten.");
             result12.ToList().ForEach(p => { Console.WriteLine($"   {p.Schueler.Name} {p.Schueler.Vorname} hat bei {p.Pruefer} eine Prüfung in AM."); });
 
@@ -133,7 +127,10 @@ namespace LinqUebung1.App
             //     aber in E nur positive Prüfungen?
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result13 (kein var verwenden!).
 
-            IEnumerable<Schueler> result13 = db.Schuelers.Where(s => s.Pruefungen.Any(p => p.Fach == "AM" && p.Note == 5) && (s.Pruefungen.Where(p => p.Fach == "E").All(p => p.Note < 5)));
+            IEnumerable<Schueler> result13 = db.Schuelers
+                .Where(s => s.Pruefungen.Any(p => p.Fach == "AM" && p.Note == 5)
+                    && s.Pruefungen.Where(p => p.Fach == "E")
+                        .All(p => p.Note <= 4));
 
             Console.WriteLine("Beispiel 13: Schüler, die in AM einmal negativ, aber in E immer positiv waren.");
             result13.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} war in AM negativ, in E aber nie."); });
@@ -148,14 +145,14 @@ namespace LinqUebung1.App
             // Schreibe das Ergebnis mit dem richtigen Datentyp in die Variable result14 (kein var verwenden!).
 
             IEnumerable<Schueler> result14 = db.Schuelers
-                .Where(s => 
+                .Where(s =>
                 {
                     try
                     {
                         return s.Pruefungen.Where(p => p.Fach == "DBI").Average(p => p.Note) <
-                        s.Pruefungen.Where(p => p.Fach == "D").Average(p => p.Note);
+                            s.Pruefungen.Where(p => p.Fach == "D").Average(p => p.Note);
                     }
-                    catch (Exception)
+                    catch
                     {
                         return false;
                     }
@@ -163,18 +160,13 @@ namespace LinqUebung1.App
 
             Console.WriteLine("Beispiel 14: Schüler, in DBI bessere Prüfungen (Notenschnitt) als in D hatten.");
             result14.ToList().ForEach(s => { Console.WriteLine($"   {s.Name} {s.Vorname} ist in DBI besser als in D."); });
-
-
         }
+
         static void WriteJson(object data)
         {
             string result = JsonConvert.SerializeObject(data);
             Console.WriteLine(result);
-
-
         }
     }
-
-
 }
 

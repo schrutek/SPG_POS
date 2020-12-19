@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    Spg.MvcTestsAdmin.Service.Models.Schoolclass firstSchoolclass = Model.ToList().FirstOrDefault();
 }
 
 <h1>Index</h1>
@@ -13,10 +14,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.C_Department)
+                <label asp-for="@firstSchoolclass.C_Department"></label>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.C_ClassTeacherNavigation)
+                <label asp-for="@firstSchoolclass.C_ClassTeacherNavigation"></label>
             </th>
             <th></th>
         </tr>
@@ -25,10 +26,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.C_Department)
+                <label>@item.C_Department</label>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.C_ClassTeacherNavigation.T_ID)
+                <label>@item.C_ClassTeacherNavigation.T_ID</label>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.C_ID">Edit</a> |
