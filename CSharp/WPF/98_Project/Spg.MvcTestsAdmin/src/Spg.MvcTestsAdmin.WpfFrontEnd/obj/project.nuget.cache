@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qOXsFhJw93quS2OeF/ONKE6YdjhwvIGWRlKdh4aealMBYgrqTw5GCZYSGhj6T9tcAY0WWa6n11fbaGQaBOdPGQ==",
+  "dgSpecHash": "TenDGtyudPWJ7a5YBYoLyiXqwB4EfPzc/+1CZvARBecoUWmAogt3rEArSZ7pqrlKxD5W7CtsBzOyDGF53F49Kw==",
   "success": true,
-  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\schrutem\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

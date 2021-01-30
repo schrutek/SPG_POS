@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj": {}
   },
   "projects": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {
+    "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
         "projectName": "Spg.MvcTestsAdmin.Service",
-        "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -75,14 +75,14 @@
         }
       }
     },
-    "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj": {
+    "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj",
         "projectName": "Spg.MvcTestsAdmin.WpfFrontEnd",
-        "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\Spg.MvcTestsAdmin.WpfFrontEnd.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WpfFrontEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -104,8 +104,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {
-                "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj"
+              "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {
+                "projectPath": "C:\\HTL\\POS\\CSharp\\WPF\\98_Project\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj"
               }
             }
           }
