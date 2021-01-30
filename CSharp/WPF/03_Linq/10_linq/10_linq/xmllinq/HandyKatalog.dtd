@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT HandyKatalog (Hersteller*)>
+<!ELEMENT Hersteller (HerstellerNr, Modell+)>
+<!ATTLIST Hersteller Name CDATA #REQUIRED>
+<!ELEMENT HerstellerNr  EMPTY>
+<!ATTLIST HerstellerNr nr ID #REQUIRED>
+<!ELEMENT Modell (Gewicht, Preis+)>
+<!ATTLIST Modell name CDATA #REQUIRED>
+<!ELEMENT Gewicht (#PCDATA)>
+<!ELEMENT Preis ( #PCDATA) >
+<!ATTLIST Preis vertrag (ja|nein) "nein">

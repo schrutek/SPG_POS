@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.LinQ.Demos", "Spg.LinQ.Demos\Spg.LinQ.Demos.csproj", "{8D26B8A8-9691-471A-9D67-C598FDA83E16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D26B8A8-9691-471A-9D67-C598FDA83E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D26B8A8-9691-471A-9D67-C598FDA83E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D26B8A8-9691-471A-9D67-C598FDA83E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D26B8A8-9691-471A-9D67-C598FDA83E16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8D31824-B7F0-421A-B7AB-E28C1FF2F7A2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\bin\Debug\netcoreapp3.1\Spg.Inheritance.Tests.exe
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\bin\Debug\netcoreapp3.1\Spg.Inheritance.Tests.deps.json
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\bin\Debug\netcoreapp3.1\Spg.Inheritance.Tests.runtimeconfig.json
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\bin\Debug\netcoreapp3.1\Spg.Inheritance.Tests.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\bin\Debug\netcoreapp3.1\Spg.Inheritance.Tests.dll
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\bin\Debug\netcoreapp3.1\Spg.Inheritance.Tests.pdb
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.csprojAssemblyReference.cache
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.AssemblyInfo.cs
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.dll
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.pdb
+C:\HTL\tmp\Spg.Inheritance.Tests\Spg.Inheritance.Tests\obj\Debug\netcoreapp3.1\Spg.Inheritance.Tests.genruntimeconfig.cache

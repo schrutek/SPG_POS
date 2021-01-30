@@ -1,0 +1,13 @@
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\bin\Debug\netcoreapp3.1\Spg.Collections.Tests.exe
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\bin\Debug\netcoreapp3.1\Spg.Collections.Tests.deps.json
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\bin\Debug\netcoreapp3.1\Spg.Collections.Tests.runtimeconfig.json
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\bin\Debug\netcoreapp3.1\Spg.Collections.Tests.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\bin\Debug\netcoreapp3.1\Spg.Collections.Tests.dll
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\bin\Debug\netcoreapp3.1\Spg.Collections.Tests.pdb
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.csprojAssemblyReference.cache
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.AssemblyInfo.cs
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.dll
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.pdb
+C:\HTL\tmp\Spg.Collections.Tests\Spg.Collections.Tests\obj\Debug\netcoreapp3.1\Spg.Collections.Tests.genruntimeconfig.cache

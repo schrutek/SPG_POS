@@ -1,0 +1,59 @@
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.deps.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csprojAssemblyReference.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csproj.CoreCompileInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\03_DB-Zugriff\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.genruntimeconfig.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.deps.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csproj.CoreCompileInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\04_Dependency Injection\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.genruntimeconfig.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.deps.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csprojAssemblyReference.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csproj.CoreCompileInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\06_Razor Pages und Partial Views\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.genruntimeconfig.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.deps.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csproj.CoreCompileInputs.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.genruntimeconfig.cache
+C:\HTL\Git_Vorebereitung\Pos4xHif\01_Web\07_State Management\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csprojAssemblyReference.cache
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.deps.json
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.json
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.runtimeconfig.dev.json
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\bin\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfoInputs.cache
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.AssemblyInfo.cs
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csproj.CoreCompileInputs.cache
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.genruntimeconfig.cache
+C:\HTL\Git_Vorebereitung\Pos3xHif\98_Project\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csprojAssemblyReference.cache

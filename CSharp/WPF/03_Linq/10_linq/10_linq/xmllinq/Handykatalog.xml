@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HandyKatalog>
+	<!-- NÖKIA -->
+	<Hersteller name="NOKIA">
+		<HerstellerNr nr="h1234"/>
+		<Modell name="7110">
+			<Gewicht>141g</Gewicht>
+			<Preis vertrag="ja">999</Preis>
+			<Preis vertrag="nein">4999</Preis>
+		</Modell>
+		<Modell name="8210">
+			<Gewicht>105g</Gewicht>
+			<Preis vertrag="ja">888</Preis>
+		</Modell>
+	</Hersteller>
+</HandyKatalog>

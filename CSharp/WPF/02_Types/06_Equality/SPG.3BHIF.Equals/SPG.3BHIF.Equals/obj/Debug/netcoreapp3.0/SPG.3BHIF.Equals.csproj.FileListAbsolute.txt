@@ -1,0 +1,11 @@
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\bin\Debug\netcoreapp3.0\SPG.3BHIF.Equals.exe
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\bin\Debug\netcoreapp3.0\SPG.3BHIF.Equals.deps.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\bin\Debug\netcoreapp3.0\SPG.3BHIF.Equals.runtimeconfig.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\bin\Debug\netcoreapp3.0\SPG.3BHIF.Equals.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\bin\Debug\netcoreapp3.0\SPG.3BHIF.Equals.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\bin\Debug\netcoreapp3.0\SPG.3BHIF.Equals.pdb
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\obj\Debug\netcoreapp3.0\SPG.3BHIF.Equals.csprojAssemblyReference.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\obj\Debug\netcoreapp3.0\SPG.3BHIF.Equals.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\obj\Debug\netcoreapp3.0\SPG.3BHIF.Equals.AssemblyInfo.cs
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\obj\Debug\netcoreapp3.0\SPG.3BHIF.Equals.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\SPG.3BHIF.Equals\SPG.3BHIF.Equals\obj\Debug\netcoreapp3.0\SPG.3BHIF.Equals.pdb

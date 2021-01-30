@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Generics.Tests", "Spg.Generics.Tests\Spg.Generics.Tests.csproj", "{C4A8E416-225C-407B-9AE5-E0901B8496AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4A8E416-225C-407B-9AE5-E0901B8496AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A8E416-225C-407B-9AE5-E0901B8496AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A8E416-225C-407B-9AE5-E0901B8496AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A8E416-225C-407B-9AE5-E0901B8496AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB531DFC-D064-4915-BC1B-EE5DE0DEA5ED}
+	EndGlobalSection
+EndGlobal

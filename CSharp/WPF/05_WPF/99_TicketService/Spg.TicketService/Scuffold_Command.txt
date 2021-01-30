@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=WE20W8WS2000501\SQLEXPRESS;Initial Catalog=TicketShop;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Dom -UseDatabaseNames -Force -DataAnnotations

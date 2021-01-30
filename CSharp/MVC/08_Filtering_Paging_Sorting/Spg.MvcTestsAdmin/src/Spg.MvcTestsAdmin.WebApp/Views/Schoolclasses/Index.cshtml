@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Spg.MvcTestsAdmin.Service.Models.Schoolclass>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Index (ViewData)";
     Spg.MvcTestsAdmin.Service.Models.Schoolclass firstSchoolclass = Model.ToList().FirstOrDefault();
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
     <a asp-action="Create">Create New</a>

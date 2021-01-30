@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PvxIfNSdgPnjepMUFm1JKnF3UsRQS9ff0+lTHbtHkJGQPeUYRAoTH+MrXwaSfvv8LBsDVBHyGZSScgBGYGRGXg==",
+  "success": true,
+  "projectFilePath": "C:\\HTL\\Git_Vorebereitung\\Pos3xHif\\03_Linq\\04_Projection\\LinqUebung2\\LinqUebung2.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\schrutem\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

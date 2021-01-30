@@ -1,0 +1,13 @@
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\bin\Debug\netcoreapp3.1\Spg.LinQ.Demos.exe
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\bin\Debug\netcoreapp3.1\Spg.LinQ.Demos.deps.json
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\bin\Debug\netcoreapp3.1\Spg.LinQ.Demos.runtimeconfig.json
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\bin\Debug\netcoreapp3.1\Spg.LinQ.Demos.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\bin\Debug\netcoreapp3.1\Spg.LinQ.Demos.dll
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\bin\Debug\netcoreapp3.1\Spg.LinQ.Demos.pdb
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.csprojAssemblyReference.cache
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.AssemblyInfo.cs
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.dll
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.pdb
+C:\HTL\tmp\Spg.LinQ.Demos\Spg.LinQ.Demos\obj\Debug\netcoreapp3.1\Spg.LinQ.Demos.genruntimeconfig.cache

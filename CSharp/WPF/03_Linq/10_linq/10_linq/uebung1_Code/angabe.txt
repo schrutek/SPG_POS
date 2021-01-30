@@ -1,0 +1,109 @@
+Um Übungen mit linq durchzuführen braucht man zuerst Daten,
+in diesem Fall in Form von Collections.
+Sampledata.cs enthält eine statische Klasse mit einigen Daten,
+allesamt Instanzen der Klassen aus dem Ordner Businessobjects.
+Objectdumper.cs ist eine kleine Hilfsklasse zum ausgeben von Collections.
+
+Legen Sie ein neues Konsolenprojekt an und fügen Sie 
+Sampledata.cs, Objectdumper.c und den Ordner Businessobjects
+zum Projekt hinzu.
+Machen Sie sich (z.B. mit Hilfe des Klassendiagramms) mit der Struktur
+zwischen den verschiedenen Klassen vertraut.
+
+Weil irgendwo using System.Drawing steht und diese Assembly
+nicht erreichbar ist muß man im Projekt Explorer unter 
+Verweise rechtsklicken - Verweis hinzufügen wählen und System Drawing hinzufügen
+
+Das verbleibende kleine Namespaceproblem lösen Sie selbst.
+
+
+In der main können Sie nun z.B. die folgende Linq-query schreiben:
+
+        {
+            var ergebnis =
+            from b in SampleData.Books
+            where b.Price > 0
+            orderby b.Price descending
+            select new {b.Isbn, b.Title, Preis2 =b.Price };
+
+            ObjectDumper.Write(ergebnis);
+
+            Console.ReadKey();
+        }
+
+
+
+Lösen Sie bitte die folgenden Fragen zur Sampladata Struktur
+als Linq Queries.
+
+1- liste alle Bücher, die mehr als 200 Seiten haben
+  
+2- liste alle Bücher (nur Isbn, PublicationDate, Title ausgeben),
+   die  vor August 2007 produziert wurden, sortierung nach
+   Title ist erwünscht
+  
+  // Ab hier benötigt man weitere Daten aus anderen Instanzen,
+  // Man benutzt hier bevorzugt Referenzen (statt einem Join wie in SQL) 
+  
+3- liste alle Bücher, die vom Verlag mit Namen "FunBooks" stammen,
+   Ausgabe einiger Felder aus Book
+   [weil Bücher auszugeben sind wird man wohl from ... SampleData.Books
+    verwenden, mit der Referenz Publisher erreicht man den Verlag "Datensatz"]
+  
+4- Liste description und Name des Subjects "Software development"   
+   sowie den Title der Bücher, die  zum subject gehören
+   
+5- Liste Name und Website aus publisher, dazu die Bücher
+   des Verlags (Title, Price) und auch noch den Namen des 
+   Buch-subjects
+   
+   // Die Beziehung Books zu Authors ist  n:m
+   // daher ist hier anders vorzugehen
+   
+6- Liste die Bücher (Title und Pagecount) sowie die
+   Autoren, die das Buch geschrieben haben
+   
+7- Liste die Bücher des Autors  Octavio Prince
+
+8- Liste die Bücher, bei denen Octavio Prince
+   der Hauptautor (1. Autoreintrag) ist
+
+      // gruppierende Abfragen sind ab hier möglich, bei 11 nötig
+      
+9- Gebe die Publisher aus, dazu die Anzahl ihrer Bücher
+   [
+
+10- Ausgabe Publishername, booktitle, Anzahl der Autoren
+
+11- Ausgabe aller Subjects, darunter geschachtelt  jeweils
+    die Books dieses Subjects     
+
+
+
+
+
+
+- Erläutern Sie Sinn und Zweck des folgenden statements
+    var authors =
+    from distinctAuthor in 
+      (
+      from book in SampleData.Books
+      where book.Title.Contains("LINQ")
+      from author in book.Authors.Take(1)
+      select author
+      )
+       .Distinct()
+    select new {distinctAuthor.FirstName, distinctAuthor.LastName};
+
+- Erläutern Sie Sinn und Zweck des folgenden statements
+    var erg = 
+        from publisher in SampleData.Publishers
+        join book in SampleData.Books
+             on publisher equals book.Publisher 
+        into publisherBooks
+        from book in publisherBooks.DefaultIfEmpty()
+        select new {
+               Publisher = publisher.Name,
+               Book = book == default(Book) ? "(no books)" : book.Title
+             };
+

@@ -1,0 +1,183 @@
+
+
+Basierend auf unserem SampleData Projekt erstellen Sie 
+füt die unten folgenden Fragen Ausgaben in XML
+
+Beispiel: Geben Sie dickere Bücher als Buchelemente mit dem Buchtitel als Textinhalt aus
+            var xel1 =
+            new XElement("Buecher",         // das Wurzelelement
+                    from b in SampleData.Books
+                    where b.PageCount >100
+                    orderby b.Title
+                    select new XElement("Buch", b.Title)  // pro Buch ein <Buch> element
+                );
+
+            
+            Console.WriteLine(xel1);    // ToString() gibt formatierten XML Text aus
+
+Beispielausgabe:
+<Buecher>
+  <Buch>All your base are belong to us</Buch>
+  <Buch>C# on Rails</Buch>
+  <Buch>Funny Stories</Buch>
+  <Buch>LINQ rules</Buch>
+</Buecher>
+
+
+
+----1 Liste (aller) Bücher, Buchdaten als Elemente -------------------------------
+
+        
+
+<Buecher>
+  <Buch>
+    <Titel>Bonjour mon Amour</Titel>
+    <Seiten>50</Seiten>
+    <Isbn>2-444-77777-2</Isbn>
+  </Buch>
+  <Buch>
+    <Titel>Funny Stories</Titel>
+    <Seiten>101</Seiten>
+    <Isbn>0-000-77777-2</Isbn>
+  </Buch>
+</Buecher>
+
+----2 Liste (aller) Bücher, Buchdaten als Attribute -------------------------------
+
+<Buecher>
+  <Buch Titel="Bonjour mon Amour" Seiten="50" Isbn="2-444-77777-2" />
+  <Buch Titel="Funny Stories" Seiten="101" Isbn="0-000-77777-2" />
+</Buecher>
+
+
+
+----3 Liste alle Bücher, Buchdaten als Attribute und Elemente ----------------------------
+
+
+<Buecher>
+  <Buch Titel="All your base are belong to us" Seiten="1205">
+    <Isbn>0-333-77777-2</Isbn>
+  </Buch>
+  <Buch Titel="Bonjour mon Amour" Seiten="50">
+    <Isbn>2-444-77777-2</Isbn>
+  </Buch>
+  <Buch Titel="C# on Rails" Seiten="256">
+    <Isbn>0-222-77777-2</Isbn>
+  </Buch>
+  <Buch Titel="Funny Stories" Seiten="101">
+    <Isbn>0-000-77777-2</Isbn>
+  </Buch>
+  <Buch Titel="LINQ rules" Seiten="300">
+    <Isbn>0-111-77777-2</Isbn>
+  </Buch>
+</Buecher>
+
+
+
+
+----4 Liste aller Verlage mit den jeweiligen Büchern und auch noch die Buchautoren dazu
+----        der XML File sollte hierarchisch verschachtelt sein -----------------------
+
+
+
+<Buecher>
+  <Verlag Name="FunBooks">
+    <Buch Titel="Funny Stories">
+      <Autor>Good</Autor>
+      <Autor>Simplegame</Autor>
+    </Buch>
+    <Buch Titel="Bonjour mon Amour">
+      <Autor>Simplegame</Autor>
+      <Autor>Prince</Autor>
+    </Buch>
+  </Verlag>
+  <Verlag Name="Joe Publishing">
+    <Buch Titel="LINQ rules">
+      <Autor>Prince</Autor>
+    </Buch>
+    <Buch Titel="C# on Rails">
+      <Autor>Prince</Autor>
+    </Buch>
+    <Buch Titel="All your base are belong to us">
+      <Autor>Legrand</Autor>
+    </Buch>
+  </Verlag>
+  <Verlag Name="I Publisher" />
+</Buecher>
+
+
+----5  Gebe jene Bücher aus, bei denen Prince ein Author ist
+
+
+
+<Buecher>
+  <Buch Titel="LINQ rules" />
+  <Buch Titel="C# on Rails" />
+  <Buch Titel="Bonjour mon Amour" />
+</Buecher>
+
+
+
+----------------------------------------------------------------------------
+Hat man XML, so kann man dieses mit Linq auslesen, bearbeiten
+dabei muss man vor allem jene Methoden von XElement einsetzen, die Collections liefern
+
+XElement.Parse oder XElement.Load lesen xml und legen im Hauptspeicher einen
+DOM-Tree an, einen Hierarchie von XNodes. Neben Elementen sind auch Texte
+(Texte die in Elementen drinnen stehen) oder Kommentare Nodes
+
+
+            var xelin =
+     XElement.Parse(
+           @"<?xml version=""1.0""  encoding=""UTF-8"" ?>
+                        <HandyKatalog>
+                        <!-- NOKIA -->
+	                        <Hersteller name=""NOKIA"">
+		                        <HerstellerNr nr=""h1234""/>
+		                        <Modell name=""7110"">
+			                        <Gewicht>141g</Gewicht>
+			                        <Preis vertrag=""ja"">999</Preis>
+			                        <Preis vertrag=""nein"">4999</Preis>
+		                        </Modell>
+		                        <Modell name=""8210"">
+			                        <Gewicht>105g</Gewicht>
+			                        <Preis vertrag=""ja"">888</Preis>
+		                        </Modell>
+	                        </Hersteller>
+                        </HandyKatalog> ");
+
+            Console.WriteLine("NodeType: " + xelin.NodeType);
+            Console.WriteLine("Name: " + xelin.Name);
+
+            // ein Xelement (eines ganzen Files) stellt das Wurzelelement dar.
+            Console.WriteLine("FirstNode: " + xelin.FirstNode);
+            Console.WriteLine("FirstAttribute: " + xelin.FirstAttribute);
+            Console.WriteLine("Value: " + xelin.Value);
+            Console.WriteLine("Parent: " + xelin.Parent);
+            
+            // die folgenden liefern Collections:
+            Console.WriteLine("Elements().Count(): " + xelin.Elements().Count()); // direkt untergeordnete Elemente ("name schränkt ein")
+            Console.WriteLine("Nodes().Count(): " + xelin.Nodes().Count());       // direkt untergeordnete Nodes
+            Console.WriteLine("Untergeordnete().Count(): " + xelin.Descendants().Count());   // rekursiv alle darunter liegenden Elemente
+            Console.WriteLine("Xpath_//Preis().Count(): " + xelin.XPathSelectElements("//Preis").Count());  // Elemente gemäss XPath Suche
+
+
+
+
+NodeType: Element
+Name: HandyKatalog
+FirstNode: <!-- NOKIA -->
+FirstAttribute:
+Value: 141g9994999105g888
+Parent:
+Elements().Count(): 1
+Nodes().Count(): 2
+Untergeordnete().Count(): 9
+Xpath_//Preis().Count(): 3
+
+
+
+
+--- 6  Liste die Modelle des Handykatalogs mit Namen
+
+

@@ -1,0 +1,138 @@
+﻿<Window x:Class="Spg.MvcTestsAdmin.WpfFrontEnd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spg.MvcTestsAdmin.WpfFrontEnd.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1200">
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+    
+    <Grid x:Name="grdSchoolClasses" Margin="15,15,15,15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   Margin="0,0,15,0"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center">Schulklassen
+        </TextBlock>
+        <ListBox x:Name="lstSchoolClasses"
+                 Grid.Row="2" Grid.Column="0"
+                 Margin="0,0,15,0"
+                 ItemsSource="{Binding Path=SchoolClassViewModel.AllSchoolClasses.Result}"
+                 SelectedValue="{Binding SchoolClassViewModel.CurrentSchoolclass}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel Margin="5 5 5 5">
+                        <StackPanel>
+                            <TextBlock Text="{Binding C_ID}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding C_Department}"/>
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Margin="0,0,15,0">
+            <Button Margin="0,10,10,10" Width="80" 
+                    Content="Neu"
+                    Command="{Binding Path=SchoolClassViewModel.InsertSchoolClassCommand}"></Button>
+            <Button Margin="0,10,10,10" Width="80" 
+                    Content="Ändern"
+                    Command="{Binding Path=SchoolClassViewModel.UpdateSchoolClassCommand}" 
+                    CommandParameter="{Binding ElementName=lstSchoolClasses, Path=SelectedItem}"></Button>
+            <Button Margin="0,10,10,10" Width="80" 
+                    Content="Löschen"
+                    Command="{Binding Path=SchoolClassViewModel.DeleteSchoolClassCommand}"
+                    CommandParameter="{Binding ElementName=lstSchoolClasses, Path=SelectedItem}"></Button>
+        </StackPanel>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" 
+                   Margin="0,0,15,0"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center">Stunden
+        </TextBlock>
+        <ListBox x:Name="lstLessons" 
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Margin="0,0,15,0"
+                 ItemsSource="{Binding Path=LessonViewModel.AllLessons.Result}"
+                 SelectedValue="{Binding LessonViewModel.CurrentLesson}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel Margin="5 5 5 5">
+                        <StackPanel>
+                            <TextBlock Text="{Binding L_Subject}" FontWeight="Bold"/>
+                            <TextBlock>
+                                <Run Text="{Binding Path=L_TeacherNavigation.T_Lastname}"></Run>
+                                <Run Text="{Binding Path=L_TeacherNavigation.T_Firstname}"></Run>
+                            </TextBlock>
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <DockPanel Grid.Row="2" Grid.Column="2">
+            <GroupBox Header="Klassenvorstand" 
+                      Margin="0,0,0,0"
+                      DockPanel.Dock="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Zeile mit Vorname. -->
+                    <Label Content="Vorname:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"/>
+                    <TextBox Margin="0 0 0 0" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"
+                         Text="{Binding Path=LessonViewModel.ClassTeacher.T_Firstname}" />
+
+                    <!-- 2. Zeile mit Nachname. -->
+                    <Label Content="Nachname:" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"/>
+                    <TextBox Margin="0 5 0 5" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center"
+                         Text="{Binding Path=LessonViewModel.ClassTeacher.T_Lastname}" />
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Weitere Informationen ..." 
+                      Margin="0,15,0,0"
+                      DockPanel.Dock="Top">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </GroupBox>
+        </DockPanel>
+
+        <Label 
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,15,0"
+            Content="Loading..." 
+            Visibility="{Binding Path=SchoolClassViewModel.AllSchoolClasses.IsNotCompleted, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+    </Grid>
+</Window>

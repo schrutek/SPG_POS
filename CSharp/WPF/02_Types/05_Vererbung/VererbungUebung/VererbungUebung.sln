@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VererbungUebung", "VererbungUebung\VererbungUebung.csproj", "{065DB3EC-2193-4BA7-A9C1-A836E0B22EFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{065DB3EC-2193-4BA7-A9C1-A836E0B22EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065DB3EC-2193-4BA7-A9C1-A836E0B22EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065DB3EC-2193-4BA7-A9C1-A836E0B22EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065DB3EC-2193-4BA7-A9C1-A836E0B22EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE4C47F1-44A3-484E-AE7F-FE4D77F3A40B}
+	EndGlobalSection
+EndGlobal

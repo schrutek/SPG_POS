@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.Inheritance.Tests", "Spg.Inheritance.Tests\Spg.Inheritance.Tests.csproj", "{6BFD5D25-708C-42D8-8F89-E4BEE5BF464A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BFD5D25-708C-42D8-8F89-E4BEE5BF464A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BFD5D25-708C-42D8-8F89-E4BEE5BF464A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BFD5D25-708C-42D8-8F89-E4BEE5BF464A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BFD5D25-708C-42D8-8F89-E4BEE5BF464A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B266418B-C0A6-45B3-9F5E-86D5CE72CEF4}
+	EndGlobalSection
+EndGlobal

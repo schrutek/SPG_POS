@@ -109,7 +109,7 @@ namespace Spg.CoocieAuthentication.Mvc.Controllers
             // mittels E-Mail-Adresse (schrutek@spengergasse.at") validiert. 
             // Das Kennwort wird ignoriert
             //
-            // Das Delay simuliert einen Datenbankzugriff der ja einige Zeit dauern kann
+            // Das Delay simuliert einen Datenbankzugriff, der ja einige Zeit dauern kann
             await Task.Delay(500);
 
             if (email == "schrutek@spengergasse.at")

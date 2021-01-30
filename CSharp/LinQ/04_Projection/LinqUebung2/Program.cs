@@ -29,8 +29,10 @@ namespace LinqUebung2
             // Liefere eine Liste aller Prüfungsfächer (IEnumerable<string>)
             // Mit Select kann man sich aussuchen, welche Properties geliefert werden.
             // Select nennt man auch "Projektion"
+
             IEnumerable<string> uebung1 = db.Pruefungen.Select(p => p.Fach);
             // Liste beinhaltet D, E, E, AM, D, AM, ...
+
             IEnumerable<string> uebung2 = db.Pruefungen.Select(p => p.Fach).Distinct();
             // Liste beinhaltet D, E, AM, POS, DBI (jedes Fach nur 1x)
 
@@ -44,9 +46,9 @@ namespace LinqUebung2
             // }
             var uebung3 = db.Schuelers.Select(s => new
             {
-                s.Name,
-                s.Vorname,
-                Anzahl = s.Pruefungen.Count   // Propertynamen festlegen
+                Name = s.Name,
+                Vorname = s.Vorname,
+                Anzahl = s.Pruefungen.Count()   // Propertynamen festlegen
             }).OrderBy(x => x.Anzahl).ThenBy(x => x.Name);
 
             // Welche Schüler haben mehr als 6 Prüfungen?
@@ -64,7 +66,7 @@ namespace LinqUebung2
                 s.Vorname,
                 Pruefer = s.Pruefungen.Select(p => p.Pruefer).Distinct()
             });
-            //WriteJson(uebung5, "Beispiel 5 - Schüler mit Prüfer", true);
+            WriteJson(uebung5, "Beispiel 5 - Schüler mit Prüfer", true);
 
 
             // Liefere ein JSON Objekt mit folgendem Aufbau:
@@ -73,17 +75,20 @@ namespace LinqUebung2
             //    Vorname: "Max",
             //    db.Pruefungen: [{"Pruefer"="KY", "Fach"="AM"}, ...]
             // },...
-            var uebung6 = db.Schuelers.Select(s => new
-            {
-                s.Name,
-                s.Vorname,
-                Pruefungen = s.Pruefungen.Select(p => new
+            var uebung6 = db.Schuelers
+                .Where(s => s.Id < 1010)
+                .Select(s => new
                 {
-                    p.Pruefer,
-                    p.Fach
-                })
-            });
-            //WriteJson(uebung6, "Beispiel 6 - Schüler mit Prüfungen", true);
+                    s.Name,
+                    s.Vorname,
+                    Pruefungen = s.Pruefungen.Select(p => new
+                    {
+                        p.Pruefer,
+                        p.Fach
+                    }),
+                    Anzahl = s.Pruefungen.Count(),
+                });
+            WriteJson(uebung6, "Beispiel 6 - Schüler mit Prüfungen", true);
 
 
             // *************************************************************************************

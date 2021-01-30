@@ -1,0 +1,13 @@
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.exe
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.deps.json
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.runtimeconfig.json
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.runtimeconfig.dev.json
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.dll
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\bin\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.pdb
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.csprojAssemblyReference.cache
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.AssemblyInfoInputs.cache
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.AssemblyInfo.cs
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.csproj.CoreCompileInputs.cache
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.dll
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.pdb
+C:\HTL\tmp\Spg.DependencyInjection.Tests\Spg.DependencyInjection.Tests\obj\Debug\netcoreapp3.1\Spg.DependencyInjection.Tests.genruntimeconfig.cache

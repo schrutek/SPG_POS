@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="Spg.FrontEnd.EventsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:Spg.FrontEnd.ViewModels"
+             x:Name="EventsPageX"
+             mc:Ignorable="d">
+    
+    <UserControl.DataContext>
+        <vm:VmEventsPage></vm:VmEventsPage>
+    </UserControl.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Events" Margin="15"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Termine" Margin="15"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Kontingente" Margin="15"></TextBlock>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+            <Button Content="Neues Event anlegen" Padding="5" Margin="15, 5, 1, 5" Width="Auto"
+                Command="{Binding Path=CreateEvent}"
+                CommandParameter=""></Button>
+        </StackPanel>
+        <ListBox Grid.Row="3" Grid.Column="0" x:Name="lstEvents" Margin="15, 0, 15, 50"
+                 ItemsSource="{Binding Events}"
+                 SelectedValue="{Binding EventSelected}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Padding="5" Margin="1, 1, 1, 1" 
+                                Command="{Binding Source={x:Reference EventsPageX}, Path=DataContext.UpdateEvent}" 
+                                CommandParameter="{Binding .}">
+                            <Image Width="16" Source="Icons/Edit.png" />
+                        </Button>
+                        <Button Padding="5" Margin="1, 1, 1, 1" 
+                                Command="{Binding Source={x:Reference EventsPageX}, Path=DataContext.DeleteEvent}" 
+                                CommandParameter="{Binding .}">
+                            <Image Width="16" Source="Icons/Delete.png" />
+                        </Button>
+                        <TextBlock Margin="5">
+                            <Run Text="{Binding Name}"></Run>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Button Content="Neue Show anlegen" Padding="5" Margin="15, 5, 1, 5" Width="Auto"
+                Command="{Binding Path=CreateShow}"
+                CommandParameter="{Binding EventSelected}"></Button>
+        </StackPanel>
+        <ListBox Grid.Row="3" Grid.Column="1" x:Name="lstShows" Margin="15, 0, 15, 50"
+                 ItemsSource="{Binding ShowsByEvent}"
+                 SelectedValuePath="Id">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0">
+                            <Button Padding="5" Margin="1, 1, 1, 1" 
+                                Command="{Binding Source={x:Reference EventsPageX}, Path=DataContext.UpdateEvent}" 
+                                CommandParameter="{Binding .}">
+                                <Image Width="16" Source="Icons/Edit.png" />
+                            </Button>
+                            <Button Padding="5" Margin="1, 1, 1, 1" 
+                                Command="{Binding Source={x:Reference EventsPageX}, Path=DataContext.DeleteEvent}" 
+                                CommandParameter="{Binding .}">
+                                <Image Width="16" Source="Icons/Delete.png" />
+                            </Button>
+                        </StackPanel>
+                        <StackPanel Margin="5, 2, 2, 2">
+                            <TextBlock>
+                            <Run FontWeight="Bold" Text="{Binding Path=Start,StringFormat=d}"></Run>
+                            <Run FontWeight="Bold" Text="CheckIn:"></Run>
+                            <Run Text="{Binding Path=CheckIn, StringFormat=t}"></Run>
+                            </TextBlock>
+                            <TextBlock>
+                            <Run Text="{Binding Path=Start, StringFormat=t}"></Run> - <Run Text="{Binding Path=End, StringFormat=t}"></Run>
+                            </TextBlock>
+                        </StackPanel>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+
+</UserControl>

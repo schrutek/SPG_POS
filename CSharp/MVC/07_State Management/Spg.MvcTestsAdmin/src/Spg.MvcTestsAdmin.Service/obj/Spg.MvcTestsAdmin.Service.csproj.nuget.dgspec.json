@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\MVC\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {}
   },
   "projects": {
-    "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {
+    "C:\\HTL\\POS\\CSharp\\MVC\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\MVC\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
         "projectName": "Spg.MvcTestsAdmin.Service",
-        "projectPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\HTL\\Git_Vorebereitung\\Pos4xHif\\01_Web\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\MVC\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -31,6 +31,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -69,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,10 @@
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\bin\Debug\netcoreapp2.2\LambdaTutorial_02.deps.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\bin\Debug\netcoreapp2.2\LambdaTutorial_02.runtimeconfig.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\bin\Debug\netcoreapp2.2\LambdaTutorial_02.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\bin\Debug\netcoreapp2.2\LambdaTutorial_02.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\bin\Debug\netcoreapp2.2\LambdaTutorial_02.pdb
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\obj\Debug\netcoreapp2.2\LambdaTutorial_02.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\obj\Debug\netcoreapp2.2\LambdaTutorial_02.AssemblyInfo.cs
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\obj\Debug\netcoreapp2.2\LambdaTutorial_02.dll
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\obj\Debug\netcoreapp2.2\LambdaTutorial_02.pdb
+C:\Users\schrutem\Source\Workspaces\HTL\3xHIF\LambdaTutorial_02\LambdaTutorial_02\obj\Debug\netcoreapp2.2\LambdaTutorial_02.csprojAssemblyReference.cache

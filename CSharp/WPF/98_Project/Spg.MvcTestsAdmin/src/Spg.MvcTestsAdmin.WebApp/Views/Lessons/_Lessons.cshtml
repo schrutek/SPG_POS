@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Spg.MvcTestsAdmin.Service.Models.Lesson>
+
+@{
+    var schoolclassId = ViewData["schoolclassId"];
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.L_Untis_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_Room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_Day)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_ClassNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_HourNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.L_TeacherNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Untis_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_Day)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_ClassNavigation.C_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_HourNavigation.P_Nr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.L_TeacherNavigation.T_ID)
+                </td>
+                <td>
+                    <a asp-controller="Lessons" asp-action="Edit" asp-route-id="@item.L_ID">Edit</a> |
+                    <a asp-controller="Lessons" asp-action="Details" asp-route-id="@item.L_ID" asp-route-schoolclassId="@schoolclassId">Details</a> |
+                    <a asp-controller="Lessons" asp-action="Delete" asp-route-id="@item.L_ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\Grouping.exe
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\db\tests.json
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\Grouping.deps.json
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\Grouping.runtimeconfig.json
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\Grouping.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\Grouping.dll
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\bin\Debug\netcoreapp3.1\Grouping.pdb
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.AssemblyInfo.cs
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.dll
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.pdb
+C:\HTL\POS\CSharp\LinQ\04a_GroupBy - Kopie\obj\Debug\netcoreapp3.1\Grouping.genruntimeconfig.cache

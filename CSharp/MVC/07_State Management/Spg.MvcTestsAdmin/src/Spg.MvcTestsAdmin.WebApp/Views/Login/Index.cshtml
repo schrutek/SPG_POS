@@ -1,4 +1,4 @@
-﻿@model Spg.MvcTestsAdmin.Service.Models.Login
+﻿@model Spg.MvcTestsAdmin.WebApp.Models.Login
 
 @{
     ViewData["Title"] = "Home Page";
@@ -14,7 +14,7 @@
 else
 {
     @:
-    <form asp-action="Index">
+    <form method="post" asp-action="Index">
         <span>Hey, seems like it's your first time here!</span><br />
         <label>Please provide your name:</label>
         @Html.TextBox("userName")

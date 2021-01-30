@@ -1,0 +1,140 @@
+                                                                                 
+                                                                                 
+Lösen Sie bitte die folgenden Fragen zur Sampladata Struktur                     
+als Linq to Objects Queries.                                                     
+                                                                                 
+1- liste alle Bücher, die mehr als einen Autor haben                             
+                                                                                 
+2- liste alle Bücher (nur Isbn, Title ausgeben),                                 
+   die  zum Subject "Software development" gehören                               
+                                                                                 
+3- liste alle Reviews, die User Fred erstellt hat                                
+                                                                                 
+4- Liste alle Bücher, geordnet nach den Ratings                                  
+   in ihren Reviews                                                              
+                                                                                 
+5- Welches Buch (Bücher) hat das schlechteste Rating bekommen                    
+                                                                                 
+6- Gib für alle User aus, wieviele Reviews sie geschrieben haben                 
+                                                                                 
+                                                                                 
+                                                                                 
+----- ab hier Ausgabe von XML ---- Sie sehen jeweils ein Ausgabemuster           
+                                                                                 
+7- Liste die User mit Ihren Reviews                                              
+                                                                                 
+    <Benutzer>                                                                   
+      <User Name="Barney">                                                       
+        <Review>cc4</Review>                                                     
+        <Review>cc8</Review>                                                     
+      </User>                                                                    
+      <User Name="Fred">                                                         
+        <Review>cc1</Review>                                                     
+        <Review>cc3</Review>                                                     
+      </User>                                                                    
+      <User Name="Wilma">                                                        
+        <Review>cc2</Review>                                                     
+        <Review>cc5</Review>                                                     
+        <Review>cc6</Review>                                                     
+        <Review>cc7</Review>                                                     
+      </User>                                                                    
+    </Benutzer>                                                                  
+                                                                                 
+                                                                                 
+                                                                                 
+8- Liste die Autoren mit Ihren Büchern und dazu                                  
+   die Anzahl der Reviews                                                        
+                                                                                 
+    <Autoren>                                                                    
+      <Autor Name="Good Johnny">                                                 
+        <Buch Titel="Funny Stories" Anzreviews="2" />                            
+      </Autor>                                                                   
+      <Autor Name="Legrand Jeremy">                                              
+        <Buch Titel="All your base are belong to us" Anzreviews="1" />           
+      </Autor>                                                                   
+      <Autor Name="Prince Octavio">                                              
+        <Buch Titel="LINQ rules" Anzreviews="3" />                               
+        <Buch Titel="C# on Rails" Anzreviews="1" />                              
+        <Buch Titel="Bonjour mon Amour" Anzreviews="1" />                        
+      </Autor>                                                                   
+      <Autor Name="Simplegame Graziella">                                        
+        <Buch Titel="Funny Stories" Anzreviews="2" />                            
+        <Buch Titel="Bonjour mon Amour" Anzreviews="1" />                        
+      </Autor>                                                                   
+    </Autoren>                                                                   
+                                                                                 
+                                                                                 
+                                                                                 
+9- Geben Sie die Verlage aus, mit Angabe aller Reviews,                          
+   die Bücher des Verlags betreffen                                              
+                                                                                 
+    <Verlage>                                                                    
+      <Verlag Name="FunBooks">                                                   
+        <Review Titel="Bonjour mon Amour" Review="cc8" Rating="5" />             
+        <Review Titel="Funny Stories" Review="cc1" Rating="2" />                 
+        <Review Titel="Funny Stories" Review="cc2" Rating="3" />                 
+      </Verlag>                                                                  
+      <Verlag Name="I Publisher" />                                              
+      <Verlag Name="Joe Publishing">                                             
+        <Review Titel="All your base are belong to us" Review="cc7" Rating="4" />
+        <Review Titel="C# on Rails" Review="cc6" Rating="3" />                   
+        <Review Titel="LINQ rules" Review="cc3" Rating="1" />                    
+        <Review Titel="LINQ rules" Review="cc4" Rating="2" />                    
+        <Review Titel="LINQ rules" Review="cc5" Rating="1" />                    
+      </Verlag>                                                                  
+    </Verlage>                                                                   
+                                                                                 
+                                                                                 
+10- Geben Sie Verlage aus, Name und durchschnittlices Rating                     
+                                                                                 
+                                                                                 
+    <Verlage>                                                                    
+      <Verlag Name="FunBooks" dRating="3.3333333333333335" />                    
+      <Verlag Name="Joe Publishing" dRating="2.2" />                             
+    </Verlage>                                                                   
+                                                                                 
+                                                                                 
+                                                                                 
+                                                                                 
+                                                                                 
+                                                                                 
+11- welche Ausgabe erwarten Sie mit folgendem Code                               
+                                                                                 
+         static void DisplayProcesses()                                          
+        {                                                                        
+            List<String> processes = new List<String>();                         
+            foreach (Process process in Process.GetProcesses())                  
+            processes.Add(process.ProcessName);                                  
+            ObjectDumper.Write(processes);                                       
+        }                                                                        
+        static void Main()                                                       
+        {                                                                        
+            DisplayProcesses();                                                  
+            Console.ReadKey();                                                   
+        }                                                                        
+                                                                                 
+                                                                                 
+---------  XML Dateien benutzen                                                  
+                                                                                 
+Im Ordner xml/beispiele gibt es viele Beispielfiles                              
+                                                                                 
+Parsen Sie diese direkt in der main oder                                         
+lesen Sie die Files mit   XElement.Load ein                                      
+                                                                                 
+finden Sie selbst Fragestellungen, und                                           
+implementieren Sie diese                                                         
+                                                                                 
+                                                                                 
+z.B.                                                                             
+                                                                                 
+            XElement el1 = XElement.Load("..\\..\\Costner.xml");                 
+                                                                                 
+            var erg =                                                            
+            from e in el1.Elements("Actor").Elements("Filmography").Elements()   
+            select e.Value;                                                      
+                                                                                 
+            ObjectDumper.Write(erg);                                             
+                                                                                 
+                                                                                 
+                                                                                 
+                                                                                 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Spg.MvcTestsAdmin.Service.Models;
+using Spg.MvcTestsAdmin.WebApp.Models;
 
 namespace Spg.MvcTestsAdmin.WebApp.Controllers
 {
