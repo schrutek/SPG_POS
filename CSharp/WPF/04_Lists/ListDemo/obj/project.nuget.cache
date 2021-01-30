@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "chw5Vlya9Z2uzBKIRhRXJsTvoK7eC8x889DCVjBVXUJBiMfYC8h3RzzbafX6HRz7baxL9zgfAk/vnd0Xsrx2oQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\04_Lists\\ListDemo\\ListDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\schrutem\\.nuget\\packages\\bogus\\32.0.2\\bogus.32.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

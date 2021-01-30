@@ -1,1 +1,0 @@
-Keine Übung vorbereitet

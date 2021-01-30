@@ -1,0 +1,17 @@
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.exe
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.deps.json
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.runtimeconfig.json
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.runtimeconfig.dev.json
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.dll
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.pdb
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.csprojAssemblyReference.cache
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall_MarkupCompile.cache
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall_MarkupCompile.lref
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.g.resources
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.AssemblyInfoInputs.cache
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.AssemblyInfo.cs
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.dll
+C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.pdb
