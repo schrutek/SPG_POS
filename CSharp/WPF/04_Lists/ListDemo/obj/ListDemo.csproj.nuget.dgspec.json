@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\04_Lists\\ListDemo\\ListDemo.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\WPF\\04_Lists\\ListDemo\\ListDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\04_Lists\\ListDemo\\ListDemo.csproj": {
+    "C:\\HTL\\POS\\CSharp\\WPF\\04_Lists\\ListDemo\\ListDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\04_Lists\\ListDemo\\ListDemo.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\WPF\\04_Lists\\ListDemo\\ListDemo.csproj",
         "projectName": "ListDemo",
-        "projectPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\04_Lists\\ListDemo\\ListDemo.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\WPF\\04_Lists\\ListDemo\\ListDemo.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\04_Lists\\ListDemo\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\WPF\\04_Lists\\ListDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
