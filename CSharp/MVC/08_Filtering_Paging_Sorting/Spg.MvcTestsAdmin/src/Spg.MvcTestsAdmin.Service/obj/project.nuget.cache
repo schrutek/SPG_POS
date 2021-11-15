@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s2EBMkbnL6Zeo0JHod1eZCfZ7Ub6E6yc4+7kmnWC2FMZrDsyPxbmW1JSk1M0wfHjRe9HU1BCjkW+cPaTAv4J+Q==",
+  "dgSpecHash": "UVABI+j4GpYkq2ZVehL9up4nCf8wQ88MVCecGjMAFrCiO1fCl3Zd6vaw8CBTqCdv0bKnmtRV0TEQ2LvjGFB5LQ==",
   "success": true,
   "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\08_Filtering_Paging_Sorting\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
   "expectedPackageFiles": [

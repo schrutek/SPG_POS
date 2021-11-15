@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj": {}
+    "C:\\HTL\\POS\\CSharp\\WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj": {
+    "C:\\HTL\\POS\\CSharp\\WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj",
+        "projectUniqueName": "C:\\HTL\\POS\\CSharp\\WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj",
         "projectName": "ViewModelDemoApp",
-        "projectPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj",
+        "projectPath": "C:\\HTL\\POS\\CSharp\\WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj",
         "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\02_ViewModelDemoApp\\obj\\",
+        "outputPath": "C:\\HTL\\POS\\CSharp\\WPF\\02_ViewModelDemoApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

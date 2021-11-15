@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vdyWQymku2ag7h6bmWY9KUeZQFHjrmwF82UGZXmSPqCTBovk0jpnNa+uot+fYNAeSYNxLFA7Lr+CvFFRLWnTYw==",
+  "dgSpecHash": "IZCTtuyi7XWyq3yLAxE7PJcRxrzQzDNi0GbnXiGy85DO+vpKjg9ueC481NcAvv0ZI0mktqu094Mhid6rV6G6qw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj",
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\WPF\\02_ViewModelDemoApp\\ViewModelDemoApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

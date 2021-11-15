@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\01_CatchTheBall\\CatchTheBall.csproj",
+      "projectUniqueName": "C:\\HTL\\POS\\CSharp\\WPF\\01_CatchTheBall\\CatchTheBall.csproj",
       "projectName": "CatchTheBall",
-      "projectPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\01_CatchTheBall\\CatchTheBall.csproj",
+      "projectPath": "C:\\HTL\\POS\\CSharp\\WPF\\01_CatchTheBall\\CatchTheBall.csproj",
       "packagesPath": "C:\\Users\\schrutem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\schrutem\\Source\\Repos\\HTL\\GIT_Schletz\\3xHIF\\04 WPF\\01_CatchTheBall\\obj\\",
+      "outputPath": "C:\\HTL\\POS\\CSharp\\WPF\\01_CatchTheBall\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -39,6 +39,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -50,6 +51,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -68,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

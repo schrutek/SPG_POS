@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\
 CatchTheBall
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\App.xaml
-11151548125
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\App.xaml
+11407045341
 
-3-917710711
-1921654412462
+3-1233169557
+192-1533232326
 MainWindow.xaml;
 
 False

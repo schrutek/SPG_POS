@@ -15,3 +15,22 @@ C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\
 C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.AssemblyInfo.cs
 C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.dll
 C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.pdb
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.exe
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.deps.json
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.runtimeconfig.json
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.dll
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\bin\Debug\netcoreapp3.1\CatchTheBall.pdb
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\App.g.cs
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall_MarkupCompile.cache
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall_MarkupCompile.lref
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.g.resources
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.AssemblyInfo.cs
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.dll
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.pdb
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\CatchTheBall.genruntimeconfig.cache

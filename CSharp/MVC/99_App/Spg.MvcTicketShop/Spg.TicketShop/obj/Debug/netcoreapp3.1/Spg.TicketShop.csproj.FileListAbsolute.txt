@@ -1,6 +1,5 @@
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\bin\Debug\netcoreapp3.1\appsettings.json
-C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\bin\Debug\netcoreapp3.1\Spg.TicketShop.exe
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\bin\Debug\netcoreapp3.1\Spg.TicketShop.deps.json
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\bin\Debug\netcoreapp3.1\Spg.TicketShop.runtimeconfig.json
@@ -187,3 +186,4 @@ C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\obj\Debug\netcorea
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\obj\Debug\netcoreapp3.1\Spg.TicketShop.dll
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\obj\Debug\netcoreapp3.1\Spg.TicketShop.pdb
 C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\obj\Debug\netcoreapp3.1\Spg.TicketShop.genruntimeconfig.cache
+C:\HTL\POS\CSharp\MVC\99_App\Spg.MvcTicketShop\Spg.TicketShop\obj\Debug\netcoreapp3.1\scopedcss\bundle\Spg.TicketShop.styles.css

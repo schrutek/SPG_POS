@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0CUus9TTmQOmV1h1MC86hKTHy7AZ6PO+j6WjQxrncO0S6MePZ6hT6sJN7288u+xEQPkmp7UnyxFLytVZkBTB9g==",
+  "dgSpecHash": "ll7AftBFMmy7kRpxyCYe0opq/tuf8yxZJf1kWcOB1OsLCQYi5kge4Ae37dlmSMEJ1VV+DenAtkh7mE408yUf8w==",
   "success": true,
   "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\07_State Management\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.Service\\Spg.MvcTestsAdmin.Service.csproj",
   "expectedPackageFiles": [

@@ -8547,6 +8547,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj": {
               "projectPath": "C:\\HTL\\POS\\CSharp\\MVC\\99_App\\Spg.MvcTicketShop\\Spg.TicketShop.Services\\Spg.TicketShop.Services.csproj"
@@ -8562,6 +8563,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
@@ -8596,7 +8598,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

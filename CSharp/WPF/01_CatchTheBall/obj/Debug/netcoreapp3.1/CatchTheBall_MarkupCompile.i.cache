@@ -1,19 +1,19 @@
 ﻿CatchTheBall
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\obj\Debug\netcoreapp3.1\
 CatchTheBall
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\01_CatchTheBall\App.xaml
-11151548125
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\HTL\POS\CSharp\WPF\01_CatchTheBall\App.xaml
+11407045341
 
-4432688651
-1921654412462
+5-1951365812
+192-1533232326
 MainWindow.xaml;
 
 False

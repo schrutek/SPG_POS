@@ -24,7 +24,7 @@ namespace Spg.MvcTestsAdmin.Service.Services
 
         public async Task<IEnumerable<Schoolclass>> GetAllAsync()
         {
-            //await Task.Delay(5000);
+            await Task.Delay(5000);
             return await _context.Schoolclass
                 .Include(s => s.C_ClassTeacherNavigation)
                 .Include(s => s.Lesson)

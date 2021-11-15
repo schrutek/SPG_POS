@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Bogus/32.0.2": {
+      "Bogus/33.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Bogus.dll": {}
@@ -14,14 +14,14 @@
     }
   },
   "libraries": {
-    "Bogus/32.0.2": {
-      "sha512": "ZHd8QDElqTOCDs1d6CAyMVHddTPvDCARlOD7seY4ZlwbiG9HM0j9sOhLK5O/3LFedh2FKf4rca9VO+M9jIQYvQ==",
+    "Bogus/33.0.2": {
+      "sha512": "92CcSgl7KLEw7lerMytjY504IPnhmYqDkCgIPm5GVfiZPslRWUcgWvtoNYhKbSU4m/Ms7giKP8OxPAFTFBgC3w==",
       "type": "package",
-      "path": "bogus/32.0.2",
+      "path": "bogus/33.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bogus.32.0.2.nupkg.sha512",
+        "bogus.33.0.2.nupkg.sha512",
         "bogus.nuspec",
         "lib/net40/Bogus.dll",
         "lib/net40/Bogus.xml",
@@ -106,7 +106,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

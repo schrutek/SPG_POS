@@ -18,3 +18,25 @@ C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\04_Lists\ListDemo\ob
 C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.csproj.CopyComplete
 C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.dll
 C:\Users\schrutem\Source\Repos\HTL\GIT_Schletz\3xHIF\04 WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.pdb
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\ListDemo.exe
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\ListDemo.deps.json
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\ListDemo.runtimeconfig.json
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\ListDemo.runtimeconfig.dev.json
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\ListDemo.dll
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\ListDemo.pdb
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\bin\Debug\netcoreapp3.1\Bogus.dll
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.csprojAssemblyReference.cache
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\App.g.cs
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo_MarkupCompile.cache
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo_MarkupCompile.lref
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.g.resources
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.AssemblyInfoInputs.cache
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.AssemblyInfo.cs
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.csproj.CoreCompileInputs.cache
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.csproj.CopyComplete
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.dll
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.pdb
+C:\HTL\POS\CSharp\WPF\04_Lists\ListDemo\obj\Debug\netcoreapp3.1\ListDemo.genruntimeconfig.cache
