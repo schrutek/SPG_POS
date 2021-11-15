@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Spg.MvcTestsAdmin.WebApp
+build_property.ProjectDir = C:\HTL\POS\CSharp\MVC\08_Filtering_Paging_Sorting\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.WebApp\
