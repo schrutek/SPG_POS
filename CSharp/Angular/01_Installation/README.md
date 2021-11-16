@@ -20,22 +20,36 @@ Die Funktionen im einzelnenwerde ich hier nicht erläutern, dazu gibt es massenh
 
 Angular ist eine Script-Library, die als Sprache Type Script verwendet. das ist eine Mischung aus Java Script und C#, sozusagen, Java Script mit C# Syntax. Es ist etwas gewöhnungsbedürftig, amn kommt da aber schnell rein.
 
-Man lwegt sein Projekt in einem Vedrzeichnis auf der Festplatt ab. Z.B.: `C:\Projets\Angular\Test_1`. Im nächsten Kapitel geht es gleich weiter, was man dann in diesem Verzeichnis tut. Als erstes aber, in dem angelegten Verzeichnis gliech die Power Shell öffnen. Ich sags gleich, Angular-Entwicklung geht nicht ohne Power Shell, da alle Kommandos dort eingegeben werden. Die Kommandos beginnen immer mit `ng ...` (z.B.: `ng new MyProject` um ein neues Projekt anzulegen, oder  `ng serve` zum Ausführen).
+Man legt sein Projekt in einem Vedrzeichnis auf der Festplatt ab. Z.B.: `C:\Projets\Angular\Test_1`. Im nächsten Kapitel geht es gleich weiter, was man dann in diesem Verzeichnis tut. Als erstes aber, in dem angelegten Verzeichnis gleich die Power Shell öffnen (Immer als Administrator öffnen!). Ich sags gleich, Angular-Entwicklung geht nicht ohne Power Shell, da alle Kommandos dort eingegeben werden. Die Kommandos beginnen immer mit `ng ...` (z.B.: `ng new MyProject` um ein neues Projekt anzulegen, oder  `ng serve` zum Ausführen).
 
 ## Angular installieren
 
-Node.js ist ein Package Manager für java script. Damit können wirnun die Angular CLI installieren :
+Node.js ist ein Package Manager für java script. Damit können wir nun die Angular CLI installieren :
 
 ```powershell
 npm install -g @angular/cli
 ```
 
-Hat man die Angular CLI bereits installiert, sollte man auf die aktuelle Version prüfen (Details dazu:  https://github.com/angular/angular-cli). Seit Begunn von Angular hat sich darin sehr viel verändert.
+Hat man die Angular CLI bereits installiert, sollte man auf die aktuelle Version prüfen (Details dazu:  https://github.com/angular/angular-cli). Seit Beginn von Angular hat sich darin sehr viel verändert.
 
 Wie bereits erwähnt, im Projektordner, die Power Shell am besten als Administrator öffnen.
 
 ```powershell
 ng new School2000
+```
+
+Hier könnte es je bnach System ein Berechtigungsproblem geben. Folgende Commandos können helfen. Dazu ost es aber notwendig, die PowerShell als Administrator zu öffnen!
+
+```powershell
+set-ExecutionPolicy RemoteSigned
+```
+
+Dieses Commando setzt die Ausführungsrichtlinie im Betriebssystem. Wir ändern die Ausführungsrichtlinie für alle Scripts, also `A` eingeben und `Enter` drücken.
+
+mit folgenbdem Commando kann das Setting nochmals kontrolliert werden:
+
+```powershell
+get-ExecutionPolicy
 ```
 
 Man bekommt nun 2 Fragen gestellt. angular routing wollen wir nicht, also NO auf die erste Frage und als Styling wählen wir CSS.
