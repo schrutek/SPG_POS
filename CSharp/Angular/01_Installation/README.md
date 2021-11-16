@@ -56,7 +56,7 @@ Man bekommt nun 2 Fragen gestellt. angular routing wollen wir nicht, also NO auf
 
 ## Grundlegendes zu diesem Beispiel
 
-Dieses Projekt besteht aus einer Angular-Applikation und eienr REST-Api. Das ist durchaus eine Konstellation eines verteilten Systems, wie es in der modernen Softwareentwicklung, aktuell, durchaus üblich ist. in diesem Tutorial wird erklärt, wie man eine Angular Applikation aufbaut. Die REST-Api wird aus zeitgründen nicht beleuchtet.
+Dieses Projekt besteht aus einer Angular-Applikation und eienr REST-Api. Das ist durchaus eine Konstellation eines verteilten Systems, wie es in der modernen Softwareentwicklung, aktuell, durchaus üblich ist. in diesem Tutorial wird erklärt, wie man eine Angular Applikation aufbaut. Die REST-Api wird aus zeitgründen nicht beleuchtet. RESTful-API: <https://github.com/schrutek/SPG_POS/tree/master/CSharp/REST/Readme.md>
 
 Die Angular Applikation wird durch das KOmmando `ng serve` zu Java Script kompiliert und bereitgestelt. Mit einem beliebigen Browser  über die URL `http://localhost:4200` kann das Ergebnis dargestellt werden.
 
