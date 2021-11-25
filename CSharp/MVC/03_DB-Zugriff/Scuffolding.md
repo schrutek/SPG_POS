@@ -2,7 +2,7 @@
 
 ## Ein Model erstellen
 
-Das Domain Object Model erstellen wir wie gewohnt mittels DB-First über das Scuffold Commando im Pckage Manager:
+Das Domain Object Model erstellen wir wie gewohnt mittels DB-First über das Scuffold Commando im Package Manager:
 
 ```Powersehll
 Scaffold-DbContext "Data Source=WE20W8WS2000501\SQLEXPRESS;Initial Catalog=TestsAdministrator;Integrated Security=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -UseDatabaseNames -Force -DataAnnotations

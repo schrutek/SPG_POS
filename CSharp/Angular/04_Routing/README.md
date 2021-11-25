@@ -20,7 +20,7 @@ Beschäftigen wir uns kurz mit Routing in Angualar. Als erstes werden wir ein Me
 
 ## Das Routing erstellen
 
-Wie bereits im letzten Kapitel erwähnt, muss die Komponente nun im html untergebracht werden, damit Angular eine Instanz davon erstellen kann. Da wir das Menü auf allen Seiten sehen wollen, platzieren wir den Selector auf der App-Komponente (`app-component.html`)
+Wie bereits im letzten Kapitel erwähnt, muss die Komponente nun im `html` untergebracht werden, damit Angular eine Instanz davon erstellen kann. Da wir das Menü auf allen Seiten sehen wollen, platzieren wir den Selector auf der App-Komponente (`app-component.html`)
 
 ```html
 <div class="container container-fluid">
@@ -30,15 +30,15 @@ Wie bereits im letzten Kapitel erwähnt, muss die Komponente nun im html unterge
 </div>
 ```
 
-Jetzt müsste das Menü bereits sichtbar sein, allerdings noch volkommen ohne Funktion
+Jetzt müsste das Menü bereits sichtbar sein, allerdings noch volkommen ohne Funktion.
 
 ## Das Routing in Angular konfigurieren
 
-Als nächstes werden wir das Menü zum Laufen bringen. Rounting in Angular funktioniert über die Module. Das heißt, Routen zu den jeweiligen Komponenten, werden im darüberliegenden Modul festgelegt. Die dafür verwednete Klasse ist das `RouterModule` (@angular/router).
+Als nächstes werden wir das Menü zum Laufen bringen. Rounting in Angular funktioniert über die Module. Das heißt, Routen zu den jeweiligen Komponenten, werden im darüberliegenden Modul festgelegt. Die dafür verwedete Klasse ist das `RouterModule` (@angular/router).
 
 Dieses Klasse muss im jeweiligen Modul importiert werden, anschließend kann sie verwendet werden. Die Funktion die dafür zu Verfügung steht heißt: `forRoot()`. Ihr wird ein Array aus Objekten übergeben.
 
-`forRoot` kann nur einmal im `app.modul.ts` vwerwendet werden. In allen darunterliegenden Modulen ist es `forChild`. Mehr dazu später.
+`forRoot` kann nur einmal im `app.modul.ts` verwendet werden. In allen darunterliegenden Modulen ist es `forChild`. Mehr dazu später.
 
 Wir müssen als erstes das Router-Modul imprtieren und konfigurieren:
 
@@ -47,6 +47,8 @@ Wir müssen als erstes das Router-Modul imprtieren und konfigurieren:
 ```typescript
 import { RouterModule} from '@angular/router'
 ```
+
+Im Abschnitt `imports`:
 
 ```typescript
 RouterModule.forRoot([
@@ -57,19 +59,19 @@ RouterModule.forRoot([
 
 ## Links im Menü anpassen
 
-Als erstes brauchen wir ein Router-Outlet in der `app-component`. In dieses `Outlet` wird das Ergebnis-html des Rountings gerendert. Wir wollen für den Anfang 2 bis 3 Seiten, die Über das Menü angesteuert werden können. Das Verhalten ist also einer z.B. simplen MVC-Applikation ähnlich. Wird ein Punkt im Menü gecklickt, erneuert sich der Inhalt der ganzen Seite. Allerdings nur fast, denn das Menü soll auf allen Seiten gleich sein.
+Als erstes brauchen wir ein Router-Outlet in der `app-component`. In dieses `Outlet` wird das Ergebnis-html des Rountings gerendert. Wir wollen für den Anfang 2 bis 3 Seiten, die Über das Menü angesteuert werden können. Das Verhalten ist also einer, z.B. simplen MVC-Applikation ähnlich. Wird ein Punkt im Menü geklickt, erneuert sich der Inhalt der ganzen Seite. Allerdings nur fast, denn das Menü soll auf allen Seiten gleich sein.
 
 Wir setzte daher also das `router-outlet` (genauso wie das Menü) in die `app-component.html`. Jetzt wird das Menü gerendert und darunter das jeweilige Routing-Ergebnis.
 
 **Wichtig!**
-Angular ist ein reaktives Framework. Bei einem Seitenwechsel wie wir ihn nun implementieren, wird nicht die gesamte Seite neu geladen, sondern es wird nur ein anderer Inhalt angezeigt. Alle Inhlate aller Seiten (außer Daten) wurden ja bereits beim ersten Aufruf der Seite geladen.
+Angular ist ein reaktives Framework. Bei einem Seitenwechsel wie wir ihn nun implementieren, wird nicht die gesamte Seite neu geladen, sondern es wird nur ein anderer Inhalt angezeigt. Alle Inhalte aller Seiten (außer Daten) wurden ja bereits beim ersten Aufruf der Seite geladen.
 
 ```html
 <div class="row">
     <router-outlet></router-outlet>
 </div>
 
-Dann die Links in der Nav-Komponente anpassen. Diese müssen natürlich auf ein Event-Bindig gesetzt werden. Ein Click ist ein Event, also Event-Binding.
+Dann die Links in der Nav-Komponente anpassen. Diese müssen natürlich auf ein Event-Binding gesetzt werden. Ein Click ist ein Event, also Event-Binding.
 
 ```html
 <li><a [routerLink]="['/schueler']">Schüler</a></li>
