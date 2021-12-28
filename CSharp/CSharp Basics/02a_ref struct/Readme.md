@@ -1,4 +1,4 @@
-# ref struct
+# ref struct am Beispiel ``ReadOnlySpan``
 
 Seit C# 10 und .Net 6.0 wurden ``ref sruct``'s eingeführt.
 
