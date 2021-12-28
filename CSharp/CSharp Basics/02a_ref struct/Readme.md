@@ -86,7 +86,7 @@ Die beiden Methoden befinden sich in einer Klasse namens ``Benchy``. Diese wird 
 [MemoryDiagnoser]
 ```
 
-Der benchmarker ist nun konfiguriert udn das Programm kann ausgeführt werden. Es wird nun Laufzeit und Speicherbedarf beider Methoden gemessen.
+Der Benchmarker ist nun konfiguriert und das Programm kann ausgeführt werden. Es wird nun Laufzeit und Speicherbedarf beider Methoden gemessen.
 
 Die Ausgabe produztiert nun jeden menge Information. Gerne könnt ihr die Messwerte studieren. Wichtig ist aber folgender Block, ziemlich am Ende:
 
@@ -100,7 +100,7 @@ Die Ausgabe produztiert nun jeden menge Information. Gerne könnt ihr die Messwe
   
 ```
 
-Angesehen davon, dass die Laufzeit in der 2. Methode (untere Zeile) deutlich besser ist (knapp die hälfte) kann man an der 2. Zeile (ReadOnlySpan) auch erkennen kann, dass der allokierte Speicherbedarf am Heap gleich 0 ist, da ja auschließlich im Stack gearbeitet wird. Der ursprüngliche String ist natürlich ein Referenztyp und am Heap vorhanden. Diese Tatsache ist in dieser Tabelle nicht ersichtlich, da ja nur die beiden Methoden gemessen und verglichen wurden.
+Abgesehen davon, dass die Laufzeit in der 2. Methode (untere Zeile) deutlich besser ist (knapp die hälfte) kann man an der 2. Zeile (ReadOnlySpan) auch erkennen kann, dass der allokierte Speicherbedarf am Heap gleich 0 ist, da ja auschließlich im Stack gearbeitet wird. Der ursprüngliche String ist natürlich ein Referenztyp und am Heap vorhanden. Diese Tatsache ist in dieser Tabelle nicht ersichtlich, da ja nur die beiden Methoden gemessen und verglichen wurden.
 
 ## Fazit
 
