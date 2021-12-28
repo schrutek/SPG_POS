@@ -155,7 +155,7 @@ public override void ActOnException(Exception e)
 }
 ```
 
-#### CircuitBraeker.cs
+#### CircuitBreaker.cs
 
 Nun zur eigentlichen "Haupt-Klasse":
 
