@@ -104,7 +104,7 @@ Abgesehen davon, dass die Laufzeit in der 2. Methode (untere Zeile) deutlich bes
 
 ## Fazit
 
-Dieses Konstrukt kann Laufzeit und Speicher sparen. Nicht jede Klasse sollte sofort als ``ref struct`` ausgeführt werden, da diese auch die bereits bekannten Eigenschaften von ``struct``'s aufweisen (keine Vererbung, ...). Aber als Datenhaltende Klassen, die im Immutable-Pattern impelementiert sind und eine vielzahl an Instanzen bedingen, kann man die ``ref sruct`` als Variante hernazuiehen.
+Dieses Konstrukt kann Laufzeit und Speicher sparen. Nicht jede Klasse sollte sofort als ``ref struct`` ausgeführt werden, da diese auch die bereits bekannten Eigenschaften von ``struct``'s aufweisen (keine Vererbung, ...). Aber als datenhaltende Klassen, die im Immutable-Pattern impelementiert sind und eine vielzahl an Instanzen bedingen, kann man die ``ref struct`` als Variante hernazuiehen.
 
 ## Zusatz
 
