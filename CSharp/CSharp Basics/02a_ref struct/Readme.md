@@ -64,7 +64,7 @@ public (int day, int month, int year) SplitDateAsSpan()
 
 ![Span](Span.png)
 
-Lediglich der initiale Date-String ist am Heap vorhanden. Alle Teilungen finden ausschließlich am Stack statt, und werden nicht als einzelne String-Instanzen gesapeichert. Der Garbage-_Collector hat also hier deutlich weniger zu tun, was sich in der besseren Laufzeit wiederspiegelt. Der "Tag-Teil [08]" ist nun als Offset (Versetzung) im Stack abgebildet.
+Lediglich der initiale Date-String ist am Heap vorhanden. Alle Teilungen finden ausschließlich am Stack statt, und werden nicht als einzelne String-Instanzen gesapeichert. Der Garbage-Collector hat also hier deutlich weniger zu tun, was sich in der besseren Laufzeit wiederspiegelt. Der "Tag-Teil [08]" ist nun als Offset (Versetzung) im Stack abgebildet.
 
 ## Messung (benötigt Vorwissen!)
 
