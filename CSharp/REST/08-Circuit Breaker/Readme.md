@@ -1,4 +1,4 @@
-# Circuit Braeker Pattern
+# Circuit Breaker Pattern
 
 Dieses Pattern findet hauptsächlich in Mircro Services Anwendung, da in dieser Architekturform sehr viele Services (Web Services, APIs) ständig miteinander kommunizieren und daher das Datenaufkommen (Trafik) sehr hoch ist.
 
