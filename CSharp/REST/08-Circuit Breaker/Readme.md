@@ -24,7 +24,7 @@ Die Statemachine besteht aus 3 States.
 * Open: Die API ist gerade nicht erreichbar, Requests werden unterdrückt. Der "Stromkreis" ist unterbrochen, er ist offen. Dieser Zustand wird für einen bestimmten Zeitraum (Time Out) beibehalten.
 * HalfOpen: Nach einer bestimmten Zeit (Time Out) werden Requests wieder an die Payment-API gesendet um festzustellen, ob sie wieder erreichbar ist. Wenn ja, geht die State Machine in den State *Closed* zurück. Wenn nein, wird zu *Open* gewecvhselt, das Time Out beginnt von vorne zu laufen.
 
-## Ablauf:
+## Ablauf
 
 Es wird eine Time-Out-Länge und ein Treshold definiert. Treshold ist dabei die maximal Anzahl an Requests die eine Exception liefern dürfen, bevor der Circuit geöffnet wird. Ist dieser Wert erreicht, wird der Circiut geöffnet (State = *Open*). Nun beginnt ein Timer zu laufen (z.B. 1Min.). Nach Ablauf dieser Zeit, wechselt die State Machine in den State *HalfOpen* und versucht einen Request. Funktioniert dieser nicht, bleibt der *Closed*-State aufrecht und das Teimout beginnt erneut zu laufen. Ist er jedoch erfolgreich, wird in den *Closed*-State gewechselt. Nun laufen Request an die Paymewnt-API durch, bis eine weitere Down Time das API auftritt.
 
