@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.4BHifShop", "Spg.4BHifShop\Spg.4BHifShop.csproj", "{45605EA6-50D9-47E3-85FE-621F0F3E2C9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.CircuitBreaker", "Spg.CircuitBreaker\Spg.CircuitBreaker.csproj", "{DA987457-173B-46C3-8163-6FD2AB474DDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45605EA6-50D9-47E3-85FE-621F0F3E2C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45605EA6-50D9-47E3-85FE-621F0F3E2C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45605EA6-50D9-47E3-85FE-621F0F3E2C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45605EA6-50D9-47E3-85FE-621F0F3E2C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA987457-173B-46C3-8163-6FD2AB474DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA987457-173B-46C3-8163-6FD2AB474DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA987457-173B-46C3-8163-6FD2AB474DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA987457-173B-46C3-8163-6FD2AB474DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C47D4AC-C0AF-4425-85C1-E41212F054A0}
+	EndGlobalSection
+EndGlobal
