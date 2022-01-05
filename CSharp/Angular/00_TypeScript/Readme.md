@@ -486,9 +486,9 @@ C# gewöhnte Entwickler haben eher weniger Schwierigkeiten sich an TS zu gewöhn
 
 ## Auf dem Weg zu Angular
 
-Die hier besprochenen Strukturen werden wir in Angular wiederfinden. Wenn man diese Grundlagen verstanden hat, ist es leichter sich im "Angular-Dschungel" zurechtzufinden.
+Die hier besprochenen Strukturen werden wir in Angular wiederfinden. Wenn man diese Grundlagen verstanden hat, ist es leichter sich im vermeintlichen "Angular-Dschungel" zurechtzufinden. In Wirklichkeit ist Angular, auch dadurch, sehr gut strukturiert.
 
-Ich greife hier deutlich vor und zeige noch eine Klassen, wie sie in Angular verwendet würde:
+Ich greife hier deutlich vor und zeige noch eine Klasse, wie sie in Angular verwendet würde:
 
 ```typescript
 import { Component } from "@angular/core";
