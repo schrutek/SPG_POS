@@ -256,7 +256,11 @@ let log = function(person: Person) {
 }
 ```
 
-mit dem Interface-Typ `Person`
+mit dem Interface-Typ `Person`. Das führt uns zwangsweise zum Kapitel Klassen und Interfaces.
+
+### Klassen und Interfaces
+
+Für die vorherige Korrektur benötigen wird einen eigenen Typ.
 
 TS:
 ```typescript
