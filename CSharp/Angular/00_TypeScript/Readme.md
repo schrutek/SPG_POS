@@ -287,7 +287,7 @@ class Person {
 }
 ```
 
-### Constructor
+### Konstruktor
 
 Ebenfalls sind Konstruktoren möglich. Pro Klasse gibt es nur einen Konstruktor. Er kann beliebig viele Parameter enthalten. Möchte man nicht alle Parameter beim Aufruf angeben, kann man sie optional setzten. Dafür werden sie einfach mit einem Fragezeichen am Ende versehen `(a, b, c, d?, e?, f?)`. Alle Parameter links neben dem ersten optionalen Parameter müssen ebenfalls optional sein. (Wie in C#)
 
