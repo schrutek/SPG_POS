@@ -169,6 +169,7 @@ TS:
 function demos() {
     let a = 5;
     a = 'Hello World!'
+    console.log(a);
 }
 demos();
 ```
@@ -362,7 +363,7 @@ person.writeInfo();
 console.log(person.address.street);
 ```
 
-### Die ganze Klasse
+### Die ganzen Klassen
 
 TS:
 ```typescript
@@ -372,9 +373,9 @@ export class Person {
     eMail: string;
     address: Address;
 
-    constructor(firstname: string, lastname: string, eMail?: string) {
-        this.firstName = firstname
-        this.lastName = lastname
+    constructor(firstName: string, lastName: string, eMail?: string) {
+        this.firstName = firstName
+        this.lastName = lastName
         this.address = new Address('Spengergasse');
     }
 
@@ -406,7 +407,17 @@ class Address {
 }
 ```
 
-Es wird mittels Node folgendes JS transpiliert:
+```typescript
+import { Person } from './person';
+
+let person = new Person('Martin', 'NoName');
+person.LastName = 'Schrutek';
+person.eMail = 'schrutek@spengergasse.at';
+person.writeInfo();
+console.log(person.address.street);
+```
+
+Es werden mittels Node folgende JS's transpiliert:
 
 JS:
 ```javascript
@@ -452,6 +463,17 @@ var Address = /** @class */ (function () {
     }
     return Address;
 }());
+```
+
+```javascript
+"use strict";
+exports.__esModule = true;
+var person_1 = require("./person");
+var person = new person_1.Person('Martin', 'NoName');
+person.LastName = 'Schrutek';
+person.eMail = 'schrutek@spengergasse.at';
+person.writeInfo();
+console.log(person.address.street);
 ```
 
 ## Fazit
