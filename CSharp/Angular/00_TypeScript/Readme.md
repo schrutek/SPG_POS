@@ -256,7 +256,7 @@ let log = function(person: Person) {
 }
 ```
 
-mit dem Interface-Typ `Person`. Das führt uns zwangsweise zum Kapitel Klassen und Interfaces.
+mit dem Interface-Typ `Person`. Das führt uns zwangsweise zum Kapitel Klassen und Interfaces, die wir in TS wie aus C# oder Java gewohnt, auch hier zur Verfügung haben.
 
 ### Klassen und Interfaces
 
@@ -274,7 +274,7 @@ interface Person {
 }
 ```
 
-Nachteil am Interface: man kann keine Methoden implementieren. Die Lösung wäre eine Klasse zu definieren, was uns gleich zu einem wichtigen Punkt bringt. Es gibt in TS (wie in C#, Java) Klassen.
+Nachteil am Interface: Man kann keine Methoden implementieren. Die Lösung wäre eine Klasse zu definieren.
 
 TS:
 ```typescript
