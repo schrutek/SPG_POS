@@ -1,0 +1,9 @@
+ts/js tsc
+Typing
+Enum
+Intellisense (Typing, as-keyword)
+Arrow Functions (viele Parameter vermeiden => Interface => Class)
+constructor (modifier + type declaration im Parameter)
+Properties (getX() => get X(), setter mit validation)
+Modules (Bsp mit main.ts, point.ts)
+
