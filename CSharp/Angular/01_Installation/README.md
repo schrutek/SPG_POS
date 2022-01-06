@@ -6,7 +6,7 @@ Wichtig!! Hier geht es um Angular, nicht um Angular.js. Angular ist der Nachfolg
 
 Als erstes müssen 3 Softwareprodukte installiert werden:
 
-1. IDE: Ich verwende gerne Visual Studio Code (https://code.visualstudio.com/download), natürlich ist auch jeder andere Editor geeignet.
+1. IDE: Visual Studio Code (https://code.visualstudio.com/download) (Empfehlung! natürlich ist auch jeder andere Editor/IDE geeignet)
 2. node.js (https://nodejs.org/en/)
 
 ## VS Code
@@ -19,7 +19,7 @@ Die Funktionen im einzelnen werde ich hier nicht erläutern, dazu gibt es massen
 
 Angular ist eine Script-Library, die als Sprache Type Script verwendet. Java Script ist aber ebenfalls möglich, da ja Tpe Script zu Java Script transpiliert wird.
 
-Man legt sein Projekt in einem Verzeichnis auf der Festplatt an. Z.B.: `C:\Projets\Angular\Test_1`. In dem angelegten Verzeichnis die Power Shell öffnen. Es eignet sich parallel zur IDE die Power Shell zu öffnen, da Angular über die Node.js-CLI gesteuert wird. Die Kommandos beginnen mit `ng ...` (z.B.: `ng new MyProject` um ein neues Projekt anzulegen, oder `ng serve` um es ausführen).
+Man legt sein Projekt in einem Verzeichnis auf der Festplatt an. Z.B.: `C:\Projects\Angular\Test_1`. In dem angelegten Verzeichnis die Power Shell öffnen. Es eignet sich parallel zur IDE die Power Shell zu öffnen, da Angular über die Node.js-CLI gesteuert wird. Die Kommandos beginnen mit `ng ...` (z.B.: `ng new MyProject` um ein neues Projekt anzulegen, oder `ng serve` um es ausführen).
 
 ## Angular installieren
 
@@ -35,4 +35,16 @@ Hat man die Angular bereits installiert, sollte man auf die aktuelle Version pr�
 
 Unser Projekt wird aus einem Angular Front End und einer REST-Api bestehen. In diesem Tutorial wird erklärt, wie man eine Angular Applikation aufbaut. Die REST-Api wird nicht beleuchtet.
 
-Die Angular Applikation wird durch das Kommando `ng serve` zu Java Script kompiliert und bereit gestellt. Mit einem beliebigen Browser, über die URL `http://localhost:4200`, kann das Ergebnis dargestellt werden.
+### Projekt anlegen
+
+```powershell
+ng new School2000
+```
+
+Man bekommt nun 2 Fragen gestellt. Angular Routing wollen wir nicht, also die erste Frage mit NO quittieren und als Styling wählen wir CSS.
+
+## Projekt ausführen
+
+Möchte man eine Angular-Applikation ausführen muss man diese erst kompilieren. Das Kommando dafür ist `ng serve`. Um sie auch ansehen zu können, im Browser die URL `http://localhost:4200` eingeben. Jede Angular Applikation ist standardmäßig im developement-Modus auf dem Port 4200 erreichbar.
+
+Das Kommando `ng build` kompiliert die App als Release.

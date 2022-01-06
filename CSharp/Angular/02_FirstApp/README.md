@@ -1,18 +1,20 @@
 # Aufbau einer Angular App
+
 Eine Angular Applikation besteht aus Modulen, Komponenten und Services.
 
 ![](Ueberblick.png)
 
 ## Module
-Module enthalten Komponenten (mehrzahl). Es gibt immer ein Hauptmodul, das app.module.ts Dieses kann weitere Komponenten enthalten. Es kann aber auch weitere Untermodule enthalten, die ihrerseits wiederum mehrere Komponenten enthalten können. Services sind allerdings in einem anderen Scope verfügbar, nämlich außerhalb dieser Hierarchie und werden über Dependency Injection in dem jeweiligen Modul instanziert. Dann haben sie in diesem Modul gültigkeit. Module sind immer Klassen, die mit dem Decorator `@Module` versenen sind.
 
-Module können Funktionen anderer Module importieren. Diese Aufteilung erleichtert Lazy Loading unterschiedlicher Komponenten.
+Module enthalten Komponenten (Mehrzahl). Es gibt immer ein Hauptmodul, das App-Modul (``app.module.ts``) Dieses kann (wird sicher) Komponenten enthalten. Es kann aber auch weitere Untermodule enthalten, die ihrerseits wiederum Komponenten enthalten können. Services sind in einem anderen Scope verfügbar. Sie stehen außerhalb dieser Hierarchie, und werden über Dependency Injection in dem jeweiligen Modul instanziiert. Dann haben sie in dieser Komponente Gültigkeit.
 
 ## Komponenten
+
 Komponenten bestehen aus drei Teilen:
 
 ### 1. dem HTML-Template (.html)
-Das HTML-Template enthält das html, welches die Komponenten darstellen wird Z.B.:
+
+Das HTML-Template enthält HTML, welches die Komponenten darstellen wird.
 
 ```html
 <h3><strong>Schüler Details</strong></h3>
@@ -33,7 +35,8 @@ Das HTML-Template enthält das html, welches die Komponenten darstellen wird Z.B
 ```
 
 ### 2. dem Type-Script FIle (.ts)
-Das Type Script File enthält die Programmlogig der Komponente (Felder Properties, Methoden, ...) Aber auch imports (das gleiche wie usings in C#)
+
+Das Type Script File enthält die Programmlogik der Komponente (Felder Properties, Methoden, ...)
 
 ```typescript
 import { Component, OnInit, Input } from '@angular/core';
@@ -56,7 +59,7 @@ export class SchuelerDetailsComponent implements OnInit {
 }
 ```
 
-Das Type-Script File ist immer eine Klasse, die mit dem Decorator `@Component` versehen ist, dem sog. Metadata. Hier werden die wichtigsten Blöcke definiert, die die Komponente benötigt.
+Komponenten werden mit dem Decorator `@Component` versehen, dem sog. Meta Data. Hier werden die wichtigsten Blöcke definiert, die die Komponente benötigt.
 
 ```typescript
 @Component({
@@ -67,7 +70,8 @@ Das Type-Script File ist immer eine Klasse, die mit dem Decorator `@Component` v
 ```
 
 ### 3. das CSS-File (.css)
-Im CSS File sind jene css-Formatierungen angegeben, die das HTML in der Komponente betreffen.
+
+Im CSS File sind jene CSS-Formatierungen angegeben, die das HTML in der Komponente betreffen.
 
 Diese 3er-Konstellation ist gekapselt!
 
@@ -75,9 +79,9 @@ Ein Komponentenbaum kann nun z.B. so aussehen:
 
 ![](component-tree.png)
 
-## Bindimgs
+## Bindings
 
-Informationen müssen ja auf irgendeine Weise vom ts-File an das html-File weitergegeben werden, und zurück. Das geschieht über das Data Binding.
+Informationen müssen auf irgendeine Weise vom ts-File an das html-File weitergegeben werden, und zurück. Das geschieht über das Data Binding.
 
 ![](Binding.png)
 
@@ -87,30 +91,21 @@ Das Interpolations Binding wird durch {{ }} gekennzeichnet. Information wird an 
 
 Das Two Way Binding wird durch [( )] gekennzeichnet. Informationen werden an das Template gegeben und wieder zurück. Z.B. html-input.
 
-Das Event-Binding wird durch [] gekennzeichnet. Die Information geht als Event vom html-Template an das ts-File. Z.B. ein BUtton wird gecklickt.
+Das Event-Binding wird durch [] gekennzeichnet. Die Information geht als Event vom html-Template an das ts-File. Z.B. ein Button wird geclickt.
 
 # Ein neues Projekt anlegen
 
-```powershell
-ng new School2000
-```
-
-Man bekommt nun 2 Fragen gestellt. angular routing wollen wir nicht, also NO auf die erste Frage und als Styling wählen wir CSS.
-
-## Das ganze ausführen
-
-Möchte man eine Angular-Applikation ausführn muss man diese natürlich erst kompilieren. Das Kommando dafür ist `ng serve`, also dieses Kommando in die Powershell eingeben. Anschließend wird die Applikation kompiliert und auf einem Developement-Server bereitgestellt. Um sie auch anschauen zu können, muss man einen Browser öffnen und die URL `http://localhost:4200` eingeben. Jede Angular Applikation ist im Developement-Modus auf dem Port 4200 erreichbar.
-
-Gleich testen. Es sollte das Heros-Default-Projekt sichtbar sein. (Schön ist es aber nicht)
-
-Für eine produktive Ausführung kann er später natürlich geändert werden. Will man die Applikation produktiv kompilieren, wird das Kommand `ng build` verwendet.
+siehe 01_Installation
 
 ## bootstrap und jquery installieren
+
 Wir müssen als erstes folgende Libraries installieren:
 
 ```Powershell
-npm install --save bootstrap@3
+npm install --save bootstrap
 npm install --save jquery
+
+z.B. `npm install --save bootstrap@3` für eine spezielle Bootstrap-Version.
 
 ...bzw. die types dazu:
 
