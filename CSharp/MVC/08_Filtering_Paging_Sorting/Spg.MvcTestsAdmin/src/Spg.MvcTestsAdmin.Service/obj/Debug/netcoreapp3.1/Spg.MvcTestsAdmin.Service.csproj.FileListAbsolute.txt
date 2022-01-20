@@ -10,3 +10,4 @@ C:\HTL\POS\CSharp\MVC\08_Filtering_Paging_Sorting\Spg.MvcTestsAdmin\src\Spg.MvcT
 C:\HTL\POS\CSharp\MVC\08_Filtering_Paging_Sorting\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.dll
 C:\HTL\POS\CSharp\MVC\08_Filtering_Paging_Sorting\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.pdb
 C:\HTL\POS\CSharp\MVC\08_Filtering_Paging_Sorting\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.genruntimeconfig.cache
+C:\HTL\POS\CSharp\MVC\08_Filtering_Paging_Sorting\Spg.MvcTestsAdmin\src\Spg.MvcTestsAdmin.Service\obj\Debug\netcoreapp3.1\Spg.MvcTestsAdmin.Service.csproj.AssemblyReference.cache

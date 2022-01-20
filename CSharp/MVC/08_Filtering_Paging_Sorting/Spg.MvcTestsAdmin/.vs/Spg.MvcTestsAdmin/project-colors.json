@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6ca9f7e2-c964-4bae-8c54-068356ad63ec": {
+      "ProjectGuid": "6ca9f7e2-c964-4bae-8c54-068356ad63ec",
+      "DisplayName": "Spg.MvcTestsAdmin.Service",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

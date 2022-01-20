@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yc57mSDk7LC/o+7sMQKqpHtf5QLwJDPM2LwPruG78iZH0rNmZCA4Tol8KHxIGHbpxQ5o73te7cSxwZNz3SkCaA==",
+  "dgSpecHash": "FY8l/Oc01w+JHrzJUYZU+i9dyg03ZKcGRj5ZAZ2RvPJ2rAYZzx8blqqM8RCxDXYOznca8PmJ3w/Jeie9p/APeA==",
   "success": true,
   "projectFilePath": "C:\\HTL\\POS\\CSharp\\MVC\\08_Filtering_Paging_Sorting\\Spg.MvcTestsAdmin\\src\\Spg.MvcTestsAdmin.WebApp\\Spg.MvcTestsAdmin.WebApp.csproj",
   "expectedPackageFiles": [
@@ -172,7 +172,8 @@
     "C:\\Users\\marti\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\marti\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
   ],
   "logs": []
 }
