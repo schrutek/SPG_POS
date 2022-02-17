@@ -488,7 +488,7 @@ C# gewöhnte Entwickler haben eher weniger Schwierigkeiten sich an TS zu gewöhn
 
 Die hier besprochenen Strukturen werden wir in Angular wiederfinden. Wenn man diese Grundlagen verstanden hat, ist es leichter sich im vermeintlichen "Angular-Dschungel" zurechtzufinden. In Wirklichkeit ist Angular, auch dadurch, sehr gut strukturiert.
 
-Ich greife hier deutlich vor und zeige noch eine Klasse, wie sie in Angular verwendet würde:
+Ich greife hier deutlich vor und zeige noch eine Klasse9, wie sie in Angular verwendet würde:
 
 ```typescript
 import { Component } from "@angular/core";
@@ -516,3 +516,71 @@ export class ProductsComponent {
 ```
 
 Wir finden den Import-Block, den Export-Block, Felder und Methoden. Diese Klasse verfügt über aber keine Properties oder Konstruktor. Lediglich neu: `@Component({ ... })`. Aber dazu mehr später.
+
+## Übung
+
+Es sind 3 Klassen zu implementieren ``program``, ``schoolClass``, ``student``
+
+```plantuml
+@startuml
+
+entity schoolClass {
+    *name
+    *List<student>
+    ---
+    schoolClass(name)
+    printInfos()
+}
+
+entity student {
+    *firstName: Property
+    *lastName: Property (private set)
+    *eMail?: Property
+    *Gender
+    *address
+    ---
+    student(firstName, lastName, eMail)
+    printInfos()
+    addStudent(student)
+}
+
+entity address {
+    *street
+    *city
+    *zip
+    ---
+    address(street, city, zip)
+}
+
+entity program {
+    ---
+    addClassAndStudents()
+    printInfos(schoolClass)
+}
+
+enum Gender {
+    *Male
+    *Female
+    *NA
+}
+
+student --|> Gender
+student --> address
+student o--> schoolClass
+schoolClass --> program
+
+@enduml
+```
+
+#### Student:
+* ``lastName`` ist ein Pflichtfeld, wenn ``null`` soll ein Error geworfen werden.
+* ``printInfo`` soll alle Daten in einer frei gestaltbaren Zeichenfolge in der Konsole ausgeben.
+
+#### SchoolClass:
+* ``addStudent`` soll einen Student der Liste hinzufügen.
+* ``printInfo`` soll alle Daten in einer frei gestaltbaren Zeichenfolge in der Konsole ausgeben.
+
+#### Program:
+* ``printInfo`` soll die Infos der Klasse und die Infos aller Studenten ausgeben.
+* ``addClassAndStudents`` soll eine Klasse mit einem beliebigen Namen (z.B. 5CHIF) und 3 Studenten mit beliebigen Daten der Klasse hinzufügen.
+* Die beiden Methoden ``printInfo`` und ``addClassAndStudent`` sollen aufgerufen werden.
