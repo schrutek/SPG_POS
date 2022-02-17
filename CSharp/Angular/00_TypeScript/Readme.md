@@ -522,7 +522,11 @@ Wir finden den Import-Block, den Export-Block, Felder und Methoden. Diese Klasse
 Es sind 3 Klassen zu implementieren ``program``, ``schoolClass``, ``student``
 
 ```plantuml
+
 @startuml
+
+hide empty methods
+hide empty fields
 
 entity schoolClass {
     *name
@@ -570,6 +574,7 @@ student o--> schoolClass
 schoolClass --> program
 
 @enduml
+
 ```
 
 #### Student:
