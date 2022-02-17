@@ -521,6 +521,60 @@ Wir finden den Import-Block, den Export-Block, Felder und Methoden. Diese Klasse
 
 Es sind 3 Klassen zu implementieren ``program``, ``schoolClass``, ``student``
 
+
+```plantuml
+
+@startuml
+
+hide empty methods
+hide empty fields
+
+entity Department {
+    tasks : List<Task>
+}
+
+entity Task {
+    department : Department
+}
+Task "0..*" <--> "1" Department
+
+enum Gender {
+    MALE
+    FEMALE
+    OTHER
+}
+
+entity ApplicantStatus {
+
+}
+
+entity Applicant {
+    uploads : List<Upload>
+    department : Department
+    applicantStatus : ApplicantStatus
+}
+Applicant -- Gender
+Applicant "0..*" o--> "1" Department
+Applicant "1"    o--> "1" ApplicantStatus
+
+Enrolled    -up-|> ApplicantStatus
+UploadsDone -up-|> ApplicantStatus
+Rated       -up-|> ApplicantStatus
+
+entity Upload {
+    applicant : Applicant
+    task : Task
+}
+Upload "0..*" <--> "1" Applicant
+Upload "0..*" o--> "1" Task
+
+@enduml
+
+```
+
+
+
+
 ```plantuml
 
 @startuml
