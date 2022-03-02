@@ -215,3 +215,15 @@ Wir können das hier dennoch tun. Im *css*-File der Komponente wird folgendes er
 ```
 
 Bei Falscheingaben erscheint nun der Rahmen in roter Farbe.
+
+## Übung
+
+Es ist ein Formular zu entwickeln mit dem das Kennwort geändert werden kann. Das Formular besteht aus 3 Eingabefeldern und einem Submit-Button.
+
+**Eingabefelder**:
+
+* **Altes Kennwort**: Die Eingabe ist erforderlich und sie muss mit einem bestehen (hard coded im Validator) Kennwort verglichen werden. Die Eingabe muss übereinstimmen.
+* **Neues Kennwort**: Die Eingabe ist erforderlich. Das Kennwort muss mindestens 8 Zeichen lang sein und ein Sonderzeichen enthalten.
+* **Kennwort wiederholen**: Die Eingabe ist erforderlich und das eingegebene Kennwort muss mit jenem aus dem Feld *Neues Kennwort* übereinstimmen.
+
+Der Submit-Button soll nach click das neue Kennwort in der Konsole ausgeben.
