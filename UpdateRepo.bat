@@ -1,4 +1,4 @@
-git add -A
+git add *
 git commit -a -m "Commit"
 :: git pull origin master --allow-unrelated-histories
-git push origin master
+git push origin main
