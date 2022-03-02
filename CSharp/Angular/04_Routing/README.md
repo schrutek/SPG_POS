@@ -131,3 +131,21 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 })
 export class AppModule { }
 ```
+
+## Übung
+
+Es soll eine Angular-App erstellt werden die über eine Übersichtsseite und eine Archivseite verfügt. Damit soll Archivmaterial verwaltet und nach Monat und Jahr sortiert werden können.
+
+Die Startseite enthält eine Liste von Datumswerten [Monat]/[Jahr]
+z.B.
+* 10/2021
+* 11/2021
+* 12/2021
+* 01/2022
+* 02/2022
+
+Klickt man auf ein Datum in dieser Liste, soll die Archivseite angezeigt werden. Die Überschrift darauf stellt einen Namen (*Archiv für ...*) und das gewählte Monat und Jahr dar. (Archiv für Jan. 2022). Das numerische Monat soll also in einen Namen umgewandelt werden.
+
+Die Archivseite verfügt darüber hinaus über einen Button, der wiederum auf die Übersichtsseite routet.
+
+Die Parameter zur Archivseite sind *required*. (URL: http://localhost4200/archive/01/2022). **KEINE optionalen Parameter!**. Ist die Url unvollständig angegeben, oder wird ein Datum angegeben, das nicht existiert, ist eine *Not-Found*-Seite anzuzeigen.
