@@ -160,7 +160,7 @@ export class AppModule { }
 
 ## Eine Erste eigene Komponente erstellen
 
-Erstellen wir nun eine Home-Komponente. Später werden wir auch einen Routing-Mechanismus implementieren, der unter anderem auf die Hoe-Komponente routen wird. Die Komponente soll dabei wie die "Startsete" der Applikation  darstellen.
+Erstellen wir nun eine Home-Komponente. Später werden wir auch einen Routing-Mechanismus implementieren, der unter anderem auf die Home-Komponente Routen wird. Die Komponente soll dabei wie die "Startseite" der Applikation  darstellen.
 
 Die Komponente kann man übe die CLI mit folgendem Kommando generieren lassen:
 
