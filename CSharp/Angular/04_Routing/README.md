@@ -131,6 +131,38 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 })
 export class AppModule { }
 ```
+## ActivatedRoute
+
+Die aktivierte Route kann abgefragt werden. Dafür ist das Modul `ActivatedRoute` mit der Methode `paramMap()` zuständig:
+
+**Klassisch:**
+
+Diese Variante wird verwendet, wenn die Komponente neu geladen wird.
+
+```typescript
+this.id = this.route.snapshot.paramMap.get('id');
+console.log('ID: =' + this.i)
+```
+
+**Mittels Observer:**
+
+Diese Variante wird verwendet, wenn die Komponente nicht neu geladen wird.
+
+```typescript
+this.route.paramMap.subscribe(params => {
+  this.id = Number(params.get('id')); // +params.get('id')!
+  this.productName = params.get('name') ?? "";
+  console.log('ID: =' + this.id)
+})
+```
+**Optionale QueryString-Parameter abfragen:**
+
+```typescript
+this.route.queryParamMap.subscribe(params => {
+  this.page = Number(params.get('page'));// +params.get('id')!
+  console.log('Page: =' + this.page);
+})
+```
 
 ## Übung
 
