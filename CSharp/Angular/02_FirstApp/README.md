@@ -75,7 +75,7 @@ Im CSS File sind jene CSS-Formatierungen angegeben, die das HTML in der Komponen
 
 Diese 3er-Konstellation ist gekapselt!
 
-Ein Komponentenbaum kann nun z.B. so aussehen:
+Ein Komponenten-Baum kann nun z.B. so aussehen:
 
 ![](component-tree.png)
 
@@ -91,13 +91,13 @@ Das Interpolations Binding wird durch {{ }} gekennzeichnet. Information wird an 
 
 Das Two Way Binding wird durch [( )] gekennzeichnet. Informationen werden an das Template gegeben und wieder zurück. Z.B. html-input.
 
-Das Event-Binding wird durch [] gekennzeichnet. Die Information geht als Event vom html-Template an das ts-File. Z.B. ein Button wird geclickt.
+Das Event-Binding wird durch [] gekennzeichnet. Die Information geht als Event vom html-Template an das ts-File. Z.B. ein Button wird geklickt.
 
 # Ein neues Projekt anlegen
 
 siehe 01_Installation
 
-## bootstrap und jquery installieren
+## `bootstrap` und `jquery` installieren
 
 Wir müssen als erstes folgende Libraries installieren:
 
@@ -107,13 +107,13 @@ npm install --save jquery
 
 z.B. `npm install --save bootstrap@3` für eine spezielle Bootstrap-Version.
 
-...bzw. die types dazu:
+...bzw. die "types" dazu:
 
 npm install --save @types/bootstrap
 npm install --save @types/jquery
 ```
 
-## Configurationen "angular.json" und "tsconfig.app.json" anpassen
+## Konfigurationen von "angular.json" und "tsconfig.app.json" anpassen
 
 `angular.json`:
 
@@ -158,6 +158,26 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
+## `bootstrap-icons` installieren
+
+```Powershell
+npm install --save bootstrap-icons
+```
+
+Anschließend im File *styles.css* die URL zu bootstrap-icons hinzufügen:
+
+```css
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+```
+
+### Verwendung
+
+```html
+<h1>
+  <span class="bi bi-star"></span>
+</h1>
+```
+
 ## Eine Erste eigene Komponente erstellen
 
 Erstellen wir nun eine Home-Komponente. Später werden wir auch einen Routing-Mechanismus implementieren, der unter anderem auf die Home-Komponente Routen wird. Die Komponente soll dabei wie die "Startseite" der Applikation  darstellen.
@@ -170,7 +190,7 @@ ng g component home
 
 Wir erhalten:
 
-![Home-Komponent](home_komponent.png)
+![Home-Komponente](home_komponent.png)
 
 Wie bereits erwähnt, sind das die wichtigsten Teile einer Komponente. Betrachten wir nun den Decorator des ts-Files im Detail:
 
@@ -190,7 +210,7 @@ Wie bereits erwähnt, sind das die wichtigsten Teile einer Komponente. Betrachte
 
 ### Das app.module
 
-Um die Kompkinente zu verwenden sind nun noch Änderunegen im App-Modul notwendig. Komponenten müssen im darüberliegenden Modul (wenn kein eigenes Modul erstellt wurde, gibt es zumindest IMMER das App-Modul) bekannt gemacht werden.
+Um die Komponente zu verwenden sind nun noch Änderungen im App-Modul notwendig. Komponenten müssen im darüber liegenden Modul (wenn kein eigenes Modul erstellt wurde, gibt es zumindest IMMER das App-Modul) bekannt gemacht werden.
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -225,4 +245,3 @@ z.B.: so:
     </div>
 </div>
 ```
-
