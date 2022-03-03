@@ -141,7 +141,7 @@ Diese Variante wird verwendet, wenn die Komponente neu geladen wird.
 
 ```typescript
 this.id = this.route.snapshot.paramMap.get('id');
-console.log('ID: =' + this.i)
+console.log('ID: =' + this.id)
 ```
 
 **Mittels Observer:**
