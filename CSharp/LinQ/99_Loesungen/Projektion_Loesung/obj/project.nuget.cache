@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IErmoVULkHCub7krqRTzEcCwZQMdTQwE5v7fqvsWDo6PivENCenH7FdRLN+bWuE+4aV8rNU7Ug9DIJMfAQ6wig==",
+  "success": true,
+  "projectFilePath": "C:\\HTL\\POS\\CSharp\\LinQ\\04_Projection\\LinqUebung2 - Kopie\\LinqUebung2.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marti\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
+  "logs": []
+}
