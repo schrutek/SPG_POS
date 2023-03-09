@@ -1,0 +1,27 @@
+﻿@model List<SchoppingCartItemDto>
+
+<h3>Ihr Warenkorb</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Tax</td>
+            <td>Pieces</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SchoppingCartItemDto item in Model ?? new())
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Pieces</td>
+            <td>@item.Tax</td>
+            <td>@item.Price</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Payment" asp-action="CallPayment" class="btn btn-lg btn-danger">Jetzt bezahlen</a>

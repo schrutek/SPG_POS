@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "45605ea6-50d9-47e3-85fe-621f0f3e2c9d": {
+      "ProjectGuid": "45605ea6-50d9-47e3-85fe-621f0f3e2c9d",
+      "DisplayName": "Spg.4BHifShop",
+      "ColorIndex": 0
+    },
+    "da987457-173b-46c3-8163-6fd2ab474ddf": {
+      "ProjectGuid": "da987457-173b-46c3-8163-6fd2ab474ddf",
+      "DisplayName": "Spg.CircuitBreaker",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
