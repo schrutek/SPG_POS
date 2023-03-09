@@ -1,7 +1,7 @@
 @echo off
 set /p solutionName="Solution Name: ("%solutionName%") "
 set /p projectName="Project Name: ("%projectName%") "
-set /p projectType="Project Type (console, mvc, webapi): ("%projectType%") "
+set /p projectType="Project Type (console, mvc, webapi, wpf): ("%projectType%") "
 
 md %solutionName%
 cd %solutionName%
@@ -124,7 +124,5 @@ dotnet add test\%solutionName%.Repository.Test\%solutionName%.Repository.Test.cs
 dotnet add test\%solutionName%.%projectName%.Test\%solutionName%.%projectName%.Test.csproj reference src\%solutionName%.DomainModel\%solutionName%.DomainModel.csproj
 dotnet add test\%solutionName%.Application.Test\%solutionName%.Application.Test.csproj reference src\%solutionName%.DomainModel\%solutionName%.DomainModel.csproj
 dotnet add test\%solutionName%.Repository.Test\%solutionName%.Repository.Test.csproj reference src\%solutionName%.DomainModel\%solutionName%.DomainModel.csproj
-
-cd..
 
 dotnet new gitignore
