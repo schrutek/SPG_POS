@@ -75,3 +75,5 @@ Sender Constraint: Der Token ist an einen bestimmten Sender (eindeutiger Client)
 ### Dont's
 
 * Inhalt wird Clientseitig inspizieren
+
+Quelle: [https://auth0.com/blog/id-token-access-token-what-is-the-difference/]
