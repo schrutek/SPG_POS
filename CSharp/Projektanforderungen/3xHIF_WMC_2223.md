@@ -31,10 +31,6 @@
 
 * Es ist mind. ein Formular zu erstellen (wahlweise **Template Forms** oder **reactive Forms**)
 
-### Data
-
-* 
-
 ## Weitere Funktionen 3 - 1:
 
 * Datenvalidierungen der Eingaben im Formular

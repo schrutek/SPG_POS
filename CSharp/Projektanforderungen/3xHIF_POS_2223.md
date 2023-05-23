@@ -8,14 +8,14 @@
 * mind. 2 1..n Relationen (List) Achtung: Denke an sichere Listen, backing Fields
 * mind. eine Enumeration
 * mind. 1 Value Object
-* vollständiiger DB-Context
-* Datenbank muss nach dem Code First Ansatz erstellt werden können
+* vollständiger DB-Context
+* Datenbank muss nach dem ``Code First`` Ansatz erstellt werden können
 * DB-Seeding mit Dummy-Daten
 
 ### ViewModel
 
 * Ein ViewModel muss implementiert werden (Voraussetzung für 3 oder besser)
-* IPropertyNotifyChanged muss implementiert werden
+* ``IPropertyNotifyChanged`` muss implementiert werden
 * Clickt man auf einen Eintrag in einer Liste, soll ein anderes beliebiges Anzeigeelement mit Daten befülllt werden.
 
 ### XAML
