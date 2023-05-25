@@ -6,9 +6,17 @@
 * Simpel, aber mind. 5 Tabellen inkl. Lookup-Tables
 
 ### Entities:
-* mind. 5 Entities
-* mind. 1 Value-Object
-* mind. 2 1..n-Relationen
+* Entities
+  * sichere Listen
+  * Konstruktoren
+  * Relations / Navigations
+  * Teileweise Logik (TDD) (Produkt in den Warenkorb legen, prüft: Produkt-Stückzahl, ob Produkt schon im Warenkorb ist , dekrementiert Produkt-Stückzahl, ...)
+  * Unite Tests (TDD)
+    * Create_Success_Test (Eine Entity adden)
+    * Relations / Navigations
+* Enums
+* Lookup-Tables
+* Value Objects
 
 ### Service:
 * mind. 2 Services
@@ -17,7 +25,7 @@
   * Create: mind. 5 Bedingungen (LinQ) prüfen (Bedingungen sollen prüfen, ob ein Datensatz angelegt werden darf)
   * Update: mind. 2 Bedingungen (LinQ) prüfen (Bedingungen sollen prüfen, ob ein Datensatz geändert werden darf)
 * Filtering / Sorting / Paging implementieren
-* Umsetzung mittels C.R.U.D.
+* C.R.U.D. + Fluent-API oder Mediator + C.Q.S. oder etwas anderes
 
 ### Unit Tests:
 * Domain Model: pro Entity mind. 1 Success_Test
@@ -53,6 +61,31 @@ Abgabe auf GIT + Präsentation. Möglichst viele pushes über den Zeitraum verte
 * GIT: Arbeiten mit Feature-Branches, idealerweise 1 Branch pro Feature + Merge auf den Main-Branch
 
 Ein Punktespiegel für ene Note besser als 4, +/- ein Notengrad. Code Quality (Optik und Sauberkeit) spielt ebenfalls eine Rolle, ist aber schwer monetär messbar.
+
+## Bewertungskriterien:
+
+* Domain Model inkl. Infrastructure (siehe Anforderungen oben)
+* Domain Model Tests
+  * Codeabdeckung
+* Repositories (siehe Anforderungen oben)
+* Repositories Tests
+  * TDD Codeabdeckung
+* Application (siehe Anforderungen oben)
+* Application Tests
+  * TDD Codeabdeckung
+* Presentation (siehe Anforderungen oben)
+* Presentation Tests
+  * Integration Tests, idealerweise TDD, Codeabdeckung
+* Git-Performance
+  * Häufigkeit und Abstand der einzelnen Pushes
+  * Anzahl der Branches
+  * Verwendung von Merge, Rebase, Squash, ...
+* Code Cquality:
+  * Keine auskommentierten Codeteile
+  * Einhaltung der Coding Conventions
+  * Einrückungen, unnötige Leerzeilen, ...
+  * *How smells your code*
+
 
 | Note | Punkteanzahl |
 |---|---|
