@@ -15,6 +15,13 @@ cd src
 dotnet new %projectType% --name %solutionName%.%projectName%
 dotnet new classlib --name %solutionName%.Application
 dotnet new classlib --name %solutionName%.Infrastructure
+
+cd %solutionName%.Infrastructure
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Bogus
+cd..
+
 dotnet new classlib --name %solutionName%.DomainModel
 cd %solutionName%.DomainModel
 md Exceptions
@@ -53,6 +60,11 @@ dotnet new classlib --name %solutionName%.Repository
 cd..
 cd test
 dotnet new xunit --name %solutionName%.%projectName%.Test
+
+cd %solutionName%.%projectName%.Test
+dotnet add package Moq
+cd..
+
 cd %solutionName%.%projectName%.Test
 md Helpers
 cd Helpers
@@ -63,6 +75,11 @@ echo } >> DatabaseUtilities.cs
 cd..
 cd..
 dotnet new xunit --name %solutionName%.Application.Test
+
+cd %solutionName%.Application.Test
+dotnet add package Moq
+cd..
+
 cd %solutionName%.Application.Test
 md Helpers
 cd Helpers
@@ -73,6 +90,11 @@ echo } >> DatabaseUtilities.cs
 cd..
 cd..
 dotnet new xunit --name %solutionName%.DomainModel.Test
+
+cd %solutionName%.DomainModel.Test
+dotnet add package Moq
+cd..
+
 cd %solutionName%.DomainModel.Test
 md Helpers
 cd Helpers
@@ -83,6 +105,11 @@ echo } >> DatabaseUtilities.cs
 cd..
 cd..
 dotnet new xunit --name %solutionName%.Repository.Test
+
+cd %solutionName%.Repository.Test
+dotnet add package Moq
+cd..
+
 cd %solutionName%.Repository.Test
 md Helpers
 cd Helpers
