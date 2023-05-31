@@ -1,6 +1,6 @@
 @echo off
-set /p solutionName="Solution Name: ("%solutionName%") "
-set /p projectName="Project Name: ("%projectName%") "
+set /p solutionName="Solution Name: (Spg.MySolutionName) "
+set /p projectName="Project Name: (MyFrontEndName) "
 set /p projectType="Project Type (console, mvc, webapi, wpf): ("%projectType%") "
 
 md %solutionName%
