@@ -8,6 +8,8 @@ cd %solutionName%
 
 dotnet new sln --name %solutionName%
 
+md libs
+md docs
 md src
 md test
 
