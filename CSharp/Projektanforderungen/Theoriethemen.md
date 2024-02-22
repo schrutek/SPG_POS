@@ -50,8 +50,8 @@ Welche Regeln müssen beim Design einer RESTful-API beachtet werden. Gehe darauf
 
 S.O.L.I.D.
 
-  * Lukas
-  * (Eren)
+  * Name 1
+  * Name 2
 
 ### CQRS
 
