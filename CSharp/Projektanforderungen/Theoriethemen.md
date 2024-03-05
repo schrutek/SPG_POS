@@ -90,3 +90,22 @@ Beschreibe das MVC-Pattern. Zeige die Implementierung anhand einiger Code-Beispi
 Was ist der Unterschied zwischen Authentication und Autorisation. Wofür wird was verwendet. Zeige die Konfiguration von Authentication/Autorisation an einem Code-Beispiel in deinem Technologiestack. Wie funktioniert Authentication zwischen verteilten Systemen (CLient-Server). Beleuchte bezüglich Authentication das Thema State in Verbindung mit RESTful. Welche Möglichkeiten hat der Client sich State-Informationen zu "merken".
 
   * Name 1
+
+### IDE
+
+Beschreibe die wesentlichen Features der von dir verwendeten IDE. Zeige dies anhand eines Projekts oder mit Code Snippets.
+
+* Was sind Templates aus und wie werden sie verwendet
+* Wie ist die Projektstruktur
+* Wie wird ein Projekt angelegt
+* Wie findet das Deployment statt
+* Wie kann die IDE in Verbindung mit GIT verwendet werden
+
+  * Name 1
+
+### GIT
+
+Erkläre die grundlegende Funktionsweise von GIT. Was ist das und wofür kann es verwendet werden. Erläutere die wichtigsten GTI-Kommandos. Erkläre die Begriffe Branch, Rebase, Push/Pull, Pull-Request. Erkläre den Unterschied GIT/GITHub.
+
+  * Name 1
+  * Name 2
