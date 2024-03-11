@@ -2,10 +2,12 @@
 
 ## Midenstanforderungen für ein Genügend (4):
 
-### DB:
+### Database:
+
 * Simpel, aber mind. 5 Tabellen inkl. Lookup-Tables
 
-### Entities:
+### Domain Model (WS):
+
 * Entities
   * sichere Listen
   * Konstruktoren
@@ -18,7 +20,12 @@
 * Lookup-Tables
 * Value Objects
 
-### Service:
+### Repository (WS):
+
+* generisches Repo, und/oder spezialisierte Repos
+
+### Service (SS):
+
 * mind. 2 Services
 * Get-Methode(n) min. eine Methode, zur Auflistung der Daten aus einer Tabelle
 * Create/Update/Delete-Methoden
@@ -27,30 +34,39 @@
 * Filtering / Sorting / Paging implementieren
 * C.R.U.D. + Fluent-API oder Mediator + C.Q.S. oder etwas anderes
 
-### Unit Tests:
-* Domain Model: pro Entity mind. 1 Success_Test
-* Services: Alle Create/Update/Delete-Method Test Driven (TDD) implementieren (100%ige Code-Abdeckung), ohne Mocking
+### Presentation (API-Controller) (SS):
 
-### Repository:
-* generisches Repo, und/oder spezialisierte Repos
-
-### Controller:
-* mind. 2
+* mind. 2 Controller
 * Alle Service Methoden auch in (mehreren) Controllern abbilden
+* In beiden Controllern C.R.U.D. inkl. sauberes und korrektes API-Design
+* Alle Methoden verfügen über sauberes Exception Handling
 
-### UI:
-(coming soon)
+### Presentation (Server Side Rendering) (SS):
 
-### GIT:
-Abgabe auf GIT + Präsentation. Möglichst viele pushes über den Zeitraum verteilt
+* --
+
+### GIT (immer):
+
+* Abgabe auf GIT + Präsentation. Möglichst viele pushes über den Zeitraum verteilt.
+
+### Unit Tests (immer):
+
+* Domain Model: pro Entity mind. 1 Success_Test
+* Repository: pro Methode mind. 1 Success_Test
+* Services: Alle Create/Update/Delete-Method Test Driven (TDD) implementieren (100%ige Code-Abdeckung), ohne Mocking
 
 ---
 
 ## Implementierungsvorschläge für 3 bis 1:
 
 * Sauberes und durchgängiges Exception Handling
+* Implementierung von Builder-Pattern für das Repository (Lesend).
+* Implementierung von Builder-Pattern für das Repository (Schreibend).
+* Implementierung von Fluent-API-Pattern für das Repository.
+* Implementierung von Fluent-API-Pattern für das Domain Model.
+* Implementierung von Datenvalidierung für das Domain Model.
 * Ein simpler, rudimentärer LogIn/LogOut
-* Filterung nach einem Freitextfeld, einem Datumsraum UND einer Drop-Down-Box. Jedes davon optional
+* Filterung nach einem Freitextfeld, einem Datumsraum. Jedes davon optional.
 * Volltextsuche mit Fehlerkorrektur in einer Tabelle, z.B. Namen
 * Erhöhung der Anzahl der Prüfungen in den Service-Methoden (Add/Update/Delete)
 * DTO Mapping
@@ -58,7 +74,9 @@ Abgabe auf GIT + Präsentation. Möglichst viele pushes über den Zeitraum verte
 * Über die Angabe hinaus, eine weiterer Service mit Add- Update- Delete-Methode
 * Umsetzung mittels C.Q.R.S. und MediatR (C.Q.R.S.- und Mediator-Pattern)
 * Mocking: MoQ wird für TDD verwendet
-* GIT: Arbeiten mit Feature-Branches, idealerweise 1 Branch pro Feature + Merge auf den Main-Branch
+* TDD für alle Service Methoden
+* Alle Layer außer (EF Core) werden durcj Mocks ersetzt.
+* GIT: Arbeiten mit Feature-Branches, 1 Branch pro Feature + Merge auf den Main-Branch
 
 Ein Punktespiegel für ene Note besser als 4, +/- ein Notengrad. Code Quality (Optik und Sauberkeit) spielt ebenfalls eine Rolle, ist aber schwer monetär messbar.
 
